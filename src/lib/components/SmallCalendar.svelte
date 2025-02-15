@@ -22,53 +22,6 @@
 	let currentMonthEvents: Event[] = [];
 	let nextMonthEvents: Event[] = [];
 
-	// 	'2024-12': [
-	// 		{
-	// 			date: '12/15/2024',
-	// 			formattedDate: 'Sun, Dec 15',
-	// 			time: '18:30',
-	// 			title: 'Christmas Cantata',
-	// 			description: ''
-	// 		},
-	// 		{
-	// 			date: '12/22/2024',
-	// 			formattedDate: 'Sun, Dec 22',
-	// 			time: '18:30',
-	// 			title: "Lord's Supper",
-	// 			description: ''
-	// 		},
-	// 		{
-	// 			date: '12/30/2024 - 01/01/2025',
-	// 			formattedDate: 'Mon, Dec 30 - Wed, Jan 01',
-	// 			time: '18:30',
-	// 			title: 'Mid Atlantic Youth Conference',
-	// 			description: ''
-	// 		}
-	// 	],
-	// 	'2025-01': [
-	// 		{
-	// 			date: '01/05/2025',
-	// 			formattedDate: 'Sun, Jan 05',
-	// 			time: '18:30',
-	// 			title: 'Vision Sunday',
-	// 			description: ''
-	// 		},
-	// 		{
-	// 			date: '01/30/2025',
-	// 			formattedDate: 'Thu, Jan 30',
-	// 			time: '20:00',
-	// 			title: 'Marriage Retreat',
-	// 			description: ''
-	// 		},
-	// 		{
-	// 			date: '01/31/2025',
-	// 			formattedDate: 'Fri, Jan 31',
-	// 			time: '11:15',
-	// 			title: 'Marriage Retreat',
-	// 			description: ''
-	// 		}
-	// 	]
-	// };
 	const events = {
 		'2024-12': [
 			{
@@ -115,7 +68,8 @@
 				date: '03/07/2025 - 03/09/2025',
 				formattedDate: 'Fri, Mar 07 - Sun, Mar 09',
 				title: 'Revival with Scott Pauley',
-				description: ''
+				description:
+					'Fri, Mar 7 at 7:00 PM,\n Sat, Mar 8 at 5:00 PM,\n Sun, Mar 9 at 11:00 AM & 6:00 PM'
 			},
 			{
 				date: '03/11/2025',
@@ -291,28 +245,10 @@
 
 <div class="flex flex-wrap gap-6 justify-center p-4">
 	<!-- Current Month -->
-	<div class="w-full rounded-lg border-2 border-mono-200 md:w-2/4 lg:w-1/3">
+	<div class="w-full rounded-lg border-2 border-mono-200 md:w-2/3 lg:w-1/3">
 		<div class="p-4 text-xl font-bold text-center bg-transparent border-b border-mono-300">
 			{currentMonthTitle}
 		</div>
-		<!-- <div class="grid grid-cols-7 gap-1 p-4">
-			<div class="font-semibold text-center">Su</div>
-			<div class="font-semibold text-center">Mo</div>
-			<div class="font-semibold text-center">Tu</div>
-			<div class="font-semibold text-center">We</div>
-			<div class="font-semibold text-center">Th</div>
-			<div class="font-semibold text-center">Fr</div>
-			<div class="font-semibold text-center">Sa</div>
-
-			{#each currentMonthDays as day}
-				<div
-					class="h-10 flex items-center justify-center text-sm border border-mono-200/50 rounded-md
-                    {day ? 'bg-white' : 'bg-mono-50 text-mono-300'}"
-				>
-					{day}
-				</div>
-			{/each}
-		</div> -->
 		<div class="grid grid-cols-7 gap-1 p-4">
 			<div class="font-semibold text-center">Su</div>
 			<div class="font-semibold text-center">Mo</div>
@@ -343,7 +279,8 @@
 						{event.title}
 					</p>
 					{#if event.description}
-						<p class="text-base text-mono-400">{event.description}</p>
+						<!-- <p class="text-base text-mono-400">{event.description}</p> -->
+						<p class="text-base text-mono-500 whitespace-pre-line pl-2 pt-1">{event.description}</p>
 					{/if}
 				</div>
 			{/each}
@@ -382,7 +319,8 @@
 						{event.title}
 					</p>
 					{#if event.description}
-						<p class="text-base text-mono-400">{event.description}</p>
+						<!-- <p class="text-base text-mono-400">{event.description}</p> -->
+						<p class="text-base text-mono-500 whitespace-pre-line pl-2 pt-1">{event.description}</p>
 					{/if}
 				</div>
 			{/each}

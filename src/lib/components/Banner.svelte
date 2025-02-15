@@ -15,23 +15,23 @@
 {#if isBannerVisible}
 	<div
 		tabindex="-1"
-		class="${styling} grid custom-grid-cols gap-x-clamp grid-rows-auto row-span-1 z-50 place-items-center col-span-3 col-start-1 w-full h-20 md:h-16 font-semibold bg-amber-300 text-mono-700 "
+		class="${styling} grid custom-grid-cols gap-x-clamp grid-rows-auto row-span-1 z-999 place-items-center col-span-3 col-start-1 w-full h-[fit-content] py-4 md:py-0 md:h-14 font-thin bg-theme-700 text-white"
 	>
 		<div
-			class="grid grid-cols-[3rem_1fr_3rem] max-w-[95vw] md:max-w-[850px] gap-x-clamp col-span-3 col-start-1 row-span-1 row-start-1 w-full h-full place-content-center place-items-center "
+			class="grid grid-cols-[3rem_1fr_3rem] max-w-[95vw] md:max-w-[850px] gap-x-clamp col-span-3 col-start-1 row-span-1 row-start-1 w-full h-full place-content-center place-items-center"
 		>
-			<span
+			<!-- <span
 				class="inline-flex col-span-1 col-start-1 justify-center items-center ml-2 w-8 h-8 bg-gray-200 rounded-full"
 			>
 				<Megaphone />
 				<span class="sr-only">Megaphone</span>
-			</span>
+			</span> -->
 
 			<a
 				href="#events"
-				class="flex col-span-1 col-start-2 items-center text-sm cursor-pointer title debug-border"
+				class="flex col-span-2 col-start-1 items-center text-sm text-text-left cursor-pointer title debug-border flex-wrap pl-6"
 			>
-				{bannerText}
+				{bannerText} Learn more.
 			</a>
 
 			<!-- Close Button Column -->
@@ -39,7 +39,7 @@
 				<button
 					on:click={closeBanner}
 					type="button"
-					class="inline-flex justify-center items-center w-8 h-8 text-sm rounded-full text-mono-800 hover:bg-red-500 hover:text-mono-100"
+					class="inline-flex justify-center items-center w-8 h-8 text-sm rounded-full text-mono-300/50 hover:bg-mono-500/50 hover:text-mono-100"
 				>
 					<svg
 						class="w-3 h-3"

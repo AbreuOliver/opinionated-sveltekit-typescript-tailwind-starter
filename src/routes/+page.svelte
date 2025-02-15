@@ -318,14 +318,47 @@
 	</section>
 	<!-- /**********/ EVENTS SECTION /**********/ -->
 	<section id="events" class="w-screen">
-		<div class="flex-col items-center mx-auto mb-16 w-full text-center md:w-1/2 lg:w-2/3">
+		<div class="flex-col items-center mx-auto w-full text-center md:w-1/2 lg:w-2/3">
 			<h2 class="mt-8 text-3xl font-bold text-gray-700 md:text-4xl">Upcoming Events</h2>
 			<p class="px-4 my-8 text-gray-700">
 				See what events are planned for the coming weeks. Join us as we grow in faith and fellowship
 				together!
 			</p>
 		</div>
-		<!-- <Calendar /> -->
+		<!-- EVENT DETAILS -->
+		<div
+			class="mx-4 md:mx-auto max-w-md md:max-h-[25rem] overflow-hidden rounded-xl border-2 bg-white shadow-none md:max-w-4xl my-6"
+		>
+			<div class="md:flex">
+				<div class="shrink-0 py-0">
+					<img
+						loading="lazy"
+						class="h-full w-full max-h-[25rem] object-cover"
+						src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/scott-pauley_zYX0B38cd.jpg?updatedAt=1739652942389"
+						alt="Evangelist Scott Pauley Headshot"
+					/>
+				</div>
+				<div class="px-6 py-4">
+					<h3 class="text-sm font-semibold tracking-wide text-theme-700 my-4 uppercase">
+						Coming Up
+					</h3>
+					<h4 class="mt-1 block text-lg leading-tight font-medium my-4 text-black hover:underline">
+						Winter Revival with Evangelist Scott Pauley
+					</h4>
+					<p class="mt-2 text-gray-500 text-base md:text-[0.9rem]">
+						For nearly twenty years Scott Pauley served as an assistant pastor, college
+						administrator, and Bible instructor. He now travels extensively as an evangelist across
+						America and in several foreign countries. His passion is to preach the gospel, teach the
+						Word of God, and reach this generation for Christ. Scott can be heard daily on the
+						Enjoying the Journey podcast and radio program. He and his wife Tammy have been blessed
+						with three children, Morgan, Lauren, and Grant and make their home in the mountains of
+						West Virginia. Join us for revival services at Emmanuel Baptist Church in La Grange, NC
+						from March 7th through 9th!
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- CALENDAR COMPONENT -->
 		<SmallCalendar />
 	</section>
 	<!-- /**********/ GIVE SECTION /**********/ -->
