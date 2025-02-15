@@ -23,14 +23,14 @@
 			},
 			{
 				date: '12/22/2024',
-                formattedDate: 'Sun, Dec 22',
+				formattedDate: 'Sun, Dec 22',
 				time: '18:30',
 				title: "Lord's Supper",
 				description: ''
 			},
 			{
 				date: '12/30/2024 - 01/01/2025',
-                formattedDate: 'Mon, Dec 30 - Wed, Jan 01',
+				formattedDate: 'Mon, Dec 30 - Wed, Jan 01',
 				time: '18:30',
 				title: 'Mid Atlantic Youth Conference',
 				description: ''
@@ -46,18 +46,98 @@
 			},
 			{
 				date: '01/30/2025',
-                formattedDate: 'Thu, Jan 30',
+				formattedDate: 'Thu, Jan 30',
 				time: '20:00',
-				title: "Marriage Retreat",
+				title: 'Marriage Retreat',
 				description: ''
 			},
-            {
+			{
 				date: '01/31/2025',
-                formattedDate: 'Fri, Jan 31',
-				time: '11:15',
-				title: "Marriage Retreat",
+				formattedDate: 'Fri, Jan 31',
+				title: 'Marriage Retreat',
+				description: ''
+			}
+		],
+		'2025-03': [
+			{
+				date: '03/07/2025 - 03/09/2025',
+				formattedDate: 'Fri, Mar 07 - Sun, Mar 09',
+				title: 'Revival with Scott Pauley',
+				description:
+					'Fri, Mar 7 at 7:00 PM,\n Sat, Mar 8 at 5:00 PM,\n Sun, Mar 9 at 11:00 AM & 6:00 PM'
+			},
+			{
+				date: '03/11/2025',
+				formattedDate: 'Tue, Mar 11',
+				title: '40 Days of Prayer & Fasting',
 				description: ''
 			},
+			{
+				date: '03/30/2025',
+				formattedDate: 'Sun, Mar 30',
+				title: "Lord's Supper",
+				description: ''
+			}
+		],
+		'2025-04': [
+			{
+				date: '04/03/2025',
+				formattedDate: 'Thu, Apr 03',
+				title: 'Easter Outreach',
+				description: ''
+			},
+			{
+				date: '04/10/2025',
+				formattedDate: 'Thu, Apr 10',
+				title: 'Easter Outreach',
+				description: ''
+			},
+			{
+				date: '04/17/2025',
+				formattedDate: 'Thu, Apr 17',
+				title: 'Easter Outreach',
+				description: ''
+			},
+			{
+				date: '04/19/2025',
+				formattedDate: 'Sat, Apr 19',
+				title: 'Super Saturday Saturation',
+				description: ''
+			},
+			{
+				date: '04/20/2025',
+				formattedDate: 'Sun, Apr 20',
+				title: 'Easter Sunday',
+				description: ''
+			}
+		],
+		'2025-05': [
+			{
+				date: '05/11/2025',
+				formattedDate: 'Sun, May 11',
+				title: "Mother's Day",
+				description: ''
+			},
+			{
+				date: '05/18/2025',
+				formattedDate: 'Sun, May 18',
+				title: 'Graduation Celebration',
+				description: ''
+			}
+		],
+		'2025-06': [
+			{
+				date: '06/01/2025',
+				formattedDate: 'Sun, Jun 01',
+				title: "Lord's Supper",
+				description: ''
+			},
+			{
+				date: '06/15/2025',
+				formattedDate: 'Sun, Jun 15',
+				title: "Father's Day",
+				description: ''
+			}
 		]
 	};
 
@@ -122,8 +202,8 @@
 
 <div class="flex flex-wrap gap-6 justify-center p-4">
 	<!-- Current Month -->
-	<div class="w-full rounded-lg border-2 border-gray-200 md:w-1/4">
-		<div class="p-4 text-xl font-bold text-center bg-transparent border-b border-gray-300">
+	<div class="w-full rounded-lg border-2 border-mono-200 md:w-2/3 lg:w-1/3">
+		<div class="p-4 text-xl font-bold text-center bg-transparent border-b border-mono-300">
 			{currentMonthTitle}
 		</div>
 		<div class="grid grid-cols-7 gap-1 p-4">
@@ -153,7 +233,8 @@
 						{event.formattedDate} at {formattedTime(event.time)}
 					</p>
 					{#if event.description}
-						<p class="text-base text-gray-500">{event.description}</p>
+						<!-- <p class="text-base text-mono-400">{event.description}</p> -->
+						<p class="text-base text-mono-500 whitespace-pre-line pl-2 pt-1">{event.description}</p>
 					{/if}
 				</div>
 			{/each}
@@ -192,7 +273,8 @@
 						{event.formattedDate} at {formattedTime(event.time)}
 					</p>
 					{#if event.description}
-						<p class="text-base text-gray-500">{event.description}</p>
+						<!-- <p class="text-base text-mono-400">{event.description}</p> -->
+						<p class="text-base text-mono-500 whitespace-pre-line pl-2 pt-1">{event.description}</p>
 					{/if}
 				</div>
 			{/each}
