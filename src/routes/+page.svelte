@@ -328,8 +328,8 @@
 					<h3 class="text-sm font-semibold tracking-wide text-theme-700 my-4 uppercase">
 						Coming Up
 					</h3>
-					<h4 class="mt-1 block text-lg leading-tight font-medium my-4 text-black hover:underline">
-						Winter Revival with Evangelist Scott Pauley
+					<h4 class="mt-1 block text-lg leading-tight font-medium my-4 text-black">
+						Spring Revival with Evangelist Scott Pauley
 					</h4>
 					<p class="mt-2 text-gray-500 text-base md:text-[0.9rem]">
 						For nearly twenty years Scott Pauley served as an assistant pastor, college
@@ -358,7 +358,9 @@
 				You can give by cash or check in any of our services or at our church office throughout the week.
 			</p>
 		</div>
-		<div class="flex-col justify-center items-center mx-auto mb-16 space-y-8 w-full text-center md:w-1/4">
+		<div
+			class="flex-col justify-center items-center mx-auto mb-16 space-y-8 w-full text-center md:w-1/4"
+		>
 			<h4 class="text-xl font-semibold text-center">Ways to give</h4>
 			<div class="flex items-center p-6 rounded-lg border-2 border-gray-800">
 				<div class="flex justify-center items-center p-2 w-10 h-10 bg-gray-800 rounded-full">
