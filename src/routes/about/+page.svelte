@@ -13,22 +13,18 @@
 
 	interface MinistryInfo {
 		title: string;
+		image?: string;
 		description: string[];
 	}
 
 	const ministryInformation: MinistryInfo[] = [
 		{
 			title: 'Preaching',
+			image: `https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/PREACHER2_Rz0apm1s3.jpg?updatedAt=1733800042663`, 
 			description: [
 				`"For after that in the wisdom of God the world by wisdom knew not God, it pleased God by the foolishness of preaching to save them that believe." (1 Corinthians 1:21)`,
 				'By this passage, we understand that preaching of the Bible is God’s method of reaching the unsaved. Though this method may stand against the way common wisdom would seek to reach a people group, this is the ordained method of God. Through preaching is God’s Word able to be made clear to the human mind and applied to the human heart.',
 				'In our church, we highly regard the preaching ministry of our Pastor. It is God’s means for His church to be guided, encouraged and taught by preaching. At Emmanuel, there is nothing more central to our services than the message of God’s Word being delivered.'
-			]
-		},
-		{
-			title: `Children's Ministry`,
-			description: [
-				'Children are close to the heart of Emmanuel. As the future leaders of our church and community, we see it as one of our highest duties to teach the ways of God to the children of our church and to encourage them to live for Him. There are age appropriate classes for children ages 3-12 during the Sunday School and Sunday morning services. These classes are lead by capable and engaging teachers that desire to impact and encourage your child for Jesus Christ.'
 			]
 		},
 		{
@@ -40,19 +36,26 @@
 			]
 		},
 		{
-			title: `Outreach`,
+			title: `Children's Ministry`,
 			description: [
-				`At Emmanuel Church, we have a passion to reach our community, our country, and those around the world with the Gospel (Acts 1:8). Locally, we accomplish this through our Bus ministry, and Church wide Soul Winning. Abroad, we accomplish this through our support of many Missionaries. Currently, we support works in Moldova, Venezuela, Panama, China, India, Brazil, and a Children's Home in Brazil. In addition to supporting these works, we also support FBN radio which has a reach spanning the globe.`
+				'Children are close to the heart of Emmanuel. As the future leaders of our church and community, we see it as one of our highest duties to teach the ways of God to the children of our church and to encourage them to live for Him. There are age appropriate classes for children ages 3-12 during the Sunday School and Sunday morning services. These classes are lead by capable and engaging teachers that desire to impact and encourage your child for Jesus Christ.'
 			]
 		},
 		{
 			title: `Music Ministry`,
+			image: `https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/John_8xDVTuwkap.JPG?updatedAt=1733800042636`,
 			description: [
 				'A Joyful Noise',
 				`"O sing unto the LORD a new song: sing unto the LORD, all the earth.Sing unto the LORD, bless his name; shew forth his salvation from day to day.Declare his glory among the heathen, his wonders among all people." Psalm 96:1-3`,
 				'Music, in sanctuary and home, should echo the greatness and glory of God. At Emmanuel, we see this as our highest goal in the music ministry. Our music is primarily directed toward God as a declaration of what He has done in our lives and hearts, proclaiming a complete dependence on and dedication to Christ’s work on the Cross.These verses from Psalm 96 capture the heart of what Christian music should be: praise to the Maker and Savior of man from a worship filled heart. Due to the wonder, awe and praise stored within the heart, the Christian should exclaim praise to God before a lost world: “He is the ‘rock of our salvation’, there is ‘no other God that can deliver’!” (Daniel 3:29). Through our songs and lives, may God be glorified and uplifted so that He might be seen as the God who is worthy of worship, praise and dedication.'
 			]
-		}
+		},
+		{
+			title: `Outreach`,
+			description: [
+				`At Emmanuel Baptist Church, we have a passion to reach our community, our country, and those around the world with the Gospel (Acts 1:8). Locally, we accomplish this through our bus ministry, and church-wide soul winning. Abroad, we accomplish this through our support of many missionaries. Currently, we support works in Moldova, Venezuela, Panama, China, India, Brazil, and a children's home in Brazil. In addition to supporting these works, we also support FBN radio which has a reach spanning the globe.`
+			]
+		},
 	];
 
 	const beliefInformation: BeliefInfo[] = [
@@ -293,6 +296,18 @@
 					<div
 						class="overflow-hidden relative p-px bg-gradient-to-b from-gray-200 to-white rounded-2xl"
 					>
+						{#if item.image}
+							<div class="overflow-hidden relative rounded-t-xl">
+								<img
+									src={item.image}
+									alt="art cover"
+									loading="lazy"
+									width="1000"
+									height="667"
+									class="object-cover object-top w-full h-64 transition duration-500 group-hover:scale-105"
+								/>
+							</div>
+						{/if}
 						<div class="flex relative flex-col gap-6 p-8 bg-gray-100 rounded-2xl dark:bg-gray-900">
 							<div class="flex gap-4">
 								<div>

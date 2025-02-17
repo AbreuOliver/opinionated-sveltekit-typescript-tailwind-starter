@@ -1,54 +1,38 @@
-# Oliver's SvelteKit + TypeScript + TailwindCSS Starter Template
+# Emmanuel Baptist Church Website
 
-Everything you need to build a full-featured Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This repository contains the source code for the official website of Emmanuel Baptist Church, a community-focused organization based in North Carolina. The site is built with modern web technologies to ensure fast, accessible, and user-friendly experiences for visitors.
 
-## What's inside
+Visit the live site: [https://www.emmanuelbaptistnc.org](https://www.emmanuelbaptistnc.org)
 
-This starter template comes with:
+---
+
+## What's Inside
+
+This site is powered by modern tools and frameworks to ensure fast performance, maintainability, and developer productivity. Here's a breakdown of the technologies used:
 
 ### Bundler
+- [Vite](https://vitejs.dev): Next-generation frontend tooling for fast builds and hot module replacement.
 
-- [Vite](https://vitejs.dev): Next Generation Frontend Tooling.
-
-### JavaScript frameworks
-
-- [Svelte Kit](https://kit.svelte.dev): Web development, streamlined.
+### Frameworks
+- [Svelte Kit](https://kit.svelte.dev): A streamlined, modern web development framework.
 
 ### Components
-
 - [svelte-headlessui](https://captaincodeman.github.io/svelte-headlessui): Unstyled, fully accessible UI components for Svelte.
-- [svelte-transition](https://github.com/captaincodeman/svelte-transition): Svelte Transition Component.
-- [svelte-french-toast](https://svelte-french-toast.com/): Buttery smooth toast notifications.
-- [svelte-themes](https://github.com/beynar/svelte-themes/): Perfect SvelteKit dark mode in 2 lines of code. Support System preference and any other theme with no flashing.
-- [@poppanator/sveltekit-svg](https://github.com/poppa/sveltekit-svg): SvelteKit plugin that makes it possible to import SVG files as Svelte components, inline SVG code or urls.
 
-### Type checking
+### CSS Frameworks
+- [Tailwind CSS](https://tailwindcss.com): A utility-first CSS framework for rapid UI development.
+- Preconfigured `tailwind.config.js` with sensible defaults.
 
-- [TypeScript](https://www.typescriptlang.org): JavaScript with syntax for types.
-
-### CSS frameworks
-
-- [Tailwind CSS](https://tailwindcss.com): Rapidly build modern websites without ever leaving your HTML.
-- Sensible defaults in the `tailwind.config.js`.
+### Type Checking
+- [TypeScript](https://www.typescriptlang.org): A superset of JavaScript with static type-checking.
 
 ### Formatting & Linting
-
-- [Prettier](https://prettier.io): An opinionated code formatter.
-- [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss): Prettier plugin for Tailwind CSS that automatically sorts classes based on the official recommended class order.
-- [Eslint](https://eslint.org): Find and fix problems in your JavaScript code.
-
+- [Prettier](https://prettier.io): Opinionated code formatting.
+- [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss): Automatically sorts Tailwind CSS classes.
+- [Eslint](https://eslint.org): Identify and fix JavaScript code issues.
 
 ### Fonts
-- [Inter variable](https://rsms.me/inter/): A typeface carefully crafted & designed for computer screens.
-- [Optimizations](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to minimize layout shifts.
+- [Epilogue](https://fonts.google.com/specimen/Epilogue): A modern, clean font for a professional appearance.
 
-### Utils
+---
 
-- [svelte-local-storage-store](https://github.com/joshnuss/svelte-local-storage-store): A Svelte store that persists to localeStorage.
-- [date-fns](https://date-fns.org/): Modern JavaScript date utility library.
-- [date-fns-tz](https://github.com/marnusw/date-fns-tz): Complementary library for date-fns v2 adding IANA time zone support.
-- [@neoconfetti/svelte](https://github.com/puruvj/neoconfetti): Confetti in Svelte.
-
-## Credits
-
-svelte-themes port of next-theme for SvelteKit by [beynar/svelte-themes](https://github.com/beynar/svelte-themes/).

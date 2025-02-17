@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Calendar from '$lib/components/Calendar.svelte';
 	import SmallCalendar from '$lib/components/SmallCalendar.svelte';
 	import '../global.css';
 </script>
@@ -216,7 +215,7 @@
 				>
 					<div class="overflow-hidden relative rounded-xl">
 						<img
-							src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/children-ministry_csc99yE_h1.jpg?updatedAt=1730625297176"
+							src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/Church%20Fellowshipping_Dk0eKsE4a7.JPG?updatedAt=1733798803071"
 							alt="art cover"
 							loading="lazy"
 							width="1000"
@@ -253,7 +252,7 @@
 				>
 					<div class="overflow-hidden relative rounded-xl">
 						<img
-							src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/bible-study_yGo1gIIPF.jpeg?updatedAt=1730625294805"
+							src="https://images.unsplash.com/photo-1499051775559-dcb9f02d2107?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 							alt="art cover"
 							loading="lazy"
 							width="1000"
@@ -289,7 +288,7 @@
 	<!-- /**********/ MEDIA SECTION /**********/ -->
 	<section id="media" class="relative py-12 mt-40 w-screen bg-gray-200 border-y">
 		<div class="flex-col items-center mx-auto w-screen text-center md:w-3/4">
-			<h2 class="mt-8 text-3xl font-bold text-gray-700 md:text-4xl">Featured Media</h2>
+			<h2 class="my-8 text-3xl font-bold text-gray-700 md:text-4xl">Featured Sermon</h2>
 			<p class="px-4 my-8 mb-16 text-gray-700">
 				The Christian's Role In Government by Pastor Ricky Garner
 			</p>
@@ -300,6 +299,21 @@
 				/>
 				Your browser does not support the video tag.
 			</video>
+			<!-- <div style="position:relative;overflow:hidden;padding-top:56.25%;">
+				<iframe
+					allow="autoplay; fullscreen"
+					allowfullscreen="true"
+					class="resi-video-frame"
+					src="https://control.resi.io/webplayer/video.html?id=ae4b050f-68f2-458f-834e-bd578c9b51d3"
+					style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+				>
+				</iframe>
+			</div>
+			<script
+				defer
+				type="text/javascript"
+				src="https://control.resi.io/webplayer/page.min.js"
+			></script> -->
 		</div>
 	</section>
 	<!-- /**********/ EVENTS SECTION /**********/ -->
@@ -359,7 +373,7 @@
 			</p>
 		</div>
 		<div
-			class="flex-col justify-center items-center mx-auto mb-16 space-y-8 w-full text-center md:w-1/4"
+			class="flex-col justify-center items-center px-4 mx-auto mb-16 space-y-8 w-full text-center md:w-1/3"
 		>
 			<h4 class="text-xl font-semibold text-center">Ways to give</h4>
 			<div class="flex items-center p-6 rounded-lg border-2 border-gray-800">
@@ -377,7 +391,7 @@
 						/>
 					</svg>
 				</div>
-				<h2 class="ml-4 text-2xl font-black">On Campus</h2>
+				<h2 class="ml-4 text-lg font-black md:text-2xl">On Campus</h2>
 			</div>
 			<div class="flex items-center p-6 rounded-lg border-2 border-gray-600">
 				<div class="flex justify-center items-center p-2 w-10 h-10 bg-gray-600 rounded-full">
@@ -394,7 +408,7 @@
 						/>
 					</svg>
 				</div>
-				<h2 class="ml-4 text-2xl font-black text-gray-800">By Mail</h2>
+				<h2 class="ml-4 text-lg font-black text-gray-800 md:text-2xl">By Mail</h2>
 			</div>
 			<div class="flex items-center p-6 rounded-lg border-2 border-gray-400">
 				<div class="flex justify-center items-center p-2 w-10 h-10 bg-gray-400 rounded-full">
@@ -411,7 +425,7 @@
 						/>
 					</svg>
 				</div>
-				<h2 class="ml-4 text-2xl font-black text-gray-700">Online (Coming Soon)</h2>
+				<h2 class="ml-4 text-lg font-black text-gray-700 md:text-2xl">Online (Coming Soon)</h2>
 			</div>
 		</div>
 	</section>

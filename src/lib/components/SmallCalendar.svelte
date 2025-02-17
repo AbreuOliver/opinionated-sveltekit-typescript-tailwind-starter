@@ -296,6 +296,24 @@
 		<div class="p-4 text-xl font-bold text-center bg-transparent border-b border-mono-300">
 			{currentMonthTitle}
 		</div>
+		<!-- <div class="grid grid-cols-7 gap-1 p-4">
+			<div class="font-semibold text-center">Su</div>
+			<div class="font-semibold text-center">Mo</div>
+			<div class="font-semibold text-center">Tu</div>
+			<div class="font-semibold text-center">We</div>
+			<div class="font-semibold text-center">Th</div>
+			<div class="font-semibold text-center">Fr</div>
+			<div class="font-semibold text-center">Sa</div>
+
+			{#each currentMonthDays as day}
+				<div
+					class="h-10 flex items-center justify-center text-sm border border-mono-200/50 rounded-md
+                    {day ? 'bg-white' : 'bg-mono-50 text-mono-300'}"
+				>
+					{day}
+				</div>
+			{/each}
+		</div> -->
 		<div class="grid grid-cols-7 gap-1 p-4">
 			<div class="font-semibold text-center">Su</div>
 			<div class="font-semibold text-center">Mo</div>

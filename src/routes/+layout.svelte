@@ -2,8 +2,8 @@
 	import dayjs from 'dayjs';
 	import Banner from '$lib/components/Banner.svelte';
 	import '../global.css';
-	import Footer from '$lib/components/Footer.svelte';
 
+	let currentYear: number = new Date().getFullYear();
 	let isMenuOpen: boolean = false;
 
 	function toggleMenu() {
@@ -339,26 +339,29 @@
 			</div>
 		</div>
 		<hr class="my-12 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-		<div class="pb-8 sm:flex sm:items-center sm:justify-between">
-			<p class="flex flex-wrap text-base leading-relaxed text-gray-200 sm:text-center">
-				<span class="mr-2 whitespace-nowrap">© 2024 Emmanuel Baptist Church.</span>
-				All Rights Reserved.
-				<a href="/legal#privacy-policy" class="mx-2 underline cursor-pointer hover:text-sky-300"
+		<div class="mb-8 sm:flex items-start sm:justify-between">
+			<div class="flex flex-wrap text-base leading-relaxed text-gray-200 sm:text-center">
+				<p>
+					<span class="mr-2 whitespace-nowrap">© {currentYear} • Emmanuel Baptist Church.</span>
+					<span class="mr-2">All Rights Reserved.</span>
+				</p>
+				<br class="visible md:hidden" />
+				<a href="/legal#privacy-policy" class="mr-2 underline cursor-pointer hover:text-sky-300"
 					>Privacy Policy
 				</a>
 				&
 				<a href="/legal#terms-of-service" class="ml-2 underline cursor-pointer hover:text-sky-300"
 					>Terms of Use</a
 				>
-			</p>
-			<div class="flex mt-4 sm:justify-center sm:mt-0">
-				<span class="text-gray-200 hover:text-gray-900 dark:hover:text-white"
+			</div>
+			<div class="flex justify-start sm:mt-2 mt-0">
+				<span class="text-gray-200 hover:text-sky-300 dark:hover:text-white"
 					><a
 						href="https://www.facebook.com/emmanuelchurchlagrange/"
 						target="_blank"
 						rel="noopener noreferrer"
 						><svg
-							class="h-7 sm:pl-3"
+							class="h-8 md:h-10 w-auto"
 							xmlns="http://www.w3.org/2000/svg"
 							width="auto"
 							height="auto"
@@ -376,20 +379,3 @@
 		</div>
 	</div>
 </footer>
-
-<!-- <div
-		class="row-start-3 w-full md:col-start-2 md:row-start-2 md:block"
-		data-svelte-h="svelte-1l0otrq"
-	>
-		<h2 class="mb-6 font-semibold text-gray-400 uppercase text-md">Legal</h2>
-		<ul class="pl-4 font-medium text-gray-200 md:pl-0">
-			<li class="mb-4">
-				<a href="/legal#privacy-policy" class="cursor-pointer hover:underline">Privacy Policy</a>
-			</li>
-			<li>
-				<a href="/legal#terms-of-service" class="cursor-pointer hover:underline"
-					>Terms of Use</a
-				>
-			</li>
-		</ul>
-	</div> -->
