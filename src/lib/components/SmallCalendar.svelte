@@ -115,7 +115,8 @@
 				date: '03/07/2025 - 03/09/2025',
 				formattedDate: 'Fri, Mar 07 - Sun, Mar 09',
 				title: 'Revival with Scott Pauley',
-				description: ''
+				description:
+					'Fri, Mar 7 at 7:00 PM,\n Sat, Mar 8 at 5:00 PM,\n Sun, Mar 9 at 11:00 AM & 6:00 PM'
 			},
 			{
 				date: '03/11/2025',
@@ -343,7 +344,7 @@
 						{event.title}
 					</p>
 					{#if event.description}
-						<p class="text-base text-mono-400">{event.description}</p>
+						<p class="text-base text-mono-500 whitespace-pre-line pl-2 pt-1">{event.description}</p>
 					{/if}
 				</div>
 			{/each}
@@ -382,7 +383,7 @@
 						{event.title}
 					</p>
 					{#if event.description}
-						<p class="text-base text-mono-400">{event.description}</p>
+						<p class="text-base text-mono-500 whitespace-pre-line pl-2 pt-1">{event.description}</p>
 					{/if}
 				</div>
 			{/each}
