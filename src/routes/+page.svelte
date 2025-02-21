@@ -314,6 +314,12 @@
 				type="text/javascript"
 				src="https://control.resi.io/webplayer/page.min.js"
 			></script>
+			<button
+				type="button"
+				class="text-mono-800 py-2.5 px-5 text-center me-2 mt-12 text-xl focus:outline-none backdrop-blur-sm rounded-full border-2 border-mono-800 hover:bg-gray-100 hover:text-theme-900 focus:z-3 focus:ring-4 focus:ring-gray-100 w-[95%] md:max-w-[275px] h-14 transform transition-transform duration-300 ease-in-out hover:scale-105 font-semibold"
+			>
+				<a href="https://www.youtube.com/@emmanuelbaptistnc85/videos">View Past Sermons</a>
+			</button>
 		</div>
 	</section>
 	<!-- /**********/ EVENTS SECTION /**********/ -->
