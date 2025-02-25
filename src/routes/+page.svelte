@@ -18,7 +18,7 @@
 			<div class="flex-col items-center px-6 mx-auto w-full max-w-7xl md:px-12 xl:px-6">
 				<div class="relative flex-col items-center pt-36 ml-auto">
 					<div class="flex-col items-center mx-auto w-full text-center md:w-1/2 lg:w-2/3">
-						<h1 class="text-5xl font-bold text-gray-900 md:text-6xl xl:text-7xl">
+						<h1 class="text-5xl font-bold text-mono-900 md:text-6xl xl:text-7xl">
 							<span
 								class="animate-fade-up animate-duration-700 animate-delay-1500 animate-ease-linear"
 								>Truth.</span
@@ -35,7 +35,7 @@
 							>
 						</h1>
 
-						<p class="mt-8 text-gray-700">
+						<p class="mt-8 text-mono-700">
 							A loving church in La Grange, NC that believes in the life-changing power of Jesus.
 							Sharing His truth and hope in our community and around the world.
 						</p>
@@ -60,9 +60,9 @@
 						<!-- INFORMATION SUBSECTION -->
 						<div class="gap-x-12 justify-evenly py-8 mt-16 w-full sm:flex">
 							<div class="text-center grow min-w-[300px]">
-								<div class="p-6 rounded-lg border border-gray-200">
-									<h6 class="mb-4 text-lg font-bold text-gray-700">Service Times</h6>
-									<ul class="pl-4 space-y-4 font-medium text-gray-500 md:pl-0">
+								<div class="p-6 rounded-lg border border-mono-200">
+									<h6 class="mb-4 text-lg font-bold text-mono-700">Service Times</h6>
+									<ul class="pl-4 space-y-4 font-medium text-mono-500 md:pl-0">
 										<li class="flex justify-between items-center">
 											<span class="text-left">Sunday <br /> Bible Study</span>
 											<span class="text-right">10:00 AM</span>
@@ -79,9 +79,9 @@
 								</div>
 							</div>
 							<div class="text-center grow min-w-[300px]">
-								<div class="p-6 mt-4 rounded-lg border border-gray-200 md:mt-0">
-									<h6 class="mb-6 text-lg font-bold text-gray-700">Contact Info</h6>
-									<ul class="pl-4 space-y-4 font-medium text-gray-500 md:pl-0">
+								<div class="p-6 mt-4 rounded-lg border border-mono-200 md:mt-0">
+									<h6 class="mb-6 text-lg font-bold text-mono-700">Contact Info</h6>
+									<ul class="pl-4 space-y-4 font-medium text-mono-500 md:pl-0">
 										<li class="flex flex-col text-left md:flex-row md:justify-start">
 											<a
 												href="https://www.google.com/maps/search/?api=1&amp;query=5975+US+70+East+La+Grange,+NC+28551"
@@ -160,12 +160,12 @@
 		</div>
 	</section>
 	<!-- /**********/ DISCOVER SECTION /**********/ -->
-	<section id="discover" class="pt-20 w-screen border-t border-gray-200">
+	<section id="discover" class="pt-20 w-screen border-t border-mono-200">
 		<div class="flex flex-col items-center px-6 mx-auto max-w-8xl md:px-12 xl:px-6">
 			<!-- Header Section -->
 			<div class="mx-auto mb-16 text-center md:w-1/2 lg:w-2/3">
-				<h2 class="mt-8 text-3xl font-bold text-gray-700 md:text-4xl">Discover Emmanuel</h2>
-				<p class="my-8 text-gray-700">
+				<h2 class="mt-8 text-3xl font-bold text-mono-700 md:text-4xl">Discover Emmanuel</h2>
+				<p class="my-8 text-mono-700">
 					Learn more about who we are, how we serve God and others, and what we believe
 				</p>
 			</div>
@@ -174,7 +174,7 @@
 				<!-- Card 1 -->
 				<a
 					href="/about#our-pastor"
-					class="p-6 bg-white bg-opacity-50 rounded-2xl border border-gray-100 shadow-2xl cursor-pointer group sm:p-8 shadow-gray-600/10"
+					class="p-6 bg-white bg-opacity-50 rounded-2xl border border-mono-100 shadow-2xl cursor-pointer group sm:p-8 shadow-mono-600/10"
 				>
 					<div class="overflow-hidden relative rounded-md">
 						<img
@@ -187,8 +187,8 @@
 						/>
 					</div>
 					<div class="mt-6 group relative bg-white transition hover:z-[1]">
-						<h3 class="text-2xl font-semibold text-gray-800">Leadership</h3>
-						<p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
+						<h3 class="text-2xl font-semibold text-mono-800">Leadership</h3>
+						<p class="mt-6 mb-8 text-mono-600 dark:text-mono-300">
 							Pastor Ricky Garner, Pastor of Emmanuel Baptist Church
 						</p>
 						<span class="flex justify-between items-center group-hover:text-mono-900">
@@ -211,7 +211,7 @@
 				<!-- Card 2 -->
 				<a
 					href="/about#ministries"
-					class="p-6 bg-white bg-opacity-50 rounded-2xl border border-gray-100 shadow-2xl cursor-pointer group sm:p-8 shadow-gray-600/10"
+					class="p-6 bg-white bg-opacity-50 rounded-2xl border border-mono-100 shadow-2xl cursor-pointer group sm:p-8 shadow-mono-600/10"
 				>
 					<div class="overflow-hidden relative rounded-xl">
 						<img
@@ -224,8 +224,8 @@
 						/>
 					</div>
 					<div class="mt-6 group relative bg-white transition hover:z-[1]">
-						<h3 class="text-2xl font-semibold text-gray-800">Ministries</h3>
-						<p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
+						<h3 class="text-2xl font-semibold text-mono-800">Ministries</h3>
+						<p class="mt-6 mb-8 text-mono-600 dark:text-mono-300">
 							Learn how we serve God in our community and around the world
 						</p>
 						<span class="flex justify-between items-center group-hover:text-mono-900">
@@ -248,7 +248,7 @@
 				<!-- Card 3 -->
 				<a
 					href="/about#beliefs"
-					class="p-6 bg-white bg-opacity-50 rounded-2xl border border-gray-100 shadow-2xl cursor-pointer group sm:p-8 shadow-gray-600/10"
+					class="p-6 bg-white bg-opacity-50 rounded-2xl border border-mono-100 shadow-2xl cursor-pointer group sm:p-8 shadow-mono-600/10"
 				>
 					<div class="overflow-hidden relative rounded-xl">
 						<img
@@ -261,8 +261,8 @@
 						/>
 					</div>
 					<div class="mt-6 group relative bg-white transition hover:z-[1]">
-						<h3 class="text-2xl font-semibold text-gray-800">Beliefs</h3>
-						<p class="mt-6 mb-8 text-gray-600 dark:text-gray-300">
+						<h3 class="text-2xl font-semibold text-mono-800">Beliefs</h3>
+						<p class="mt-6 mb-8 text-mono-600 dark:text-mono-300">
 							The beliefs that guide our behaviors
 						</p>
 						<span class="flex justify-between items-center group-hover:text-mono-900">
@@ -286,10 +286,10 @@
 		</div>
 	</section>
 	<!-- /**********/ MEDIA SECTION /**********/ -->
-	<section id="media" class="relative py-12 mt-40 w-screen bg-gray-200 border-y">
+	<section id="media" class="relative py-12 mt-40 w-screen bg-mono-200 border-y">
 		<div class="flex-col items-center mx-auto w-screen text-center md:w-3/4">
-			<h2 class="my-8 text-3xl font-bold text-gray-700 md:text-4xl">Featured Sermon</h2>
-			<p class="px-4 my-8 mb-16 text-gray-700">
+			<h2 class="mt-8 text-3xl font-bold text-mono-700 md:text-4xl mb-12">Latest Sermon</h2>
+			<!-- <p class="px-4 my-8 mb-16 text-mono-700">
 				The Christian's Role In Government by Pastor Ricky Garner
 			</p>
 			<video class="object-cover pb-4 w-screen h-full rounded-xl" autoplay muted loop controls>
@@ -298,14 +298,14 @@
 					type="video/mp4"
 				/>
 				Your browser does not support the video tag.
-			</video>
-			<!-- <div style="position:relative;overflow:hidden;padding-top:56.25%;">
+			</video> -->
+			<div style="position:relative;overflow:hidden;padding-top:56.25%;">
 				<iframe
+					title="EBC Livestream or Latest Sermon"
 					allow="autoplay; fullscreen"
-					allowfullscreen="true"
 					class="resi-video-frame"
-					src="https://control.resi.io/webplayer/video.html?id=ae4b050f-68f2-458f-834e-bd578c9b51d3"
-					style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+					src="https://control.resi.io/webplayer/video.html?id=ae4b050f-68f2-458f-834e-bd578c9b51d3&startPos=290"
+					style="position:absolute;top:0;left:0;width:100%;height:100%;border:none; border-radius: 15px;"
 				>
 				</iframe>
 			</div>
@@ -313,21 +313,27 @@
 				defer
 				type="text/javascript"
 				src="https://control.resi.io/webplayer/page.min.js"
-			></script> -->
+			></script>
+			<button
+				type="button"
+				class="text-mono-800 py-2.5 px-5 text-center me-2 mt-12 text-xl focus:outline-none backdrop-blur-sm rounded-full border-2 border-mono-800 hover:bg-gray-100 hover:text-theme-900 focus:z-3 focus:ring-4 focus:ring-gray-100 w-[95%] md:max-w-[275px] h-14 transform transition-transform duration-300 ease-in-out hover:scale-105 font-semibold"
+			>
+				<a href="https://www.youtube.com/@emmanuelbaptistnc85/videos">View Past Sermons</a>
+			</button>
 		</div>
 	</section>
 	<!-- /**********/ EVENTS SECTION /**********/ -->
 	<section id="events" class="w-screen">
 		<div class="flex-col items-center mx-auto w-full text-center md:w-1/2 lg:w-2/3">
-			<h2 class="mt-8 text-3xl font-bold text-gray-700 md:text-4xl">Upcoming Events</h2>
-			<p class="px-4 my-8 text-gray-700">
+			<h2 class="mt-8 text-3xl font-bold text-mono-700 md:text-4xl">Upcoming Events</h2>
+			<p class="px-4 my-8 text-mono-700">
 				See what events are planned for the coming weeks. Join us as we grow in faith and fellowship
 				together!
 			</p>
 		</div>
 		<!-- EVENT DETAILS -->
 		<div
-			class="mx-4 md:mx-auto max-w-md md:max-h-[25rem] overflow-hidden rounded-xl border-2 bg-white shadow-none md:max-w-4xl my-6"
+			class="mx-4 md:mx-auto max-w-md md:max-h-[25rem] overflow-hidden rounded-xl border-2 bg-white shadow-none md:max-w-4xl my-12"
 		>
 			<div class="md:flex">
 				<div class="shrink-0 py-0">
@@ -345,7 +351,7 @@
 					<h4 class="mt-1 block text-lg leading-tight font-medium my-4 text-black">
 						Spring Revival with Evangelist Scott Pauley
 					</h4>
-					<p class="mt-2 text-gray-500 text-base md:text-[0.9rem]">
+					<p class="mt-2 text-mono-500 text-base md:text-[0.9rem]">
 						For nearly twenty years Scott Pauley served as an assistant pastor, college
 						administrator, and Bible instructor. He now travels extensively as an evangelist across
 						America and in several foreign countries. His passion is to preach the gospel, teach the
@@ -364,20 +370,20 @@
 	<!-- /**********/ GIVE SECTION /**********/ -->
 	<section id="give" class="items-center py-20 w-screen bg-sky-300">
 		<div class="flex-col items-center mx-auto mb-16 w-screen text-center md:w-1/2 lg:w-2/3">
-			<h2 class="mt-8 text-3xl font-bold text-gray-700 md:text-4xl">Giving</h2>
-			<h3 class="my-8 text-2xl text-gray-700">Your obedience and generosity is changing lives.</h3>
-			<p class="px-4 my-8 text-gray-700">
+			<h2 class="mt-8 text-3xl font-bold text-mono-700 md:text-4xl">Giving</h2>
+			<h3 class="my-8 text-2xl text-mono-700">Your obedience and generosity is changing lives.</h3>
+			<p class="px-4 my-8 text-mono-700">
 				Our church's mission is funded solely by the giving of her members and regular attenders. <br
 				/>
 				You can give by cash or check in any of our services or at our church office throughout the week.
 			</p>
 		</div>
 		<div
-			class="flex-col justify-center items-center px-4 mx-auto mb-16 space-y-8 w-full text-center md:w-1/3"
+			class="flex-col justify-center items-center mx-auto mb-16 space-y-8 w-full text-center md:w-1/3"
 		>
 			<h4 class="text-xl font-semibold text-center">Ways to give</h4>
-			<div class="flex items-center p-6 rounded-lg border-2 border-gray-800">
-				<div class="flex justify-center items-center p-2 w-10 h-10 bg-gray-800 rounded-full">
+			<div class="flex items-center p-6 rounded-lg border-2 border-mono-800">
+				<div class="flex justify-center items-center p-2 w-10 h-10 bg-mono-800 rounded-full">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="w-6 h-6 text-white"
@@ -393,8 +399,8 @@
 				</div>
 				<h2 class="ml-4 text-lg font-black md:text-2xl">On Campus</h2>
 			</div>
-			<div class="flex items-center p-6 rounded-lg border-2 border-gray-600">
-				<div class="flex justify-center items-center p-2 w-10 h-10 bg-gray-600 rounded-full">
+			<div class="flex items-center p-6 rounded-lg border-2 border-mono-600">
+				<div class="flex justify-center items-center p-2 w-10 h-10 bg-mono-600 rounded-full">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="w-6 h-6 text-white"
@@ -408,10 +414,10 @@
 						/>
 					</svg>
 				</div>
-				<h2 class="ml-4 text-lg font-black text-gray-800 md:text-2xl">By Mail</h2>
+				<h2 class="ml-4 text-2xl font-black text-mono-800">By Mail</h2>
 			</div>
-			<div class="flex items-center p-6 rounded-lg border-2 border-gray-400">
-				<div class="flex justify-center items-center p-2 w-10 h-10 bg-gray-400 rounded-full">
+			<div class="flex items-center p-6 rounded-lg border-2 border-mono-400">
+				<div class="flex justify-center items-center p-2 w-10 h-10 bg-mono-400 rounded-full">
 					<svg
 						class="w-6 h-6 text-black"
 						xmlns="http://www.w3.org/2000/svg"
@@ -425,7 +431,7 @@
 						/>
 					</svg>
 				</div>
-				<h2 class="ml-4 text-lg font-black text-gray-700 md:text-2xl">Online (Coming Soon)</h2>
+				<h2 class="ml-4 text-2xl font-black text-mono-700">Online (Coming Soon)</h2>
 			</div>
 		</div>
 	</section>
