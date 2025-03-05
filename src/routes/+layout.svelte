@@ -27,7 +27,7 @@
 		<Banner
 			bannerText={`Join us for revival with Evangelist Scott Pauley in ${daysUntilRevival} days!`}
 		/>
-	{:else if daysUntilRevival === 1}
+	{:else if currentDate.isSame('2025-03-06', 'day')}
 		<Banner bannerText="Our revival services with Evangelist Scott Pauley begin tomorrow!" />
 	{:else if currentDate.isSame('2025-03-07', 'day')}
 		<Banner
