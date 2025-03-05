@@ -1,10 +1,14 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import dayjs from 'dayjs';
 	import Banner from '$lib/components/Banner.svelte';
 	import '../global.css';
 
 	let currentYear: number = new Date().getFullYear();
 	let isMenuOpen: boolean = false;
+	let currentDate: dayjs.Dayjs;
+	let daysUntilRevival: number;
+	let isBeforeEnd: boolean;
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
@@ -13,18 +17,17 @@
 
 	const targetDate = dayjs('2025-03-07');
 	const lastDate = dayjs('2025-03-10');
-	const currentDate = dayjs();
 
-	// Calculate days until revival
-	const daysUntilRevival = targetDate.diff(currentDate, 'day');
+	onMount(() => {
+		currentDate = dayjs().startOf('day');
+		daysUntilRevival = targetDate.diff(currentDate, 'day');
+		isBeforeEnd = currentDate.isBefore(lastDate);
 
-	// Check if we're before the end date
-	const isBeforeEnd = currentDate.isBefore(lastDate);
-
-	const currentDate = dayjs().startOf('day');
-	console.log('Current Date:', currentDate.format('YYYY-MM-DD'));
-	console.log('Target Date:', targetDate.format('YYYY-MM-DD'));
-	console.log('Days Until Revival:', daysUntilRevival);
+		console.log('Current Date:', currentDate.format('YYYY-MM-DD'));
+		console.log('Target Date:', targetDate.format('YYYY-MM-DD'));
+		console.log('Days Until Revival:', daysUntilRevival);
+		console.log('Is Before End:', isBeforeEnd);
+	});
 </script>
 
 {#if isBeforeEnd} 
@@ -32,22 +35,23 @@
 		<Banner 
 			bannerText={`Join us for revival with Evangelist Scott Pauley in ${daysUntilRevival} days!`} 
 		/> 
-	{:else if currentDate.isSame('2025-03-06', 'day')} 
+	{:else if currentDate && currentDate.isSame('2025-03-06', 'day')} 
 		<Banner bannerText="Our revival services with Evangelist Scott Pauley begin tomorrow!" /> 
-	{:else if currentDate.isSame('2025-03-07', 'day')} 
+	{:else if currentDate && currentDate.isSame('2025-03-07', 'day')} 
 		<Banner 
 			bannerText="Join our revival service with Evangelist Scott Pauley this evening at 7pm!" 
 		/> 
-	{:else if currentDate.isSame('2025-03-08', 'day')} 
+	{:else if currentDate && currentDate.isSame('2025-03-08', 'day')} 
 		<Banner 
 			bannerText="Join our revival service with Evangelist Scott Pauley this evening at 5pm!" 
 		/> 
-	{:else if currentDate.isSame('2025-03-09', 'day')} 
+	{:else if currentDate && currentDate.isSame('2025-03-09', 'day')} 
 		<Banner 
 			bannerText="Join our revival service with Evangelist Scott Pauley today during our regular morning and evening services!" 
 		/> 
 	{/if} 
 {/if}
+
 <header class="flex sticky top-0 z-30 -mb-16 h-20 backdrop-blur-sm">
 	<nav class="absolute z-10 w-full border-b border-black/5 lg:border-transparent">
 		<div class="px-6 mx-auto max-w-5xl md:px-12 xl:px-6">
