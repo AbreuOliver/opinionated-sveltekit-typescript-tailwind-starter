@@ -18,8 +18,13 @@
 	// Calculate days until revival
 	const daysUntilRevival = targetDate.diff(currentDate, 'day');
 
-	// THE SECRETE SAUCE: Check if we're before the end date
+	// Check if we're before the end date
 	const isBeforeEnd = currentDate.isBefore(lastDate);
+
+	const currentDate = dayjs().startOf('day');
+	console.log('Current Date:', currentDate.format('YYYY-MM-DD'));
+	console.log('Target Date:', targetDate.format('YYYY-MM-DD'));
+	console.log('Days Until Revival:', daysUntilRevival);
 </script>
 
 {#if isBeforeEnd} 
