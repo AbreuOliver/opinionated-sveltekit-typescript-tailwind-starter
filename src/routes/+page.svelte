@@ -331,8 +331,8 @@
 				together!
 			</p>
 		</div>
-		<!-- EVENT DETAILS -->
-		<div
+		<!-- FEATURED EVENT DETAILS -->
+		<!-- <div
 			class="mx-4 md:mx-auto max-w-md md:max-h-[25rem] overflow-hidden rounded-xl border-2 bg-white shadow-none md:max-w-4xl my-12"
 		>
 			<div class="md:flex">
@@ -363,7 +363,7 @@
 					</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- CALENDAR COMPONENT -->
 		<SmallCalendar />
 	</section>
