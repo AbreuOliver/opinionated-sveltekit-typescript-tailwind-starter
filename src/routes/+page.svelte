@@ -304,8 +304,8 @@
 					allow="autoplay; fullscreen"
 					allowfullscreen="true"
 					class="resi-video-frame"
-					src="https://control.resi.io/webplayer/video.html?id=ae4b050f-68f2-458f-834e-bd578c9b51d3"
-					style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+					src="https://control.resi.io/webplayer/video.html?id=ae4b050f-68f2-458f-834e-bd578c9b51d3&startPos=290"
+					style="position:absolute;top:0;left:0;width:100%;height:100%;border:none; border-radius: 15px;"
 				>
 				</iframe>
 			</div>
@@ -326,8 +326,8 @@
 			</p>
 		</div>
 		<!-- EVENT DETAILS -->
-		<div
-			class="mx-4 md:mx-auto max-w-md md:max-h-[25rem] overflow-hidden rounded-xl border-2 bg-white shadow-none md:max-w-4xl my-6"
+		<!-- <div
+			class="mx-4 md:mx-auto max-w-md md:max-h-[25rem] overflow-hidden rounded-xl border-2 bg-white shadow-none md:max-w-4xl my-12"
 		>
 			<div class="md:flex">
 				<div class="shrink-0 py-0">
@@ -357,7 +357,7 @@
 					</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- CALENDAR COMPONENT -->
 		<SmallCalendar />
 	</section>

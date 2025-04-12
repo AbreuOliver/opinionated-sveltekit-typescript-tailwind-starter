@@ -11,8 +11,8 @@
 		console.log('Menu State:', isMenuOpen);
 	}
 
-	const targetDate = dayjs('2025-03-07');
-	const lastDate = dayjs('2025-03-10');
+	const targetDate = dayjs('2025-04-20');
+	const lastDate = dayjs('2025-04-20');
 	const currentDate = dayjs();
 
 	// Calculate days until revival
@@ -23,25 +23,11 @@
 </script>
 
 {#if isBeforeEnd}
-	{#if daysUntilRevival > 1}
-		<Banner
-			bannerText={`Join us for revival with Evangelist Scott Pauley in ${daysUntilRevival} days!`}
-		/>
-	{:else if daysUntilRevival === 1}
-		<Banner bannerText="Our revival services with Evangelist Scott Pauley begin tomorrow!" />
-	{:else if currentDate.isSame('2025-03-07', 'day')}
-		<Banner
-			bannerText="Join our revival service with Evangelist Scott Pauley this evening at 7pm!"
-		/>
-	{:else if currentDate.isSame('2025-03-08', 'day')}
-		<Banner
-			bannerText="Join our revival service with Evangelist Scott Pauley this evening at 5pm!"
-		/>
-	{:else if currentDate.isSame('2025-03-09', 'day')}
-		<Banner
-			bannerText="Join our revival service with Evangelist Scott Pauley today during our regular morning and evening services!"
-		/>
-	{/if}
+	<Banner
+		bannerText={`
+		Join us for Easter!
+		Celebrating the resurrection of the Lord Jesus Christ on April 20th.`}
+	/>
 {/if}
 <header class="flex sticky top-0 z-30 -mb-16 h-20 backdrop-blur-sm">
 	<nav class="absolute z-10 w-full border-b border-black/5 lg:border-transparent">
