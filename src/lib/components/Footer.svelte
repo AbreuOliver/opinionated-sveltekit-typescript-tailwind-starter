@@ -13,7 +13,7 @@
 >
 	<div class="col-span-1 col-start-2 mx-auto w-full">
 		<div
-			class="grid grid-cols-1 gap-y-8 grid-rows-[75px_auto_auto_auto] md:grid-cols-2 md:grid-rows-[75px_auto_auto] "
+			class="grid grid-cols-1 gap-y-8 grid-rows-[75px_auto_auto_auto] md:grid-cols-2 md:grid-rows-[75px_auto_auto]"
 		>
 			<div class="col-start-1 row-start-1 w-full h-full">
 				<a href="https://flowbite.com/" class="flex items-center">
@@ -23,8 +23,8 @@
 				</a>
 			</div>
 			<div class="col-start-1 row-start-2 w-full">
-				<h2 class="mb-6 text-lg font-semibold text-gray-400 uppercase">Service Times</h2>
-				<ul class="pl-4 space-y-4 font-medium text-gray-200 md:pl-0">
+				<h2 class="mb-6 text-lg font-semibold text-neutral-400 uppercase">Service Times</h2>
+				<ul class="pl-4 space-y-4 font-medium text-neutral-200 md:pl-0">
 					<li class="">
 						<a href="https://flowbite.com/" class="text-sky-300"
 							>Sunday Bible Study <br /><span class="text-white">10:00 AM</span></a
@@ -42,10 +42,10 @@
 					</li>
 				</ul>
 			</div>
-            
+
 			<div class="row-start-3 w-full md:col-start-2 md:row-start-2 md:block">
-				<h2 class="mb-6 text-lg font-semibold text-gray-400 uppercase">Legal</h2>
-				<ul class="pl-4 font-medium text-gray-200 md:pl-0">
+				<h2 class="mb-6 text-lg font-semibold text-neutral-400 uppercase">Legal</h2>
+				<ul class="pl-4 font-medium text-neutral-200 md:pl-0">
 					<li class="mb-4">
 						<a href="/" class="hover:underline">Privacy Policy</a>
 					</li>
@@ -54,10 +54,10 @@
 					</li>
 				</ul>
 			</div>
-            <!-- <hr class="row-end-3 my-2 w-full border-gray-500 md:row-start-3 md:col-span-2" /> -->
+			<!-- <hr class="row-end-3 my-2 w-full border-neutral-500 md:row-start-3 md:col-span-2" /> -->
 			<div class="col-start-1 row-start-4 w-full">
-				<h2 class="mb-6 text-lg font-semibold text-gray-400 uppercase">Contact Info</h2>
-				<ul class="pl-4 space-y-4 font-medium text-gray-200 md:pl-0">
+				<h2 class="mb-6 text-lg font-semibold text-neutral-400 uppercase">Contact Info</h2>
+				<ul class="pl-4 space-y-4 font-medium text-neutral-200 md:pl-0">
 					<li class="">
 						<a
 							href="https://www.google.com/maps/search/?api=1&query=5975+US+70+East+La+Grange,+NC+28551"
@@ -130,20 +130,20 @@
 				</ul>
 			</div>
 		</div>
-		<hr class="my-12 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+		<hr class="my-12 border-neutral-200 sm:mx-auto dark:border-neutral-700 lg:my-8" />
 		<div class="pb-8 sm:flex sm:items-center sm:justify-between">
-			<span class="text-sm text-gray-200 sm:text-center"
+			<span class="text-sm text-neutral-200 sm:text-center"
 				>© {currentYear}
-				<a href="https://emmanuelbaptistnc.org/" class="hover:underline">Emmanuel Baptist Church</a>. 
-                <br class="md:hidden" />
-                All
-				Rights Reserved.
+				<a href="https://emmanuelbaptistnc.org/" class="hover:underline">Emmanuel Baptist Church</a
+				>.
+				<br class="md:hidden" />
+				All Rights Reserved.
 			</span>
 			<div class="flex mt-4 sm:justify-center sm:mt-0">
-				<span class="text-gray-200 hover:text-gray-900 dark:hover:text-white">
+				<span class="text-neutral-200 hover:text-neutral-900 dark:hover:text-white">
 					<Facebook />
 					<span class="sr-only">Facebook page</span>
-                </span>
+				</span>
 			</div>
 		</div>
 	</div>

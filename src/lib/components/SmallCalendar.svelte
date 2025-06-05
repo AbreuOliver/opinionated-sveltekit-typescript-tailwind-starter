@@ -245,8 +245,8 @@
 
 <div class="flex flex-wrap gap-6 justify-center p-4">
 	<!-- Current Month -->
-	<div class="w-full rounded-lg border-2 border-mono-200 md:w-2/3 lg:w-1/3">
-		<div class="p-4 text-xl font-bold text-center bg-transparent border-b border-mono-300">
+	<div class="w-full rounded-lg border-2 border-neutral-200 md:w-2/3 lg:w-1/3">
+		<div class="p-4 text-xl font-bold text-center bg-transparent border-b border-neutral-300">
 			{currentMonthTitle}
 		</div>
 		<div class="grid grid-cols-7 gap-1 p-4">
@@ -260,8 +260,8 @@
 
 			{#each currentMonthDays as day}
 				<div
-					class="h-10 flex flex-col items-center justify-center text-sm border border-mono-200/50 hover:border-mono-300 rounded-md relative
-				{day ? 'bg-white' : 'bg-mono-50 text-mono-300'}"
+					class="h-10 flex flex-col items-center justify-center text-sm border border-neutral-200/50 hover:border-neutral-300 rounded-md relative
+				{day ? 'bg-white' : 'bg-neutral-50 text-neutral-300'}"
 				>
 					{#if isCurrentDate(day, currentYear, currentMonth)}
 						<div class="absolute top-0 w-full h-full bg-theme-900/20 rounded-md"></div>
@@ -270,17 +270,19 @@
 				</div>
 			{/each}
 		</div>
-		<div class="p-8 mt-2 w-full bg-mono-100 border-t border-mono-200">
+		<div class="p-8 mt-2 w-full bg-neutral-100 border-t border-neutral-200">
 			<!-- <h3 class="text-lg font-semibold">Events</h3> -->
 			{#each currentMonthEvents as event}
-				<div class="pb-4 mb-4 border-b border-mono-400 border-dashed">
+				<div class="pb-4 mb-4 border-b border-neutral-400 border-dashed">
 					<p class="text-lg font-bold">{event.formattedDate}</p>
 					<p class="text-lg font-medium">
 						{event.title}
 					</p>
 					{#if event.description}
-						<!-- <p class="text-base text-mono-400">{event.description}</p> -->
-						<p class="text-base text-mono-500 whitespace-pre-line pl-2 pt-1">{event.description}</p>
+						<!-- <p class="text-base text-neutral-400">{event.description}</p> -->
+						<p class="text-base text-neutral-500 whitespace-pre-line pl-2 pt-1">
+							{event.description}
+						</p>
 					{/if}
 				</div>
 			{/each}
@@ -288,8 +290,8 @@
 	</div>
 
 	<!-- Next Month -->
-	<div class="w-full rounded-lg border-2 border-mono-200 md:w-2/4 lg:w-1/3">
-		<div class="p-4 text-xl font-bold text-center bg-transparent border-b border-mono-300">
+	<div class="w-full rounded-lg border-2 border-neutral-200 md:w-2/4 lg:w-1/3">
+		<div class="p-4 text-xl font-bold text-center bg-transparent border-b border-neutral-300">
 			{nextMonthTitle}
 		</div>
 		<div class="grid grid-cols-7 gap-1 p-4">
@@ -303,24 +305,26 @@
 
 			{#each nextMonthDays as day}
 				<div
-					class="h-10 flex items-center justify-center text-sm border border-mono-200/50 hover:border-mono-300 rounded-md
-                    {day ? 'bg-white' : 'bg-mono-50 text-mono-300'}"
+					class="h-10 flex items-center justify-center text-sm border border-neutral-200/50 hover:border-neutral-300 rounded-md
+                    {day ? 'bg-white' : 'bg-neutral-50 text-neutral-300'}"
 				>
 					{day}
 				</div>
 			{/each}
 		</div>
-		<div class="p-8 mt-2 w-full bg-mono-100 border-t border-mono-200">
+		<div class="p-8 mt-2 w-full bg-neutral-100 border-t border-neutral-200">
 			<!-- <h3 class="text-lg font-semibold">Events</h3> -->
 			{#each nextMonthEvents as event}
-				<div class="pb-4 mb-4 border-b border-mono-400 border-dashed">
+				<div class="pb-4 mb-4 border-b border-neutral-400 border-dashed">
 					<p class="text-lg font-bold">{event.formattedDate}</p>
 					<p class="text-lg font-medium">
 						{event.title}
 					</p>
 					{#if event.description}
-						<!-- <p class="text-base text-mono-400">{event.description}</p> -->
-						<p class="text-base text-mono-500 whitespace-pre-line pl-2 pt-1">{event.description}</p>
+						<!-- <p class="text-base text-neutral-400">{event.description}</p> -->
+						<p class="text-base text-neutral-500 whitespace-pre-line pl-2 pt-1">
+							{event.description}
+						</p>
 					{/if}
 				</div>
 			{/each}

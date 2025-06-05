@@ -33,7 +33,7 @@
 				<button
 					on:click={closeBanner}
 					type="button"
-					class="inline-flex justify-center items-center w-8 h-8 text-sm rounded-full text-mono-900/50 hover:bg-mono-500/50 hover:text-mono-100"
+					class="inline-flex justify-center items-center w-8 h-8 text-sm rounded-full text-neutral-900/50 hover:bg-neutral-500/50 hover:text-neutral-100"
 				>
 					<svg
 						class="w-3 h-3"
@@ -103,7 +103,7 @@
 	</div> -->
 	<div
 		tabindex="-1"
-		class="relative z-50 col-span-3 col-start-1 w-full h-auto md:h-14 text-neutral-800 font-normal py-4 md:py-0 bg-neutral-700 banner-container"
+		class="relative z-50 col-span-3 col-start-1 w-full h-auto md:h-14 text-black font-normal py-4 md:py-0 bg-neutral-800 banner-container"
 	>
 		<div
 			class="grid grid-cols-[3rem_1fr_3rem] max-w-[95vw] md:max-w-[850px] mx-auto w-full h-full place-content-center place-items-center gap-x-4"

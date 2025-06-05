@@ -11,7 +11,7 @@
 			class="mt-4 grid gap-8 md:gap-4 sm:grid-cols-1 sm:grid-rows-3 md:grid-cols-3 grid-rows-3 text-white text-[1.75rem] font-sans text-bold font-quilonBold uppercase"
 		>
 			<div
-				class="relative block rounded-[1.5rem] overflow-hidden border border-mono-800 transform transition-transform duration-300 ease-in-out hover:scale-105 md:h-full h-70 w-full row-start-1 row-span-1 col-start-1 col-span-1"
+				class="relative block rounded-[1.5rem] overflow-hidden border border-neutral-800 transform transition-transform duration-300 ease-in-out hover:scale-105 md:h-full h-70 w-full row-start-1 row-span-1 col-start-1 col-span-1"
 			>
 				<a
 					href="/about#leadership"
@@ -27,7 +27,7 @@
 			</div>
 
 			<div
-				class="relative block md:h-full w-full rounded-[1.5rem] overflow-hidden bg-cover bg-center border border-mono-800 transform transition-transform duration-300 ease-in-out hover:scale-105 md:row-start-1 row-start-2 row-span-1 col-start-1 col-span-1 md:col-start-2 md:col-span-2"
+				class="relative block md:h-full w-full rounded-[1.5rem] overflow-hidden bg-cover bg-center border border-neutral-800 transform transition-transform duration-300 ease-in-out hover:scale-105 md:row-start-1 row-start-2 row-span-1 col-start-1 col-span-1 md:col-start-2 md:col-span-2"
 				style="background-image: url('https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/mini-ebc-beliefs_gGYNvMvjL.webp?updatedAt=1729398571868');"
 			>
 				<a
@@ -38,7 +38,7 @@
 				</a>
 			</div>
 			<div
-				class="relative block md:h-64 w-full rounded-[1.5rem] overflow-hidden bg-cover bg-center border border-mono-800 transform transition-transform duration-300 ease-in-out hover:scale-105 md:row-start-2 row-start-3 row-span-1 col-start-1 col-span-1 md:col-span-3"
+				class="relative block md:h-64 w-full rounded-[1.5rem] overflow-hidden bg-cover bg-center border border-neutral-800 transform transition-transform duration-300 ease-in-out hover:scale-105 md:row-start-2 row-start-3 row-span-1 col-start-1 col-span-1 md:col-span-3"
 				style="background-image: url('https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/mini-ebc-involvement_mp7Evs0hb.webp?updatedAt=1729398571608');"
 			>
 				<a

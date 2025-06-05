@@ -81,29 +81,34 @@
 			<div class="flex-col items-center px-6 mx-auto w-full max-w-7xl md:px-12 xl:px-6">
 				<div class="relative flex-col items-center pt-36 ml-auto">
 					<div class="flex-col items-center mx-auto w-full text-center md:w-1/2 lg:w-2/3">
-						<h1 class="text-5xl font-bold text-gray-900 md:text-6xl xl:text-7xl">
+						<h1 class="text-5xl font-bold text-neutral-900 md:text-6xl xl:text-7xl">
 							<div class="m-auto mt-6 space-y-6 md:w-8/12 lg:w-full">
 								<h1 class="text-4xl font-black md:text-5xl">Plan Your Visit</h1>
 							</div>
 						</h1>
 
-						<h3 class="mt-8 text-lg text-gray-700">
-							Welcome! We’re so glad you’re considering visiting our church. Our goal is to make your experience as smooth and spiritually uplifting as possible. To help with that, we’ve gathered answers to some of the most common questions right here. If you don’t find what you're looking for or simply want to connect, please don’t hesitate to reach out through the <a href="/plan-your-visit#form" class="underline">form below</a> — we’d love to hear from you!
-						</h3>  
+						<h3 class="mt-8 text-lg text-neutral-700">
+							Welcome! We’re so glad you’re considering visiting our church. Our goal is to make
+							your experience as smooth and spiritually uplifting as possible. To help with that,
+							we’ve gathered answers to some of the most common questions right here. If you don’t
+							find what you're looking for or simply want to connect, please don’t hesitate to reach
+							out through the <a href="/plan-your-visit#form" class="underline">form below</a> — we’d
+							love to hear from you!
+						</h3>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="my-20 text-gray-600 dark:text-gray-300 max-w-8xl" id="faqs">
+		<div class="my-20 text-neutral-600 dark:text-neutral-300 max-w-8xl" id="faqs">
 			<!-- <div class="px-6 mx-auto max-w-7xl md:px-12 xl:px-6">
 				<div class="px-6 mb-20 space-y-4 md:px-0">
-					<h2 class="text-2xl font-bold text-center text-gray-800 dark:text-white md:text-4xl">
+					<h2 class="text-2xl font-bold text-center text-neutral-800 dark:text-white md:text-4xl">
 						Frequently Asked Questions
 					</h2>
 				</div>
 				<div class="gap-8 space-y-8 md:columns-2 lg:columns-3">
 					<div
-						class="p-8 bg-white rounded-3xl border border-gray-100 shadow-2xl aspect-auto dark:bg-gray-800 dark:border-gray-700 shadow-gray-600/10 dark:shadow-none"
+						class="p-8 bg-white rounded-3xl border border-neutral-100 shadow-2xl aspect-auto dark:bg-neutral-800 dark:border-neutral-700 shadow-neutral-600/10 dark:shadow-none"
 					>
 						<div class="flex gap-4 items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="text-theme-400" width="24" height="24" viewBox="0 0 24 24">
@@ -113,7 +118,7 @@
 								</g>
 							</svg>
 							<div>
-								<h6 class="text-lg font-medium text-gray-700 dark:text-white">
+								<h6 class="text-lg font-medium text-neutral-700 dark:text-white">
 									What time are your services?
 								</h6>
 							</div>
@@ -123,7 +128,7 @@
 						</p>
 					</div>
 					<div
-						class="p-8 bg-white rounded-3xl border border-gray-100 shadow-2xl aspect-auto dark:bg-gray-800 dark:border-gray-700 shadow-gray-600/10 dark:shadow-none"
+						class="p-8 bg-white rounded-3xl border border-neutral-100 shadow-2xl aspect-auto dark:bg-neutral-800 dark:border-neutral-700 shadow-neutral-600/10 dark:shadow-none"
 					>
 						<div class="flex gap-4 items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="text-theme-400" width="24" height="24" viewBox="0 0 24 24">
@@ -133,7 +138,7 @@
 								</g>
 							</svg>
 							<div>
-								<h6 class="text-lg font-medium text-gray-700 dark:text-white">
+								<h6 class="text-lg font-medium text-neutral-700 dark:text-white">
 									What's a typical church service like?
 								</h6>
 							</div>
@@ -143,14 +148,14 @@
 						</p>
 					</div>
 					<div
-						class="p-8 bg-white rounded-3xl border border-gray-100 shadow-2xl aspect-auto dark:bg-gray-800 dark:border-gray-700 shadow-gray-600/10 dark:shadow-none"
+						class="p-8 bg-white rounded-3xl border border-neutral-100 shadow-2xl aspect-auto dark:bg-neutral-800 dark:border-neutral-700 shadow-neutral-600/10 dark:shadow-none"
 					>
 						<div class="flex gap-4 items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 								<path fill="currentColor" d="M13 3C9.23 3 6.19 5.95 6 9.66l-1.92 2.53c-.24.31 0 .81.42.81H6v3c0 1.11.89 2 2 2h1v3h7v-4.69c2.37-1.12 4-3.51 4-6.31c0-3.86-3.12-7-7-7m1 11h-2v-2h2zm1.75-5.19c-.29.4-.66.69-1.11.93c-.25.16-.42.33-.51.52c-.09.18-.13.43-.13.74h-2c0-.5.11-.92.31-1.18c.19-.27.54-.57 1.05-.91c.26-.16.47-.36.61-.59c.16-.23.23-.5.23-.82c0-.3-.08-.56-.26-.75c-.18-.18-.44-.28-.75-.28a1 1 0 0 0-.66.23c-.18.16-.27.39-.28.69h-1.93l-.01-.03c-.01-.79.25-1.36.77-1.77c.54-.39 1.24-.59 2.11-.59c.93 0 1.66.23 2.19.68c.54.45.81 1.06.81 1.82c0 .5-.15.91-.44 1.31" />
 							</svg>
 							<div>
-								<h6 class="text-lg font-medium text-gray-700 dark:text-white">Are all your services the same?</h6>
+								<h6 class="text-lg font-medium text-neutral-700 dark:text-white">Are all your services the same?</h6>
 							</div>
 						</div>
 						<p class="mt-8">
@@ -162,20 +167,20 @@
 			</div> -->
 			<div class="px-6 mx-auto max-w-7xl md:px-12 xl:px-6">
 				<div class="px-6 mb-20 space-y-4 md:px-0">
-					<h2 class="text-2xl font-bold text-center text-gray-800 dark:text-white md:text-4xl">
+					<h2 class="text-2xl font-bold text-center text-neutral-800 dark:text-white md:text-4xl">
 						Frequently Asked Questions
 					</h2>
 				</div>
 				<div class="gap-8 space-y-8 md:columns-2 lg:columns-3">
 					{#each faqs as { question, answer, icon }}
 						<div
-							class="p-8 bg-white rounded-3xl border border-gray-100 shadow-2xl aspect-auto dark:bg-gray-800 dark:border-gray-700 shadow-gray-600/10 dark:shadow-none"
+							class="p-8 bg-white rounded-3xl border border-neutral-100 shadow-2xl aspect-auto dark:bg-neutral-800 dark:border-neutral-700 shadow-neutral-600/10 dark:shadow-none"
 						>
 							<div class="flex gap-4 items-center">
 								<span class="p-3 text-white rounded-full bg-theme-600">{@html icon}</span>
 
 								<div>
-									<h6 class="text-lg font-medium text-gray-700 dark:text-white">{question}</h6>
+									<h6 class="text-lg font-medium text-neutral-700 dark:text-white">{question}</h6>
 								</div>
 							</div>
 							<p class="mt-8">{answer}</p>
@@ -189,17 +194,18 @@
 		<div class="flex-col items-center px-6 mx-auto w-full max-w-7xl md:px-12 xl:px-6">
 			<div class="relative flex-col items-center pt-36 ml-auto">
 				<div class="flex-col items-center mx-auto w-full text-center md:w-1/2 lg:w-2/3">
-			<h2 class="text-2xl font-bold text-center text-gray-800 dark:text-white md:text-4xl">
-				Reach Out Directly
-			</h2>
-			<h3 class="mt-8 mb-20 text-lg text-gray-700">
-				Visiting a new church can feel intimidating, but we’re here to help you feel at home. Use the form below to ask us anything!  
-			</h3>
+					<h2 class="text-2xl font-bold text-center text-neutral-800 dark:text-white md:text-4xl">
+						Reach Out Directly
+					</h2>
+					<h3 class="mt-8 mb-20 text-lg text-neutral-700">
+						Visiting a new church can feel intimidating, but we’re here to help you feel at home.
+						Use the form below to ask us anything!
+					</h3>
 				</div>
 			</div>
 		</div>
 		<form class="mx-auto max-w-xl" action="https://api.web3forms.com/submit" method="POST">
-			<input type="hidden" name="subject" value="New Submission from EBC Contact Form">
+			<input type="hidden" name="subject" value="New Submission from EBC Contact Form" />
 			<input type="hidden" name="access_key" value={ACCESS_KEY} />
 			<div class="mb-5">
 				<Label class="space-y-2">
@@ -213,15 +219,20 @@
 					<Input type="email" placeholder="name@provider.com" size="lg" required>
 						<!-- <EnvelopeSolid slot="right" class="w-5 h-5" /> -->
 					</Input>
-					
 				</Label>
 			</div>
 			<div class="mb-5">
 				<Label for="textarea-id" class="mb-2 capitalize">Your question/comment*</Label>
 				<!-- <Textarea id="textarea-id" placeholder="Your message/question" rows="4" name="message" class="p-2" required /> -->
-				<Textarea class="mb-4" id="textarea-id" name="message" rows="4" placeholder="Do you have visitor parking?">
+				<Textarea
+					class="mb-4"
+					id="textarea-id"
+					name="message"
+					rows="4"
+					placeholder="Do you have visitor parking?"
+				>
 					<div slot="footer" class="flex justify-between items-center">
-						<Helper class="text-sm text-gray-600">
+						<Helper class="text-sm text-neutral-600">
 							We’ll never share your details. Read our <a
 								href="/legal#privacy-policy"
 								class="font-medium text-theme-600 hover:underline dark:text-theme-500"

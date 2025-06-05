@@ -134,11 +134,11 @@
 			{#each daysInMonth1 as day}
 				<div
 					class="relative h-24"
-					on:click={() => defaultModal = true}
+					on:click={() => (defaultModal = true)}
 					on:keydown={(event) => {
 						if (event.key === 'Enter' || event.key === ' ') {
 							event.preventDefault();
-							openModal(day-1, 0)
+							openModal(day - 1, 0);
 						}
 					}}
 					role="button"
@@ -151,8 +151,10 @@
 					>
 						{day}
 					</div>
-					{#each getEventsForDate(day-1, 0) as event}
-						<div class="p-1 mt-2 text-xs text-center text-white rounded bg-theme-900">{event.title}</div>
+					{#each getEventsForDate(day - 1, 0) as event}
+						<div class="p-1 mt-2 text-xs text-center text-white rounded bg-theme-900">
+							{event.title}
+						</div>
 					{/each}
 				</div>
 			{/each}
@@ -182,7 +184,7 @@
 						if (event.key === 'Enter' || event.key === ' ') {
 							event.preventDefault();
 							defaultModal = true;
-                            openModal(day-1, 1)
+							openModal(day - 1, 1);
 						}
 					}}
 					role="button"
@@ -196,7 +198,9 @@
 						{day}
 					</div>
 					{#each getEventsForDate(day - 1, 1) as event}
-						<div class="p-1 mt-2 text-xs text-center text-white rounded bg-theme-900">{event.title}</div>
+						<div class="p-1 mt-2 text-xs text-center text-white rounded bg-theme-900">
+							{event.title}
+						</div>
 					{/each}
 				</div>
 			{/each}
@@ -208,7 +212,7 @@
 	title="Event Details"
 	bind:open={defaultModal}
 	class="mx-auto w-screen rounded-2xl md:w-1/2"
-	backdropClass="fixed inset-0 z-40 bg-gray-900 bg-opacity-50 dark:bg-opacity-80"
+	backdropClass="fixed inset-0 z-40 bg-neutral-900 bg-opacity-50 dark:bg-opacity-80"
 	center
 	autoclose
 >
@@ -219,7 +223,7 @@
 				<div class="mb-4">
 					<h3 class="text-lg font-semibold">{event.title}</h3>
 					<!-- <p>{event.description}</p> -->
-					<p class="text-sm text-gray-500">{event.date.toLocaleDateString()}</p>
+					<p class="text-sm text-neutral-500">{event.date.toLocaleDateString()}</p>
 				</div>
 			{/each}
 		{:else}

@@ -39,7 +39,7 @@
 							class="w-11 h-11"
 						/>
 						<svg
-							class="h-12 w-[auto] text-mono-900 md:ml-2 p-1"
+							class="h-12 w-[auto] text-neutral-900 md:ml-2 p-1"
 							xmlns="http://www.w3.org/2000/svg"
 							width="auto"
 							height="auto"
@@ -69,7 +69,7 @@
 							<div
 								aria-hidden="true"
 								id="line"
-								class="m-auto w-5 h-0.5 bg-sky-900 rounded transition-transform duration-300 dark:bg-gray-300"
+								class="m-auto w-5 h-0.5 bg-sky-900 rounded transition-transform duration-300 dark:bg-neutral-300"
 								class:is-hidden={isMenuOpen}
 								class:rotate-45={isMenuOpen}
 								class:translate-y-[4px]={isMenuOpen}
@@ -78,7 +78,7 @@
 							<div
 								aria-hidden="true"
 								id="line2"
-								class="m-auto mt-2 w-5 h-0.5 bg-sky-900 rounded transition-transform duration-300 dark:bg-gray-300"
+								class="m-auto mt-2 w-5 h-0.5 bg-sky-900 rounded transition-transform duration-300 dark:bg-neutral-300"
 								class:rotate-[-45deg]={isMenuOpen}
 								class:-translate-y-[6px]={isMenuOpen}
 								class:bg-amber-400={isMenuOpen}
@@ -89,18 +89,22 @@
 				<div
 					id="navLayer"
 					aria-hidden="true"
-					class="fixed inset-0 z-10 w-screen h-screen backdrop-blur-2xl transition duration-500 origin-bottom scale-y-0 bg-white/70 dark:bg-gray-900/70 lg:hidden"
+					class="fixed inset-0 z-10 w-screen h-screen backdrop-blur-2xl transition duration-500 origin-bottom scale-y-0 bg-white/70 dark:bg-neutral-900/70 lg:hidden"
 				></div>
 				<div
 					id="navlinks"
-					class="absolute left-0 top-full invisible z-20 flex-col flex-wrap gap-6 justify-end p-8 w-full bg-white rounded-3xl border border-gray-100 shadow-2xl opacity-0 transition-all duration-300 origin-top-right scale-90 translate-y-1 shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none"
+					class="absolute left-0 top-full invisible z-20 flex-col flex-wrap gap-6 justify-end p-8 w-full bg-white rounded-3xl border border-neutral-100 shadow-2xl opacity-0 transition-all duration-300 origin-top-right scale-90 translate-y-1 shadow-neutral-600/10 dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none"
 				>
-					<div class="w-full text-gray-600 capitalize dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0">
-						<ul class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-md">
+					<div
+						class="w-full text-neutral-600 capitalize dark:text-neutral-200 lg:w-auto lg:pr-4 lg:pt-0"
+					>
+						<ul
+							class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-md font-extralight"
+						>
 							<li class="">
 								<a
 									href="/#discover"
-									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300"
+									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300 hover:font-normal"
 								>
 									<span class="">Discover</span>
 								</a>
@@ -108,7 +112,7 @@
 							<li class="">
 								<a
 									href="/#media"
-									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300"
+									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300 hover:font-normal"
 								>
 									<span class="">media</span>
 								</a>
@@ -116,7 +120,7 @@
 							<li class="">
 								<a
 									href="/#events"
-									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300"
+									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300 hover:font-normal"
 								>
 									<span class="">events</span>
 								</a>
@@ -124,7 +128,7 @@
 							<li class="">
 								<a
 									href="/#give"
-									class="hover:text-primary block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300"
+									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300 hover:font-normal"
 								>
 									<span class="">give</span>
 								</a>
@@ -133,14 +137,14 @@
 					</div>
 				</div>
 				<div
-					class={`${isMenuOpen ? 'block bg-blue-500' : 'hidden bg-gray-500'} absolute left-0 top-16 z-20 h-[fit-content] bg-white w-screen transition-transform transform animate-fade-down animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal`}
+					class={`${isMenuOpen ? 'block bg-blue-500' : 'hidden bg-neutral-500'} absolute left-0 top-16 z-20 h-[fit-content] bg-white w-screen transition-transform transform animate-fade-down animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal`}
 				>
 					<div
 						id="navlinks"
-						class="absolute w-[85%] top-full left-0 z-20 origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none lg:visible lg:relative lg:hidden lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none !visible !scale-100 !opacity-100 !lg:translate-y-0"
+						class="absolute w-[85%] top-full left-0 z-20 origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-neutral-100 bg-white p-8 opacity-0 shadow-2xl shadow-neutral-600/10 transition-all duration-300 dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-none lg:visible lg:relative lg:hidden lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none !visible !scale-100 !opacity-100 !lg:translate-y-0"
 					>
 						<div
-							class="w-full text-gray-600 capitalize dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0"
+							class="w-full text-neutral-600 capitalize dark:text-neutral-200 lg:w-auto lg:pr-4 lg:pt-0"
 						>
 							<ul class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-base">
 								<li>
@@ -206,7 +210,7 @@
 						class="w-11 h-11"
 					/>
 					<svg
-						class="h-12 w-[auto] text-mono-50 md:ml-2 p-1"
+						class="h-12 w-[auto] text-neutral-50 md:ml-2 p-1"
 						xmlns="http://www.w3.org/2000/svg"
 						width="auto"
 						height="auto"
@@ -227,8 +231,8 @@
 				</a>
 			</div>
 			<div class="col-start-1 row-start-2 w-full">
-				<h2 class="mb-6 font-semibold text-gray-400 uppercase text-md">Service Times</h2>
-				<ul class="pl-4 space-y-4 font-medium text-gray-200 md:pl-0">
+				<h2 class="mb-6 font-semibold text-neutral-400 uppercase text-md">Service Times</h2>
+				<ul class="pl-4 space-y-4 font-medium text-neutral-200 md:pl-0">
 					<li class="text-sky-300 text-md">
 						Sunday Bible Study
 						<br />
@@ -248,8 +252,8 @@
 			</div>
 
 			<div class="w-full md:col-start-2 md:row-start-2">
-				<h2 class="mb-6 font-semibold text-gray-400 uppercase text-md">Contact Info</h2>
-				<ul class="pl-4 space-y-4 font-medium text-gray-200 md:pl-0">
+				<h2 class="mb-6 font-semibold text-neutral-400 uppercase text-md">Contact Info</h2>
+				<ul class="pl-4 space-y-4 font-medium text-neutral-200 md:pl-0">
 					<li class="text-base">
 						<a
 							href="https://www.google.com/maps/search/?api=1&amp;query=5975+US+70+East+La+Grange,+NC+28551"
@@ -322,9 +326,9 @@
 				</ul>
 			</div>
 		</div>
-		<hr class="my-12 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+		<hr class="my-12 border-neutral-200 sm:mx-auto dark:border-neutral-700 lg:my-8" />
 		<div class="mb-8 sm:flex items-start sm:justify-between">
-			<div class="flex flex-wrap text-base leading-relaxed text-gray-200 sm:text-center">
+			<div class="flex flex-wrap text-base leading-relaxed text-neutral-200 sm:text-center">
 				<p>
 					<span class="mr-2 whitespace-nowrap">© {currentYear} • Emmanuel Baptist Church.</span>
 					<span class="mr-2">All Rights Reserved.</span>
@@ -339,7 +343,7 @@
 				>
 			</div>
 			<div class="flex justify-start sm:mt-2 mt-0">
-				<span class="text-gray-200 hover:text-sky-300 dark:hover:text-white"
+				<span class="text-neutral-200 hover:text-sky-300 dark:hover:text-white"
 					><a
 						href="https://www.facebook.com/emmanuelchurchlagrange/"
 						target="_blank"

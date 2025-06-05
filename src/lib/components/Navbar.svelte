@@ -9,10 +9,10 @@
 </script>
 
 <div
-	class="${styling} grid custom-grid-cols gap-x-clamp grid-rows-auto row-span-1 md:place-items-center col-span-3 col-start-1 w-full h-20 md:h-18 font-semibold text-mono-900 md:border-b md:last:border-mono-400"
+	class="${styling} grid custom-grid-cols gap-x-clamp grid-rows-auto row-span-1 md:place-items-center col-span-3 col-start-1 w-full h-20 md:h-18 font-semibold text-neutral-900 md:border-b md:last:border-neutral-400"
 >
 	<div
-		class="grid col-span-1 col-start-2 row-span-1 row-start-1 justify-start items-center w-full max-w-[95vw] md:max-w-[850px]  gap-x-clamp md:place-items-start"
+		class="grid col-span-1 col-start-2 row-span-1 row-start-1 justify-start items-center w-full max-w-[95vw] md:max-w-[850px] gap-x-clamp md:place-items-start"
 	>
 		<!-- SUBGRID HERE -->
 		<div class="grid grid-cols-[1fr_4fr] w-full debug-border">

@@ -20,7 +20,7 @@
 	const ministryInformation: MinistryInfo[] = [
 		{
 			title: 'Preaching',
-			image: `https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/PREACHER2_Rz0apm1s3.jpg?updatedAt=1733800042663`, 
+			image: `https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/PREACHER2_Rz0apm1s3.jpg?updatedAt=1733800042663`,
 			description: [
 				`"For after that in the wisdom of God the world by wisdom knew not God, it pleased God by the foolishness of preaching to save them that believe." (1 Corinthians 1:21)`,
 				'By this passage, we understand that preaching of the Bible is God’s method of reaching the unsaved. Though this method may stand against the way common wisdom would seek to reach a people group, this is the ordained method of God. Through preaching is God’s Word able to be made clear to the human mind and applied to the human heart.',
@@ -55,7 +55,7 @@
 			description: [
 				`At Emmanuel Baptist Church, we have a passion to reach our community, our country, and those around the world with the Gospel (Acts 1:8). Locally, we accomplish this through our bus ministry, and church-wide soul winning. Abroad, we accomplish this through our support of many missionaries. Currently, we support works in Moldova, Venezuela, Panama, China, India, Brazil, and a children's home in Brazil. In addition to supporting these works, we also support FBN radio which has a reach spanning the globe.`
 			]
-		},
+		}
 	];
 
 	const beliefInformation: BeliefInfo[] = [
@@ -246,14 +246,14 @@
 			<div class="relative ml-auto">
 				<div class="gap-16 md:flex md:items-center">
 					<div class="text-center sm:px-12 md:w-2/3 md:px-0 md:text-left lg:w-1/2">
-						<h1 class="text-3xl font-bold text-center text-gray-800 md:text-4xl">Our Pastor</h1>
+						<h1 class="text-3xl font-bold text-center text-neutral-800 md:text-4xl">Our Pastor</h1>
 						<div class="">
-							<p class="mt-8 text-lg leading-loose text-gray-700">
+							<p class="mt-8 text-lg leading-loose text-neutral-700">
 								Pastor Garner has served as the senior pastor of Emmanuel Baptist Church since 2019.
 								He is originally from Arkansas, and came to NC when stationed at Ft. Bragg. While in
 								the service he met his wife, Jeana, and was married in 1999.
 							</p>
-							<p class="mt-4 text-lg leading-loose text-gray-700">
+							<p class="mt-4 text-lg leading-loose text-neutral-700">
 								Pastor Garner enjoys time with his family, especially on vacation in the mountains
 								of Tennessee. He and his wife have two adult children and two children still in the
 								home.
@@ -288,13 +288,15 @@
 		class="data-[size=md]:scale-[0.8] data-[size=sm]:scale-75 w-screen relative ease-in-out flex transition-all duration-700 will-change-auto items-center flex-col"
 	>
 		<div class="flex-col items-center mx-auto mt-16 mb-0 w-full text-center md:w-1/2 lg:w-2/3">
-			<h2 class="mt-8 text-3xl font-bold text-center text-gray-800 md:text-4xl">Our Ministries</h2>
+			<h2 class="mt-8 text-3xl font-bold text-center text-neutral-800 md:text-4xl">
+				Our Ministries
+			</h2>
 		</div>
 		<div class="grid gap-6 p-4 mt-12 max-w-5xl sm:grid-cols-1 lg:grid-cols-2 md:mt-20">
 			{#each ministryInformation as item}
 				<div class="space-y-6 w-full">
 					<div
-						class="overflow-hidden relative p-px bg-gradient-to-b from-gray-200 to-white rounded-2xl"
+						class="overflow-hidden relative p-px bg-gradient-to-b from-neutral-200 to-white rounded-2xl"
 					>
 						{#if item.image}
 							<div class="overflow-hidden relative rounded-t-xl">
@@ -308,16 +310,18 @@
 								/>
 							</div>
 						{/if}
-						<div class="flex relative flex-col gap-6 p-8 bg-gray-100 rounded-2xl dark:bg-gray-900">
+						<div
+							class="flex relative flex-col gap-6 p-8 bg-neutral-100 rounded-2xl dark:bg-neutral-900"
+						>
 							<div class="flex gap-4">
 								<div>
-									<h3 class="text-xl font-bold text-gray-700 md:text-2xl dark:text-white">
+									<h3 class="text-xl font-bold text-neutral-700 md:text-2xl dark:text-white">
 										{item.title}
 									</h3>
 								</div>
 							</div>
 							{#each item.description as paragraph}
-								<p class="text-gray-500 text-md">{paragraph}</p>
+								<p class="text-neutral-500 text-md">{paragraph}</p>
 							{/each}
 						</div>
 					</div>
@@ -331,7 +335,7 @@
 		class="data-[size=md]:scale-[0.8] data-[size=sm]:scale-75 w-screen relative ease-in-out flex transition-all duration-700 will-change-auto items-center flex-col mb-20"
 	>
 		<div class="flex-col items-center mx-auto my-8 w-full text-center md:my-16 md:w-1/2 lg:w-2/3">
-			<h2 class="mt-8 text-3xl font-bold text-center text-gray-800 md:text-4xl">Our Beliefs</h2>
+			<h2 class="mt-8 text-3xl font-bold text-center text-neutral-800 md:text-4xl">Our Beliefs</h2>
 		</div>
 		<div class="flex flex-col items-center p-0 w-screen border-2 border-transparent">
 			<Accordion class="p-6 w-full max-w-[800px] border-2 border-transparent">
@@ -339,7 +343,7 @@
 					<AccordionItem class="p-6 focus:ring-0 focus:ring-transparent" open={false}>
 						<span slot="header" class="pr-6 text-lg font-semibold md:text-2xl">{title}</span>
 						{#each content as paragraph}
-							<p class="px-6 py-3 mb-2 text-base leading-loose text-gray-500">{paragraph}</p>
+							<p class="px-6 py-3 mb-2 text-base leading-loose text-neutral-500">{paragraph}</p>
 						{/each}
 					</AccordionItem>
 				{/each}
