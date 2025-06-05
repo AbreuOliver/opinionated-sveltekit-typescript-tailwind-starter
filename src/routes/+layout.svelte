@@ -11,8 +11,8 @@
 		console.log('Menu State:', isMenuOpen);
 	}
 
-	const targetDate = dayjs('2025-04-20');
-	const lastDate = dayjs('2025-04-20');
+	const targetDate = dayjs('2025-06-22');
+	const lastDate = dayjs('2025-06-25');
 	const currentDate = dayjs();
 
 	// Calculate days until revival
@@ -24,9 +24,7 @@
 
 {#if isBeforeEnd}
 	<Banner
-		bannerText={`
-		Join us for Easter!
-		Celebrating the resurrection of the Lord Jesus Christ on April 20th.`}
+		bannerText={`Vacation Bible School • June 22–26 • Ages 4–12 welcome! Registration opens at 6:00 PM. `}
 	/>
 {/if}
 <header class="flex sticky top-0 z-30 -mb-16 h-20 backdrop-blur-sm">
