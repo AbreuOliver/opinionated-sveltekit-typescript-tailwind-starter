@@ -302,7 +302,7 @@
 			<div style="position:relative;overflow:hidden;padding-top:56.25%;">
 				<iframe
 					title="EBC Livestream or Latest Sermon"
-					allow="autoplay; fullscreen"
+					allow="autoplay fullscreen"
 					class="resi-video-frame"
 					src="https://control.resi.io/webplayer/video.html?id=ae4b050f-68f2-458f-834e-bd578c9b51d3&startPos=240&debug&autoplay=1"
 					style="position:absolute;top:0;left:0;width:100%;height:100%;border:none; border-radius: 15px;"
