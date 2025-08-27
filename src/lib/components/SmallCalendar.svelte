@@ -149,6 +149,102 @@
 				title: 'Vacation Bible School (VBS)',
 				description: ''
 			}
+		],
+		'2025-07': [
+			{
+				date: '06/01/2025',
+				formattedDate: 'Sun, Jun 01',
+				title: "Lord's Supper",
+				description: ''
+			},
+			{
+				date: '06/15/2025',
+				formattedDate: 'Sun, Jun 15',
+				title: "Father's Day",
+				description: ''
+			},
+			{
+				date: '06/22/2025 - 06/25/2025',
+				formattedDate: 'Sun, Jun 22 - Wed, Jun 25',
+				title: 'Vacation Bible School (VBS)',
+				description: ''
+			}
+		],
+		'2025-08': [
+			{
+				date: '08/02/2025',
+				formattedDate: 'Sat, Aug 02',
+				title: 'Teacher Appreciation Meal',
+				description: ''
+			},
+			{
+				date: '08/03/2025',
+				formattedDate: 'Sun, Aug 03',
+				title: "'Move-Up' Sunday",
+				description: ''
+			},
+			{
+				date: '08/24/2025 - 08/29/2025',
+				formattedDate: 'Sun, Aug 24 - Fri, Aug 29',
+				title: 'Revival Services with Dr. Benny Beckum',
+				description: ''
+			}
+		],
+		'2025-09': [
+			{
+				date: '09/07/2025',
+				formattedDate: 'Sun, Sep 07',
+				title: "Grandparent's Day",
+				description: ''
+			},
+			{
+				date: '09/07/2025',
+				formattedDate: 'Sun, Sep 07',
+				title: "Lord's Supper",
+				description: ''
+			}
+		],
+		'2025-10': [
+			{
+				date: '10/17/2025',
+				formattedDate: 'Fri, Oct 17',
+				title: 'AGM',
+				description: ''
+			},
+			{
+				date: '10/25/2025',
+				formattedDate: 'Sat, Oct 25',
+				title: 'Big Bus Day',
+				description: ''
+			},
+			{
+				date: '10/26/2025',
+				formattedDate: 'Sun, Cct 26',
+				title: 'Anniversary Sunday with Brady Rochester Family',
+				description: ''
+			}
+		],
+		'2025-11': [
+			{
+				date: '11/22/2025',
+				formattedDate: 'Sat, Nov 22',
+				title: 'Fall Festival',
+				description: ''
+			}
+		],
+		'2025-12': [
+			{
+				date: '12/14/2025',
+				formattedDate: 'Sun, Dec 14',
+				title: 'Christmas Cantata',
+				description: ''
+			},
+			{
+				date: '12/21/2025',
+				formattedDate: 'Sun, Dec 21',
+				title: "Lord's Supper",
+				description: ''
+			}
 		]
 	};
 

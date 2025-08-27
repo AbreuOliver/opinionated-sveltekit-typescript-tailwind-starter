@@ -2,6 +2,8 @@
 	import dayjs from 'dayjs';
 	import Banner from '$lib/components/Banner.svelte';
 	import '../global.css';
+	// import SiteHeader from '$lib/components/SiteHeader.svelte';
+	// import SiteFooter from '$lib/components/SiteFooter.svelte'
 
 	let currentYear: number = new Date().getFullYear();
 	let isMenuOpen: boolean = false;
