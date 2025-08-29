@@ -1,5 +1,6 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
+	import PromoModal from '$lib/components/PromoModal.svelte';
 	import Banner from '$lib/components/Banner.svelte';
 	import '../global.css';
 	// import SiteHeader from '$lib/components/SiteHeader.svelte';
@@ -13,8 +14,8 @@
 		console.log('Menu State:', isMenuOpen);
 	}
 
-	const targetDate = dayjs('2025-06-22');
-	const lastDate = dayjs('2025-06-25');
+	const targetDate = dayjs('2025-08-25');
+	const lastDate = dayjs('2025-09-10');
 	const currentDate = dayjs();
 
 	// Calculate days until revival
@@ -22,13 +23,34 @@
 
 	// Check if we're before the end date
 	const isBeforeEnd = currentDate.isBefore(lastDate);
+
+	const startDate = dayjs('2025-08-28').startOf('day'); // go-live date
+	const endDate = dayjs('2025-09-10').endOf('day'); // inclusive through the day
+	const now = dayjs();
+
+	// Reuse the name, but make it correct and self-contained:
+	const isLive = !now.isBefore(startDate) && !now.isAfter(endDate);
+
+	// Flowbite modal open state
+	let promoOpen = false;
+	if (isLive) promoOpen = true; // show immediately while live
 </script>
 
-{#if isBeforeEnd}
-	<Banner
-		bannerText={`Vacation Bible School • June 22–26 • Ages 4–12 welcome! Registration opens at 6:00 PM. `}
+{#if isLive}
+	<PromoModal
+		bind:open={promoOpen}
+		heading="Calling all kids!"
+		dateISO=""
+		body={['Awana begins Wed, Sep 10!']}
+		videoSrc="https://ik.imagekit.io/bip1v395ybp/Awana%20Promo_ig0_dyDb3.mp4?updatedAt=1756429140256"
+		poster="https://ik.imagekit.io/bip1v395ybp/awana-clubs-logo-color_UjjD8b0RC.jpg?updatedAt=1756429228137"
+		primaryCta={{ href: '/about#childrens-ministry', label: 'Learn more' }}
+		secondaryCta={{ href: '/#events', label: 'See all events' }}
 	/>
 {/if}
+<!-- {#if promoOpen}
+	<div class="w-full h-full backdrop-blur-[4px] z-888"></div>
+{/if} -->
 <header class="flex sticky top-0 z-30 -mb-16 h-20 backdrop-blur-sm">
 	<nav class="absolute z-10 w-full border-b border-black/5 lg:border-transparent">
 		<div class="px-6 mx-auto max-w-5xl md:px-12 xl:px-6">

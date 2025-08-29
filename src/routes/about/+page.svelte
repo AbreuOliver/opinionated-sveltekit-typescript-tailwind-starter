@@ -17,6 +17,14 @@
 		description: string[];
 	}
 
+	const slugify = (s: string) =>
+		s
+			.normalize('NFKD') // handle accents/diacritics
+			.replace(/['’]+/g, '') // drop straight & curly apostrophes
+			.toLowerCase()
+			.replace(/[^a-z0-9]+/g, '-') // collapse runs of non-alnum to "-"
+			.replace(/^-+|-+$/g, ''); // trim leading/trailing "-"
+
 	const ministryInformation: MinistryInfo[] = [
 		{
 			title: 'Preaching',
@@ -37,6 +45,8 @@
 		},
 		{
 			title: `Children's Ministry`,
+			image: `https://ik.imagekit.io/bip1v395ybp/awana-clubs-logo-color_UjjD8b0RC.jpg?updatedAt=1756429228137`,
+			// image: `https://ik.imagekit.io/bip1v395ybp/awana-clubs-logo-color-Photoroom_Jrnpd55-W.png?updatedAt=1756429237299`,
 			description: [
 				'Children are close to the heart of Emmanuel. As the future leaders of our church and community, we see it as one of our highest duties to teach the ways of God to the children of our church and to encourage them to live for Him. There are age appropriate classes for children ages 3-12 during the Sunday School and Sunday morning services. These classes are lead by capable and engaging teachers that desire to impact and encourage your child for Jesus Christ.'
 			]
@@ -294,7 +304,7 @@
 		</div>
 		<div class="grid gap-6 p-4 mt-12 max-w-5xl sm:grid-cols-1 lg:grid-cols-2 md:mt-20">
 			{#each ministryInformation as item}
-				<div class="space-y-6 w-full">
+				<div id={slugify(item.title)} class="space-y-6 w-full">
 					<div
 						class="overflow-hidden relative p-px bg-gradient-to-b from-neutral-200 to-white rounded-2xl"
 					>
