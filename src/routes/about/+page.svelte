@@ -48,7 +48,7 @@
 			image: `https://ik.imagekit.io/bip1v395ybp/awana-clubs-logo-color_UjjD8b0RC.jpg?updatedAt=1756429228137`,
 			// image: `https://ik.imagekit.io/bip1v395ybp/awana-clubs-logo-color-Photoroom_Jrnpd55-W.png?updatedAt=1756429237299`,
 			description: [
-				'Children are close to the heart of Emmanuel. As the future leaders of our church and community, we see it as one of our highest duties to teach the ways of God to the children of our church and to encourage them to live for Him. There are age appropriate classes for children ages 3-12 during the Sunday School and Sunday morning services. These classes are lead by capable and engaging teachers that desire to impact and encourage your child for Jesus Christ.'
+				'Children are close to the heart of Emmanuel. We offer age-appropriate classes for children ages 3–12 during both Sunday School and the Sunday morning worship service, as well as Awana Clubs on Wednesday evenings at 6:45 PM. As the future leaders of our church and community, we believe it is one of our greatest responsibilities to teach the ways of God to the next generation and encourage them to live for Him. Each class is led by caring and capable teachers who are passionate about helping children grow in their faith and love for Jesus Christ.'
 			]
 		},
 		{
@@ -233,131 +233,103 @@
 	];
 </script>
 
-<div id="main" class="flex flex-col justify-center mt-40 grow min-h-80">
-	<section
-		id="our-pastor"
-		class="data-[size=md]:scale-[0.8] data-[size=sm]:scale-75 w-screen relative ease-in-out flex transition-all duration-700 will-change-auto items-center flex-col space-y-40"
-	>
-		<div class="relative">
-			<!-- GRADIENTS -->
-			<div aria-hidden="true" class="grid absolute inset-0 grid-cols-2 -space-x-52 opacity-40">
-				<div class="blur-[106px] h-56 bg-gradient-to-br from-theme-800 to-purple-400"></div>
-				<div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300"></div>
-			</div>
-			<div class="px-6 mx-auto max-w-7xl md:px-12 xl:px-6">
-				<div class="relative">
-					<div class="m-auto mt-6 space-y-6 md:w-8/12 lg:w-full">
-						<h1 class="text-4xl font-black md:text-5xl">About Us</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="px-6 mx-auto max-w-5xl md:px-12 lg:px-6 xl:px-0">
-			<div class="relative ml-auto">
-				<div class="gap-16 md:flex md:items-center">
-					<div class="text-center sm:px-12 md:w-2/3 md:px-0 md:text-left lg:w-1/2">
-						<h1 class="text-3xl font-bold text-center text-neutral-800 md:text-4xl">Our Pastor</h1>
-						<div class="">
-							<p class="mt-8 text-lg leading-loose text-neutral-700">
-								Pastor Garner has served as the senior pastor of Emmanuel Baptist Church since 2019.
-								He is originally from Arkansas, and came to NC when stationed at Ft. Bragg. While in
-								the service he met his wife, Jeana, and was married in 1999.
-							</p>
-							<p class="mt-4 text-lg leading-loose text-neutral-700">
-								Pastor Garner enjoys time with his family, especially on vacation in the mountains
-								of Tennessee. He and his wife have two adult children and two children still in the
-								home.
-							</p>
-						</div>
-					</div>
-					<div class="relative mt-20 md:mt-0 md:w-2/5 lg:w-3/5">
-						<div class="-ml-0 md:-ml-6 lg:mr-0">
-							<img
-								class="object-cover object-left h-full rounded-xl dark:hidden"
-								src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/image_M8J7Q6rMd.jpg?updatedAt=1730959808912"
-								alt="Garner Family"
-								width="1628"
-								height="1233"
-							/>
-							<img
-								class="hidden object-cover object-left h-full dark:block"
-								src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/image_M8J7Q6rMd.jpg?updatedAt=1730959808912"
-								alt="app screenshot"
-								width="1628"
-								height="1233"
-							/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<div id="main" class="relative grow pt-10 sm:pt-12 scroll-mt-28">
+  <!-- Top intro / About Us -->
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-br from-sky-50 via-sky-50 to-white"></div>
+  <!-- optional soft blobs -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-40">
+	<div class="absolute left-[-10%] top-10 h-48 w-80 blur-[106px] bg-gradient-to-br from-sky-200 to-sky-300"></div>
+	<div class="absolute right-[-6%] top-28 h-36 w-72 blur-[106px] bg-gradient-to-r from-sky-200 to-sky-100"></div>
+  </div>
+  <section id="our-pastor" class="relative w-full scroll-mt-28">
+    <div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6">
+      <div class="mx-auto mt-6 space-y-6">
+        <h1 class="text-4xl font-extrabold text-center text-zinc-900 md:text-5xl py-8">About Us</h1>
+      </div>
 
-	<section
-		id="ministries"
-		class="data-[size=md]:scale-[0.8] data-[size=sm]:scale-75 w-screen relative ease-in-out flex transition-all duration-700 will-change-auto items-center flex-col"
-	>
-		<div class="flex-col items-center mx-auto mt-16 mb-0 w-full text-center md:w-1/2 lg:w-2/3">
-			<h2 class="mt-8 text-3xl font-bold text-center text-neutral-800 md:text-4xl">
-				Our Ministries
-			</h2>
-		</div>
-		<div class="grid gap-6 p-4 mt-12 max-w-5xl sm:grid-cols-1 lg:grid-cols-2 md:mt-20">
-			{#each ministryInformation as item}
-				<div id={slugify(item.title)} class="space-y-6 w-full">
-					<div
-						class="overflow-hidden relative p-px bg-gradient-to-b from-neutral-200 to-white rounded-2xl"
-					>
-						{#if item.image}
-							<div class="overflow-hidden relative rounded-t-xl">
-								<img
-									src={item.image}
-									alt="art cover"
-									loading="lazy"
-									width="1000"
-									height="667"
-									class="object-cover object-top w-full h-64 transition duration-500 group-hover:scale-105"
-								/>
-							</div>
-						{/if}
-						<div
-							class="flex relative flex-col gap-6 p-8 bg-neutral-100 rounded-2xl dark:bg-neutral-900"
-						>
-							<div class="flex gap-4">
-								<div>
-									<h3 class="text-xl font-bold text-neutral-700 md:text-2xl dark:text-white">
-										{item.title}
-									</h3>
-								</div>
-							</div>
-							{#each item.description as paragraph}
-								<p class="text-neutral-500 text-md">{paragraph}</p>
-							{/each}
-						</div>
-					</div>
-				</div>
-			{/each}
-		</div>
-	</section>
+      <!-- Our Pastor block -->
+      <div class="relative mt-10">
+        <div class="md:flex md:items-center md:gap-16">
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold text-zinc-900 md:text-4xl text-center md:text-left">Our Pastor</h2>
+            <div>
+              <p class="mt-8 text-lg leading-7 text-zinc-700">
+                Pastor Garner has served as the senior pastor of Emmanuel Baptist Church since 2019.
+                He is originally from Arkansas, and came to NC when stationed at Ft. Bragg. While in
+                the service he met his wife, Jeana, and was married in 1999.
+              </p>
+              <p class="mt-4 text-lg leading-7 text-zinc-700">
+                Pastor Garner enjoys time with his family, especially on vacation in the mountains
+                of Tennessee. He and his wife have two adult children and two children still in the
+                home.
+              </p>
+            </div>
+          </div>
 
-	<section
-		id="beliefs"
-		class="data-[size=md]:scale-[0.8] data-[size=sm]:scale-75 w-screen relative ease-in-out flex transition-all duration-700 will-change-auto items-center flex-col mb-20"
-	>
-		<div class="flex-col items-center mx-auto my-8 w-full text-center md:my-16 md:w-1/2 lg:w-2/3">
-			<h2 class="mt-8 text-3xl font-bold text-center text-neutral-800 md:text-4xl">Our Beliefs</h2>
-		</div>
-		<div class="flex flex-col items-center p-0 w-screen border-2 border-transparent">
-			<Accordion class="p-6 w-full max-w-[800px] border-2 border-transparent">
-				{#each beliefInformation as { title, content }}
-					<AccordionItem class="p-6 focus:ring-0 focus:ring-transparent" open={false}>
-						<span slot="header" class="pr-6 text-lg font-semibold md:text-2xl">{title}</span>
-						{#each content as paragraph}
-							<p class="px-6 py-3 mb-2 text-base leading-loose text-neutral-500">{paragraph}</p>
-						{/each}
-					</AccordionItem>
-				{/each}
-			</Accordion>
-		</div>
-	</section>
+          <div class="relative mt-10 md:mt-0 md:w-1/2">
+            <img
+              class="h-full w-full rounded-xl object-cover object-left"
+              src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/image_M8J7Q6rMd.jpg?updatedAt=1730959808912"
+              alt="Garner Family"
+              width="1628" height="1233"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ministries -->
+  <section id="ministries" class="w-full scroll-mt-28">
+    <div class="mx-auto mt-16 max-w-7xl px-6 text-center md:px-12 xl:px-6">
+      <h2 class="text-3xl font-bold text-zinc-900 md:text-4xl pt-10">Our Ministries</h2>
+      <div class="mx-auto mt-12 max-w-6xl columns-1 sm:columns-2 lg:columns-2 [column-gap:1.5rem] md:mt-16">
+      {#each ministryInformation as item}
+        <article id={slugify(item.title)}
+          class="mb-6 break-inside-avoid overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ">
+          {#if item.image}
+            <img
+              src={item.image}
+              alt=""
+              loading="lazy"
+              width="1000" height="667"
+              class="h-auto w-full aspect-[16/9] object-cover object-top "
+            />
+          {/if}
+          <div class="p-16">
+            <h3 class="text-xl font-bold text-zinc-900 md:text-2xl pb-6">{item.title}</h3>
+            {#each item.description as paragraph}
+              <p class="mt-3 text-zinc-700">{paragraph}</p>
+            {/each}
+          </div>
+        </article>
+      {/each}
+    </div>
+    </div>
+  </section>
+
+  <!-- Beliefs -->
+  <section id="beliefs" class="w-full scroll-mt-28">
+    <div class="mx-auto py-16 max-w-7xl px-6 text-center md:py-20 md:px-12 xl:px-6">
+      <h2 class="text-3xl font-bold text-zinc-900 md:text-4xl py-8">Our Beliefs</h2>
+      <div class="mx-auto mt-10 w-full max-w-3xl">
+        <!-- Accordion container styled like other cards -->
+        <Accordion class="rounded-xl border border-zinc-200 bg-white shadow-sm p-0">
+          {#each beliefInformation as { title, content }, i}
+            <AccordionItem activeClass="border-b border-zinc-200 last:border-b-0 focus:ring-0 focus:ring-transparent pr-12" open={false} inactiveClass="pr-12">
+              <span slot="header" class="block px-6 py-4 text-left text-lg font-semibold text-zinc-900 md:text-xl">
+                {title}
+              </span>
+              <div class="px-6 pb-5">
+                {#each content as paragraph}
+                  <p class="py-2 text-zinc-700 text-left text-lg leading-7">{paragraph}</p>
+                {/each}
+              </div>
+            </AccordionItem>
+          {/each}
+        </Accordion>
+      </div>
+    </div>
+  </section>
 </div>
+

@@ -2,6 +2,7 @@
 	import dayjs from 'dayjs';
 	import PromoModal from '$lib/components/PromoModal.svelte';
 	import Banner from '$lib/components/Banner.svelte';
+	import MyModal from '$lib/components/MyModal.svelte';
 	import '../global.css';
 	// import SiteHeader from '$lib/components/SiteHeader.svelte';
 	// import SiteFooter from '$lib/components/SiteFooter.svelte'
@@ -24,8 +25,8 @@
 	// Check if we're before the end date
 	const isBeforeEnd = currentDate.isBefore(lastDate);
 
-	const startDate = dayjs('2025-08-28').startOf('day'); // go-live date
-	const endDate = dayjs('2025-09-10').endOf('day'); // inclusive through the day
+	const startDate = dayjs('2025-10-08').startOf('day'); // go-live date
+	const endDate = dayjs('2025-10-26').endOf('day'); // inclusive through the day
 	const now = dayjs();
 
 	// Reuse the name, but make it correct and self-contained:
@@ -34,43 +35,59 @@
 	// Flowbite modal open state
 	let promoOpen = false;
 	if (isLive) promoOpen = true; // show immediately while live
+
+
+  let isCoolModalOpen = false;
 </script>
 
+<MyModal
+  bind:open={promoOpen}
+  heading="Celebrating 40 Years of Ministry"
+  dateISO="2025-10-26"
+  body={[
+    'Join us for Anniversary Sunday, October 26 at 10:30AM.',
+    'We’d love to celebrate God’s faithfulness with you!'
+  ]}
+  primaryCta={{ href: '/#events', label: 'See Details' }}
+  secondaryCta={{ href: '/plan-your-visit', label: 'Plan Your Visit' }}
+/>
+
+<!-- 
 {#if isLive}
 	<PromoModal
 		bind:open={promoOpen}
-		heading="Calling all kids!"
+		heading="Celebrating 40 years of ministry"
 		dateISO=""
-		body={['Awana begins Wed, Sep 10!']}
-		videoSrc="https://ik.imagekit.io/bip1v395ybp/Awana%20Promo_ig0_dyDb3.mp4?updatedAt=1756429140256"
-		poster="https://ik.imagekit.io/bip1v395ybp/awana-clubs-logo-color_UjjD8b0RC.jpg?updatedAt=1756429228137"
+		body={['Join us for our Anniversary Sunday, October 26 at 10:30AM']}
+		videoSrc=""
+		poster=""
 		primaryCta={{ href: '/about#childrens-ministry', label: 'Learn more' }}
 		secondaryCta={{ href: '/#events', label: 'See all events' }}
 	/>
-{/if}
+{/if} -->
 <!-- {#if promoOpen}
 	<div class="w-full h-full backdrop-blur-[4px] z-888"></div>
 {/if} -->
-<header class="flex sticky top-0 z-30 -mb-16 h-20 backdrop-blur-sm">
-	<nav class="absolute z-10 w-full border-b border-black/5 lg:border-transparent">
-		<div class="px-6 mx-auto max-w-5xl md:px-12 xl:px-6">
-			<div class="flex relative flex-wrap gap-6 justify-between items-center py-3 md:gap-0 md:py-4">
-				<div class="flex relative z-20 justify-between w-full md:px-0 lg:w-max">
-					<a href="/#home" class="flex items-center h-full">
-						<img
-							src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/ebc-logo-new-large_WrsHKgywk.png?updatedAt=1730625294622"
-							alt="logo"
-							class="w-11 h-11"
-						/>
-						<svg
-							class="h-12 w-[auto] text-neutral-900 md:ml-2 p-1"
-							xmlns="http://www.w3.org/2000/svg"
-							width="auto"
-							height="auto"
-							viewBox="0 0 204 57"
-							fill="none"
-						>
-							<path
+<!-- <Banner  /> -->
+
+<header class="sticky top-0 z-40 h-20 bg-white/80 backdrop-blur-md border-b border-zinc-200">
+  <nav class="absolute inset-x-0 top-0 h-full z-10 w-full">
+    <div class="mx-auto max-w-5xl px-6 md:px-12 xl:px-6 h-full">
+      <div class="relative flex flex-wrap items-center justify-between gap-6 py-4 md:gap-0 md:py-4">
+
+        <!-- Brand -->
+        <div class="relative z-20 flex w-full justify-between items-center md:px-0 lg:w-max">
+          <a href="/#home" class="flex h-full items-center">
+            <img
+              src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/ebc-logo-new-large_WrsHKgywk.png?updatedAt=1730625294622"
+              alt="logo"
+              class="h-11 w-11"
+            />
+            <svg
+              class="h-12 w-auto p-1 text-zinc-900 md:ml-2"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 204 57" fill="none" aria-hidden="true">
+              <path
 								d="M18.108 4.8C18.084 5.76 18.036 6.732 17.964 7.716C17.916 8.676 17.832 9.648 17.712 10.632H16.776L15.3 6.672H7.452V16.212H13.32L14.724 13.548H15.624C15.768 15.924 15.768 18.348 15.624 20.82H14.724L13.32 18.084H7.452V28.128H15.732L17.496 23.808H18.396C18.564 24.816 18.684 25.836 18.756 26.868C18.828 27.9 18.84 28.944 18.792 30H1.044V28.956C1.884 28.572 2.868 28.284 3.996 28.092V6.744C3.516 6.648 3.024 6.528 2.52 6.384C2.016 6.216 1.524 6.036 1.044 5.844V4.8H18.108ZM51.0851 30H42.1571V28.956C42.6371 28.764 43.1171 28.608 43.5971 28.488C44.0771 28.344 44.5691 28.212 45.0731 28.092V11.892L45.2171 7.68H44.9291L43.7411 11.532L36.3611 30H35.4251L28.4051 11.532L27.1091 7.32H26.7851L26.8211 11.892V28.092C27.2771 28.188 27.7331 28.308 28.1891 28.452C28.6451 28.596 29.1011 28.764 29.5571 28.956V30H22.0331V28.956C22.4891 28.764 22.9571 28.596 23.4371 28.452C23.9411 28.284 24.4451 28.152 24.9491 28.056V6.744C24.4451 6.648 23.9411 6.528 23.4371 6.384C22.9571 6.216 22.4771 6.036 21.9971 5.844V4.8H29.3771L35.6411 21.252L36.8651 24.96H36.9011L38.1251 21.18L44.6051 4.8H51.1211V5.844C50.6891 6.036 50.2451 6.216 49.7891 6.384C49.3331 6.528 48.8651 6.648 48.3851 6.744V28.128C48.8891 28.224 49.3571 28.344 49.7891 28.488C50.2451 28.608 50.6771 28.764 51.0851 28.956V30ZM82.3039 30H73.3759V28.956C73.8559 28.764 74.3359 28.608 74.8159 28.488C75.2959 28.344 75.7879 28.212 76.2919 28.092V11.892L76.4359 7.68H76.1479L74.9599 11.532L67.5799 30H66.6439L59.6239 11.532L58.3279 7.32H58.0039L58.0399 11.892V28.092C58.4959 28.188 58.9519 28.308 59.4079 28.452C59.8639 28.596 60.3199 28.764 60.7759 28.956V30H53.2519V28.956C53.7079 28.764 54.1759 28.596 54.6559 28.452C55.1599 28.284 55.6639 28.152 56.1679 28.056V6.744C55.6639 6.648 55.1599 6.528 54.6559 6.384C54.1759 6.216 53.6959 6.036 53.2159 5.844V4.8H60.5959L66.8599 21.252L68.0839 24.96H68.1199L69.3439 21.18L75.8239 4.8H82.3399V5.844C81.9079 6.036 81.4639 6.216 81.0079 6.384C80.5519 6.528 80.0839 6.648 79.6039 6.744V28.128C80.1079 28.224 80.5759 28.344 81.0079 28.488C81.4639 28.608 81.8959 28.764 82.3039 28.956V30ZM91.3826 30H83.3906V28.956C84.2546 28.572 85.1186 28.284 85.9826 28.092L95.0906 4.368H96.1346L105.243 28.092C105.723 28.188 106.191 28.296 106.647 28.416C107.127 28.536 107.571 28.716 107.979 28.956V30H98.7626V28.956C99.2426 28.764 99.7346 28.596 100.239 28.452C100.743 28.308 101.235 28.188 101.715 28.092L99.2666 21.504H90.6626L88.2866 28.092C89.2946 28.236 90.3266 28.524 91.3826 28.956V30ZM91.3826 19.632H98.6546L95.8106 12L95.1266 8.904H95.0546L94.1546 12.072L91.3826 19.632ZM125.497 4.8H133.273V5.844C132.265 6.516 131.281 6.996 130.321 7.284V30.432H128.269L115.201 10.596L113.797 7.788H113.689L114.013 10.596V27.696C114.997 27.96 115.921 28.38 116.785 28.956V30H109.009V28.956C109.441 28.692 109.897 28.464 110.377 28.272C110.881 28.056 111.409 27.864 111.961 27.696V7.068C111.481 6.876 111.001 6.672 110.521 6.456C110.065 6.24 109.633 6.024 109.225 5.808V4.8H115.309L126.649 21.9L128.305 24.996H128.449L128.269 21.9V7.284C127.765 7.068 127.273 6.84 126.793 6.6C126.337 6.36 125.905 6.108 125.497 5.844V4.8ZM134.692 4.8H143.836V5.844C143.38 6.036 142.924 6.204 142.468 6.348C142.012 6.492 141.556 6.624 141.1 6.744V21.468C141.1 22.74 141.232 23.808 141.496 24.672C141.784 25.512 142.192 26.196 142.72 26.724C143.248 27.228 143.896 27.6 144.664 27.84C145.456 28.056 146.344 28.164 147.328 28.164C149.224 28.164 150.7 27.648 151.756 26.616C152.812 25.56 153.34 23.832 153.34 21.432V7.068C152.788 6.876 152.272 6.684 151.792 6.492C151.312 6.276 150.88 6.06 150.496 5.844V4.8H158.164V5.844C157.708 6.108 157.24 6.348 156.76 6.564C156.304 6.78 155.836 6.948 155.356 7.068V21.504C155.356 23.04 155.152 24.36 154.744 25.464C154.336 26.568 153.76 27.48 153.016 28.2C152.296 28.92 151.408 29.46 150.352 29.82C149.32 30.156 148.168 30.324 146.896 30.324C143.896 30.324 141.604 29.652 140.02 28.308C138.436 26.94 137.644 24.852 137.644 22.044V6.744C136.66 6.6 135.676 6.3 134.692 5.844V4.8ZM176.628 4.8C176.604 5.76 176.556 6.732 176.484 7.716C176.436 8.676 176.352 9.648 176.232 10.632H175.296L173.82 6.672H165.972V16.212H171.84L173.244 13.548H174.144C174.288 15.924 174.288 18.348 174.144 20.82H173.244L171.84 18.084H165.972V28.128H174.252L176.016 23.808H176.916C177.084 24.816 177.204 25.836 177.276 26.868C177.348 27.9 177.36 28.944 177.312 30H159.564V28.956C160.404 28.572 161.388 28.284 162.516 28.092V6.744C162.036 6.648 161.544 6.528 161.04 6.384C160.536 6.216 160.044 6.036 159.564 5.844V4.8H176.628ZM180.517 4.8H190.381V5.844C189.805 6.06 189.229 6.252 188.653 6.42C188.077 6.564 187.501 6.672 186.925 6.744V28.128H195.205L197.329 22.332H198.265C198.337 22.836 198.397 23.424 198.445 24.096C198.517 24.744 198.565 25.428 198.589 26.148C198.637 26.844 198.661 27.528 198.661 28.2C198.661 28.872 198.649 29.472 198.625 30H180.517V28.956C181.093 28.692 181.621 28.5 182.101 28.38C182.581 28.26 183.037 28.164 183.469 28.092V6.744C182.917 6.648 182.389 6.528 181.885 6.384C181.381 6.216 180.925 6.036 180.517 5.844V4.8Z"
 								fill="currentColor"
 							>
@@ -80,167 +97,116 @@
 								fill="currentColor"
 							>
 							</path>
-						</svg>
-					</a>
+            </svg>
+          </a>
 
-					<div class="flex relative items-center max-h-10 lg:hidden">
-						<button
-							aria-label="hamburger"
-							id="hamburger"
-							on:click={toggleMenu}
-							class="relative p-6"
-						>
-							<div
-								aria-hidden="true"
-								id="line"
-								class="m-auto w-5 h-0.5 bg-sky-900 rounded transition-transform duration-300 dark:bg-neutral-300"
-								class:is-hidden={isMenuOpen}
-								class:rotate-45={isMenuOpen}
-								class:translate-y-[4px]={isMenuOpen}
-								class:bg-amber-400={isMenuOpen}
-							></div>
-							<div
-								aria-hidden="true"
-								id="line2"
-								class="m-auto mt-2 w-5 h-0.5 bg-sky-900 rounded transition-transform duration-300 dark:bg-neutral-300"
-								class:rotate-[-45deg]={isMenuOpen}
-								class:-translate-y-[6px]={isMenuOpen}
-								class:bg-amber-400={isMenuOpen}
-							></div>
-						</button>
-					</div>
-				</div>
-				<div
-					id="navLayer"
-					aria-hidden="true"
-					class="fixed inset-0 z-10 w-screen h-screen backdrop-blur-2xl transition duration-500 origin-bottom scale-y-0 bg-white/70 dark:bg-neutral-900/70 lg:hidden"
-				></div>
-				<div
-					id="navlinks"
-					class="absolute left-0 top-full invisible z-20 flex-col flex-wrap gap-6 justify-end p-8 w-full bg-white rounded-3xl border border-neutral-100 shadow-2xl opacity-0 transition-all duration-300 origin-top-right scale-90 translate-y-1 shadow-neutral-600/10 dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-none lg:visible lg:relative lg:flex lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none"
-				>
-					<div
-						class="w-full text-neutral-600 capitalize dark:text-neutral-200 lg:w-auto lg:pr-4 lg:pt-0"
-					>
-						<ul
-							class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-md font-extralight"
-						>
-							<li class="">
-								<a
-									href="/#discover"
-									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300 hover:font-normal"
-								>
-									<span class="">Discover</span>
-								</a>
-							</li>
-							<li class="">
-								<a
-									href="/#media"
-									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300 hover:font-normal"
-								>
-									<span class="">media</span>
-								</a>
-							</li>
-							<li class="">
-								<a
-									href="/#events"
-									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300 hover:font-normal"
-								>
-									<span class="">events</span>
-								</a>
-							</li>
-							<li class="">
-								<a
-									href="/#give"
-									class="block transition dark:hover:text-white md:px-4 relative hover:text-blue-900 capitalize text-outfit after:content-[''] after:block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-blue-900 after:rounded-md after:scale-x-0 hover:after:scale-x-100 after:translate-y-2 after:transition-transform after:duration-300 hover:font-normal"
-								>
-									<span class="">give</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div
-					class={`${isMenuOpen ? 'block bg-blue-500' : 'hidden bg-neutral-500'} absolute left-0 top-16 z-20 h-[fit-content] bg-white w-screen transition-transform transform animate-fade-down animate-once animate-duration-500 animate-delay-100 animate-ease-linear animate-normal`}
-				>
-					<div
-						id="navlinks"
-						class="absolute w-[85%] top-full left-0 z-20 origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-neutral-100 bg-white p-8 opacity-0 shadow-2xl shadow-neutral-600/10 transition-all duration-300 dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-none lg:visible lg:relative lg:hidden lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none !visible !scale-100 !opacity-100 !lg:translate-y-0"
-					>
-						<div
-							class="w-full text-neutral-600 capitalize dark:text-neutral-200 lg:w-auto lg:pr-4 lg:pt-0"
-						>
-							<ul class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-base">
-								<li>
-									<a
-										on:click={toggleMenu}
-										href="/#discover"
-										class="block transition hover:text-primary dark:hover:text-white md:px-4"
-									>
-										<span>discover</span>
-									</a>
-								</li>
-								<li>
-									<a
-										on:click={toggleMenu}
-										href="/#media"
-										class="block transition hover:text-primary dark:hover:text-white md:px-4"
-									>
-										<span>media</span>
-									</a>
-								</li>
-								<li>
-									<a
-										on:click={toggleMenu}
-										href="/#events"
-										class="block transition hover:text-primary dark:hover:text-white md:px-4"
-									>
-										<span>events</span>
-									</a>
-								</li>
-								<li>
-									<a
-										on:click={toggleMenu}
-										href="/#give"
-										class="block transition hover:text-primary dark:hover:text-white md:px-4"
-									>
-										<span>give</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
+          <!-- Mobile hamburger (unchanged logic/markup) -->
+          <div class="relative flex max-h-10 items-center lg:hidden ">
+            <button aria-label="hamburger" id="hamburger" on:click={toggleMenu} class="relative p-6">
+              <div
+                aria-hidden="true" id="line"
+                class="m-auto h-0.5 w-7 rounded transition-transform duration-300 bg-sky-900 dark:bg-neutral-300"
+                class:is-hidden={isMenuOpen}
+                class:rotate-45={isMenuOpen}
+                class:translate-y-[4px]={isMenuOpen}
+                class:bg-amber-400={isMenuOpen}></div>
+              <div
+                aria-hidden="true" id="line2"
+                class="m-auto mt-2 h-0.5 w-7 rounded transition-transform duration-300 bg-sky-900 dark:bg-neutral-300"
+                class:rotate-[-45deg]={isMenuOpen}
+                class:-translate-y-[6px]={isMenuOpen}
+                class:bg-amber-400={isMenuOpen}></div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Overlay (kept) -->
+        <div
+          id="navLayer" aria-hidden="true"
+          class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/70 backdrop-blur-2xl transition duration-500 dark:bg-neutral-900/70 lg:hidden">
+        </div>
+
+        <!-- Desktop nav -->
+        <div
+          id="navlinks"
+          class="absolute left-0 top-full invisible z-20 flex w-full translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-zinc-200 bg-white p-8 opacity-0 shadow-2xl shadow-zinc-600/10 transition-all duration-300 origin-top-right
+                 dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-none
+                 lg:visible lg:relative lg:flex lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none">
+          <div class="w-full lg:w-auto lg:pr-4 lg:pt-0 text-zinc-700 dark:text-neutral-200">
+            <ul class="flex flex-col gap-6 font-medium tracking-wide lg:flex-row lg:gap-0">
+              <li>
+                <a href="/#discover"
+                   class="relative block md:px-4 text-zinc-700 hover:text-zinc-900
+                          after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:rounded-md after:bg-sky-600 after:transition-transform after:duration-300 after:translate-y-2 hover:after:scale-x-100">
+                  <span>Discover</span>
+                </a>
+              </li>
+              <li>
+                <a href="/#media"
+                   class="relative block md:px-4 text-zinc-700 hover:text-zinc-900
+                          after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:rounded-md after:bg-sky-600 after:transition-transform after:duration-300 after:translate-y-2 hover:after:scale-x-100">
+                  <span>Media</span>
+                </a>
+              </li>
+              <li>
+                <a href="/#events"
+                   class="relative block md:px-4 text-zinc-700 hover:text-zinc-900
+                          after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:rounded-md after:bg-sky-600 after:transition-transform after:duration-300 after:translate-y-2 hover:after:scale-x-100">
+                  <span>Events</span>
+                </a>
+              </li>
+              <li>
+                <a href="/#give"
+                   class="relative block md:px-4 text-zinc-700 hover:text-zinc-900
+                          after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:scale-x-0 after:rounded-md after:bg-sky-600 after:transition-transform after:duration-300 after:translate-y-2 hover:after:scale-x-100">
+                  <span>Give</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile drawer (kept, just token tweaks) -->
+        <div
+          class={`${isMenuOpen ? 'block' : 'hidden'} absolute left-0 top-16 z-20 h-[fit-content] w-screen bg-white transition-transform animate-fade-down animate-once animate-duration-500 animate-delay-100 animate-ease-linear`}>
+          <div
+            id="navlinks"
+            class="absolute left-0 top-full z-20 w-[85%] translate-y-1 scale-90 origin-top-right flex-col flex-wrap justify-end gap-6 rounded-3xl border border-zinc-200 bg-white p-8 opacity-0 shadow-2xl shadow-zinc-600/10 transition-all duration-300
+                   dark:border-neutral-700 dark:bg-neutral-800 dark:shadow-none
+                   lg:visible lg:relative lg:hidden lg:w-7/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none !visible !scale-100 !opacity-100 !lg:translate-y-0">
+            <div class="w-full text-zinc-700 dark:text-neutral-200 lg:w-auto lg:pr-4 lg:pt-0">
+              <ul class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-base">
+                <li><a on:click={toggleMenu} href="/#discover" class="block md:px-4 hover:text-sky-700 capitalize">discover</a></li>
+                <li><a on:click={toggleMenu} href="/#media"    class="block md:px-4 hover:text-sky-700 capitalize">media</a></li>
+                <li><a on:click={toggleMenu} href="/#events"   class="block md:px-4 hover:text-sky-700 capitalize">events</a></li>
+                <li><a on:click={toggleMenu} href="/#give"     class="block md:px-4 hover:text-sky-700 capitalize">give</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
 </header>
+
+
 <main class="grow min-h-[60vh]">
 	<slot />
 </main>
-<footer
-	id="footer"
-	class="$col-span-3 col-start-1 row-start-3 text-white bg-theme-200 grid grid-cols-[1fr_minmax(clamp(1rem,6vw,3rem),80ch)_1fr] gap-x-[clamp(1rem,6vw,3rem)] text-base"
->
-	<div class="col-span-1 col-start-2 p-4 py-6 mx-auto w-full lg:py-8">
-		<div
-			class="grid grid-cols-1 gap-y-8 grid-rows-[75px_auto_auto_auto] md:grid-cols-2 md:grid-rows-[75px_auto_auto]"
-		>
-			<div class="col-start-1 row-start-1 mb-6 md:mb-0">
-				<a href="/#home" class="flex items-center h-full">
+
+<footer class="w-screen bg-sky-950 py-8 text-zinc-300">
+	<div class="mx-auto w-full max-w-5xl px-6 md:px-12 xl:px-6 py-16">
+		<div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+			<!-- Brand -->
+			<div>
+				<a href="/#home" class="flex items-center gap-3">
 					<img
 						src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/ebc-logo-new-large_WrsHKgywk.png?updatedAt=1730625294622"
-						alt="logo"
-						class="w-11 h-11"
+						alt=""
+						class="h-8 w-8"
 					/>
-					<svg
-						class="h-12 w-[auto] text-neutral-50 md:ml-2 p-1"
-						xmlns="http://www.w3.org/2000/svg"
-						width="auto"
-						height="auto"
-						viewBox="0 0 204 57"
-						fill="none"
-					>
+					<svg class="h-8 w-auto text-white" viewBox="0 0 204 57" aria-hidden="true">
 						<path
 							d="M18.108 4.8C18.084 5.76 18.036 6.732 17.964 7.716C17.916 8.676 17.832 9.648 17.712 10.632H16.776L15.3 6.672H7.452V16.212H13.32L14.724 13.548H15.624C15.768 15.924 15.768 18.348 15.624 20.82H14.724L13.32 18.084H7.452V28.128H15.732L17.496 23.808H18.396C18.564 24.816 18.684 25.836 18.756 26.868C18.828 27.9 18.84 28.944 18.792 30H1.044V28.956C1.884 28.572 2.868 28.284 3.996 28.092V6.744C3.516 6.648 3.024 6.528 2.52 6.384C2.016 6.216 1.524 6.036 1.044 5.844V4.8H18.108ZM51.0851 30H42.1571V28.956C42.6371 28.764 43.1171 28.608 43.5971 28.488C44.0771 28.344 44.5691 28.212 45.0731 28.092V11.892L45.2171 7.68H44.9291L43.7411 11.532L36.3611 30H35.4251L28.4051 11.532L27.1091 7.32H26.7851L26.8211 11.892V28.092C27.2771 28.188 27.7331 28.308 28.1891 28.452C28.6451 28.596 29.1011 28.764 29.5571 28.956V30H22.0331V28.956C22.4891 28.764 22.9571 28.596 23.4371 28.452C23.9411 28.284 24.4451 28.152 24.9491 28.056V6.744C24.4451 6.648 23.9411 6.528 23.4371 6.384C22.9571 6.216 22.4771 6.036 21.9971 5.844V4.8H29.3771L35.6411 21.252L36.8651 24.96H36.9011L38.1251 21.18L44.6051 4.8H51.1211V5.844C50.6891 6.036 50.2451 6.216 49.7891 6.384C49.3331 6.528 48.8651 6.648 48.3851 6.744V28.128C48.8891 28.224 49.3571 28.344 49.7891 28.488C50.2451 28.608 50.6771 28.764 51.0851 28.956V30ZM82.3039 30H73.3759V28.956C73.8559 28.764 74.3359 28.608 74.8159 28.488C75.2959 28.344 75.7879 28.212 76.2919 28.092V11.892L76.4359 7.68H76.1479L74.9599 11.532L67.5799 30H66.6439L59.6239 11.532L58.3279 7.32H58.0039L58.0399 11.892V28.092C58.4959 28.188 58.9519 28.308 59.4079 28.452C59.8639 28.596 60.3199 28.764 60.7759 28.956V30H53.2519V28.956C53.7079 28.764 54.1759 28.596 54.6559 28.452C55.1599 28.284 55.6639 28.152 56.1679 28.056V6.744C55.6639 6.648 55.1599 6.528 54.6559 6.384C54.1759 6.216 53.6959 6.036 53.2159 5.844V4.8H60.5959L66.8599 21.252L68.0839 24.96H68.1199L69.3439 21.18L75.8239 4.8H82.3399V5.844C81.9079 6.036 81.4639 6.216 81.0079 6.384C80.5519 6.528 80.0839 6.648 79.6039 6.744V28.128C80.1079 28.224 80.5759 28.344 81.0079 28.488C81.4639 28.608 81.8959 28.764 82.3039 28.956V30ZM91.3826 30H83.3906V28.956C84.2546 28.572 85.1186 28.284 85.9826 28.092L95.0906 4.368H96.1346L105.243 28.092C105.723 28.188 106.191 28.296 106.647 28.416C107.127 28.536 107.571 28.716 107.979 28.956V30H98.7626V28.956C99.2426 28.764 99.7346 28.596 100.239 28.452C100.743 28.308 101.235 28.188 101.715 28.092L99.2666 21.504H90.6626L88.2866 28.092C89.2946 28.236 90.3266 28.524 91.3826 28.956V30ZM91.3826 19.632H98.6546L95.8106 12L95.1266 8.904H95.0546L94.1546 12.072L91.3826 19.632ZM125.497 4.8H133.273V5.844C132.265 6.516 131.281 6.996 130.321 7.284V30.432H128.269L115.201 10.596L113.797 7.788H113.689L114.013 10.596V27.696C114.997 27.96 115.921 28.38 116.785 28.956V30H109.009V28.956C109.441 28.692 109.897 28.464 110.377 28.272C110.881 28.056 111.409 27.864 111.961 27.696V7.068C111.481 6.876 111.001 6.672 110.521 6.456C110.065 6.24 109.633 6.024 109.225 5.808V4.8H115.309L126.649 21.9L128.305 24.996H128.449L128.269 21.9V7.284C127.765 7.068 127.273 6.84 126.793 6.6C126.337 6.36 125.905 6.108 125.497 5.844V4.8ZM134.692 4.8H143.836V5.844C143.38 6.036 142.924 6.204 142.468 6.348C142.012 6.492 141.556 6.624 141.1 6.744V21.468C141.1 22.74 141.232 23.808 141.496 24.672C141.784 25.512 142.192 26.196 142.72 26.724C143.248 27.228 143.896 27.6 144.664 27.84C145.456 28.056 146.344 28.164 147.328 28.164C149.224 28.164 150.7 27.648 151.756 26.616C152.812 25.56 153.34 23.832 153.34 21.432V7.068C152.788 6.876 152.272 6.684 151.792 6.492C151.312 6.276 150.88 6.06 150.496 5.844V4.8H158.164V5.844C157.708 6.108 157.24 6.348 156.76 6.564C156.304 6.78 155.836 6.948 155.356 7.068V21.504C155.356 23.04 155.152 24.36 154.744 25.464C154.336 26.568 153.76 27.48 153.016 28.2C152.296 28.92 151.408 29.46 150.352 29.82C149.32 30.156 148.168 30.324 146.896 30.324C143.896 30.324 141.604 29.652 140.02 28.308C138.436 26.94 137.644 24.852 137.644 22.044V6.744C136.66 6.6 135.676 6.3 134.692 5.844V4.8ZM176.628 4.8C176.604 5.76 176.556 6.732 176.484 7.716C176.436 8.676 176.352 9.648 176.232 10.632H175.296L173.82 6.672H165.972V16.212H171.84L173.244 13.548H174.144C174.288 15.924 174.288 18.348 174.144 20.82H173.244L171.84 18.084H165.972V28.128H174.252L176.016 23.808H176.916C177.084 24.816 177.204 25.836 177.276 26.868C177.348 27.9 177.36 28.944 177.312 30H159.564V28.956C160.404 28.572 161.388 28.284 162.516 28.092V6.744C162.036 6.648 161.544 6.528 161.04 6.384C160.536 6.216 160.044 6.036 159.564 5.844V4.8H176.628ZM180.517 4.8H190.381V5.844C189.805 6.06 189.229 6.252 188.653 6.42C188.077 6.564 187.501 6.672 186.925 6.744V28.128H195.205L197.329 22.332H198.265C198.337 22.836 198.397 23.424 198.445 24.096C198.517 24.744 198.565 25.428 198.589 26.148C198.637 26.844 198.661 27.528 198.661 28.2C198.661 28.872 198.649 29.472 198.625 30H180.517V28.956C181.093 28.692 181.621 28.5 182.101 28.38C182.581 28.26 183.037 28.164 183.469 28.092V6.744C182.917 6.648 182.389 6.528 181.885 6.384C181.381 6.216 180.925 6.036 180.517 5.844V4.8Z"
 							fill="currentColor"
@@ -253,140 +219,76 @@
 						</path>
 					</svg>
 				</a>
+				<p class="mt-4 text-sm text-zinc-400">
+					Sharing Christ’s truth and hope in our community and around the world.
+				</p>
 			</div>
-			<div class="col-start-1 row-start-2 w-full">
-				<h2 class="mb-6 font-semibold text-neutral-400 uppercase text-md">Service Times</h2>
-				<ul class="pl-4 space-y-4 font-medium text-neutral-200 md:pl-0">
-					<li class="text-sky-300 text-md">
-						Sunday Bible Study
-						<br />
-						<span class="text-white"> 10:00 AM </span>
+
+			<!-- Service Times -->
+			<div>
+				<h3 class="text-sm font-semibold text-white">Service Times</h3>
+				<ul class="mt-4 space-y-2 text-sm">
+					<li>Sunday Bible Study — <span class="text-white">10:00 AM</span></li>
+					<li>Sunday Worship — <span class="text-white">11:00 AM &amp; 6:30 PM</span></li>
+					<li>Wednesday Prayer Meeting — <span class="text-white">7:00 PM</span></li>
+				</ul>
+			</div>
+
+			<!-- Contact -->
+			<div>
+				<h3 class="text-sm font-semibold text-white">Contact Info</h3>
+				<ul class="mt-4 space-y-2 text-sm">
+					<li>
+						<a
+							href="https://www.google.com/maps/search/?api=1&query=5975+US+70+East+La+Grange,+NC+28551"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="hover:text-white underline-offset-2 hover:underline"
+							>5975 US 70 East, La Grange, NC 28551</a
+						>
 					</li>
-					<li class="text-sky-300 text-md">
-						Sunday Worship
-						<br />
-						<span class="text-white"> 11:00 AM &amp; 6:30 PM </span>
+					<li>
+						<a href="tel:+12525662170" class="hover:text-white underline-offset-2 hover:underline"
+							>(252) 566-2170</a
+						>
 					</li>
-					<li class="text-sky-300 text-md">
-						Wednesday Prayer Meeting
-						<br />
-						<span class="text-white"> 7:00 PM </span>
+					<li>
+						<a
+							href="mailto:info@emmanuelbaptistnc.org"
+							class="hover:text-white underline-offset-2 hover:underline"
+							>info@emmanuelbaptistnc.org</a
+						>
 					</li>
 				</ul>
 			</div>
 
-			<div class="w-full md:col-start-2 md:row-start-2">
-				<h2 class="mb-6 font-semibold text-neutral-400 uppercase text-md">Contact Info</h2>
-				<ul class="pl-4 space-y-4 font-medium text-neutral-200 md:pl-0">
-					<li class="text-base">
-						<a
-							href="https://www.google.com/maps/search/?api=1&amp;query=5975+US+70+East+La+Grange,+NC+28551"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<div class="flex items-center space-x-4 cursor-pointer hover:underline">
-								<svg
-									class="h-12 max-w-[1.5rem] text-sky-300"
-									xmlns="http://www.w3.org/2000/svg"
-									width="auto"
-									height="auto"
-									viewBox="0 0 16 16"
-								>
-									<path
-										fill="currentColor"
-										fill-rule="evenodd"
-										d="m7.539 14.841l.003.003l.002.002a.755.755 0 0 0 .912 0l.002-.002l.003-.003l.012-.009a6 6 0 0 0 .19-.153a15.6 15.6 0 0 0 2.046-2.082C11.81 11.235 13 9.255 13 7A5 5 0 0 0 3 7c0 2.255 1.19 4.235 2.292 5.597a15.6 15.6 0 0 0 2.046 2.082l.189.153zM8 8.5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3"
-										clip-rule="evenodd"
-									></path>
-								</svg>
-								<p>5975 US 70 East La Grange, NC 28551</p>
-							</div>
-						</a>
-					</li>
-					<li class="text-base">
-						<a href="tel:+12525662170">
-							<div class="flex items-center space-x-4 cursor-pointer hover:underline">
-								<svg
-									class="h-8 max-w-[1.5rem] text-sky-300"
-									xmlns="http://www.w3.org/2000/svg"
-									width="auto"
-									height="auto"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill="currentColor"
-										fill-rule="evenodd"
-										d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.54 11.54 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.02 13.02 0 0 1 2.43 8.327A13 13 0 0 1 2 5z"
-										clip-rule="evenodd"
-									></path>
-								</svg>
-								<p>(252) 566-2170</p>
-							</div>
-						</a>
-					</li>
-					<li class="text-base">
-						<a href="mailto:info@emmanuelbaptistnc.org">
-							<div class="flex items-center space-x-4 cursor-pointer hover:underline">
-								<svg
-									class="h-8 max-w-[1.5rem] text-sky-300"
-									xmlns="http://www.w3.org/2000/svg"
-									width="auto"
-									height="auto"
-									viewBox="0 0 24 24"
-								>
-									<g fill="currentColor">
-										<path
-											d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0z"
-										></path>
-										<path
-											d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0z"
-										></path>
-									</g>
-								</svg>
-								<p>info@emmanuelbaptistnc.org</p>
-							</div>
-						</a>
-					</li>
-				</ul>
+			<!-- Follow -->
+			<div>
+				<h3 class="text-sm font-semibold text-white">Follow</h3>
+				<a
+					href="https://www.facebook.com/emmanuelchurchlagrange/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="mt-4 inline-flex items-center gap-2 text-zinc-300 hover:text-white"
+				>
+					<svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path
+							d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+						/>
+					</svg>
+					Facebook
+				</a>
 			</div>
 		</div>
-		<hr class="my-12 border-neutral-200 sm:mx-auto dark:border-neutral-700 lg:my-8" />
-		<div class="mb-8 sm:flex items-start sm:justify-between">
-			<div class="flex flex-wrap text-base leading-relaxed text-neutral-200 sm:text-center">
-				<p>
-					<span class="mr-2 whitespace-nowrap">© {currentYear} • Emmanuel Baptist Church.</span>
-					<span class="mr-2">All Rights Reserved.</span>
-				</p>
-				<br class="visible md:hidden" />
-				<a href="/legal#privacy-policy" class="mr-2 underline cursor-pointer hover:text-sky-300"
-					>Privacy Policy
-				</a>
-				&
-				<a href="/legal#terms-of-service" class="ml-2 underline cursor-pointer hover:text-sky-300"
-					>Terms of Use</a
-				>
-			</div>
-			<div class="flex justify-start sm:mt-2 mt-0">
-				<span class="text-neutral-200 hover:text-sky-300 dark:hover:text-white"
-					><a
-						href="https://www.facebook.com/emmanuelchurchlagrange/"
-						target="_blank"
-						rel="noopener noreferrer"
-						><svg
-							class="h-8 md:h-10 w-auto"
-							xmlns="http://www.w3.org/2000/svg"
-							width="auto"
-							height="auto"
-							viewBox="0 0 24 24"
-						>
-							<path
-								fill="currentColor"
-								d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
-							></path></svg
-						></a
-					>
-					<span class="sr-only">Facebook page</span></span
-				>
+
+		<div class="mt-12 border-t border-white/10 pt-6 text-xs text-zinc-500">
+			<div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+				<p>© {currentYear} Emmanuel Baptist Church. All rights reserved.</p>
+				<div class="flex items-center gap-4">
+					<a href="/legal#privacy-policy" class="hover:text-white">Privacy Policy</a>
+					<span aria-hidden="true">•</span>
+					<a href="/legal#terms-of-service" class="hover:text-white">Terms of Use</a>
+				</div>
 			</div>
 		</div>
 	</div>

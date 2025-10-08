@@ -80,6 +80,29 @@
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+	/* Primary choice for a Figtree feel */
+	/* font-family: 'DM Sans', sans-serif; */
+
+	/* Pure geometric and very clean */
+	/* font-family: 'Poppins', sans-serif; */
+
+	/* Popular geometric, great structure */
+	/* font-family: 'Montserrat', sans-serif; */
+
+	/* Crossover geometric and semi-rounded */
+	/* font-family: 'Manrope', sans-serif; */
+
+	/* +1 Contemporary Scandinavian-inspired geometric */
+	font-family: 'Albert Sans', sans-serif;
+
+	/* -1 Quirky, modern proportional sans */
+	/* font-family: 'Space Grotesk', sans-serif; */
+
+	/* -1 Friendly, humanist alternative */
+	/* font-family: 'Lato', sans-serif; */
+
+	/* +1 Elegant, crisp geometric sans */
+	/* font-family: 'Raleway', sans-serif; */
 }
 
 .gap-x-clamp {

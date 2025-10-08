@@ -219,7 +219,7 @@
 			},
 			{
 				date: '10/26/2025',
-				formattedDate: 'Sun, Cct 26',
+				formattedDate: 'Sun, Oct 26',
 				title: 'Anniversary Sunday with Brady Rochester Family',
 				description: ''
 			}

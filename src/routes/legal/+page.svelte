@@ -1,176 +1,219 @@
-<div id="main" class="flex flex-col justify-center mt-40 grow min-h-80">
-	<section
-		id="terms-of-service"
-		class="data-[size=md]:scale-[0.8] data-[size=sm]:scale-75 w-screen relative ease-in-out flex transition-all duration-700 will-change-auto items-center flex-col space-y-40"
-	>
-		<div class="relative">
-			<!-- GRADIENTS -->
-			<div aria-hidden="true" class="grid absolute inset-0 grid-cols-2 -space-x-52 opacity-40">
-				<div class="blur-[106px] h-56 bg-gradient-to-br from-theme-800 to-purple-400"></div>
-				<div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300"></div>
-			</div>
-			<div class="px-6 mx-auto max-w-7xl md:px-12 xl:px-6">
-				<div class="relative">
-					<div class="m-auto mt-6 space-y-6 md:w-8/12 lg:w-full">
-						<h1 class="text-4xl font-black md:text-5xl">Legal</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section
-		id="terms-of-service"
-		class="data-[size=md]:scale-[0.8] data-[size=sm]:scale-75 w-screen relative ease-in-out flex transition-all duration-700 will-change-auto items-center flex-col mb-20"
-	>
-		<div class="flex-col items-center p-4 mx-auto mt-16 mb-0 w-full max-w-4xl text-center">
-			<h2
-				class="p-8 text-2xl font-black text-center text-neutral-800 border-b border-neutral-200 md:text-3xl"
-			>
-				Terms of Service
-			</h2>
+<script lang="ts">
+  // Simple types for clarity
+  type Link = { label: string; href: string };
+  type Paragraph = string | { text: string; link?: Link };
+  type Section = { title?: string; paragraphs: Paragraph[] };
+  type LegalDoc = { heading: string; updated?: string; sections: Section[] };
 
-			<h4 class="mt-12 mb-6 font-bold text-center text-md text-neutral-700 md:text-base">
-				Posted November 7, 2024
-			</h4>
+  // --- CONTENT (JSON-style data) -------------------------------------------
+  const legal: { terms: LegalDoc; privacy: LegalDoc } = {
+    terms: {
+      heading: 'Terms of Service',
+      updated: '2024-11-07',
+      sections: [
+        {
+          title: '1. Introduction',
+          paragraphs: [
+            `Welcome to the website of Emmanuel Baptist Church (“we”, “our”, or “us”). By accessing
+            or using this website (“Site”), you agree to comply with and be bound by these Terms of
+            Use. If you do not agree to these terms, please refrain from using the Site.`
+          ]
+        },
+        {
+          title: '2. Site Usage',
+          paragraphs: [
+            `You are permitted to use this Site for lawful purposes only. You may browse the content,
+            read articles, watch videos, and engage with any publicly available materials provided.
+            Unauthorized use of any content, including but not limited to copying, distribution, or
+            modification, is strictly prohibited.`
+          ]
+        },
+        {
+          title: '3. No Account Creation',
+          paragraphs: [
+            `The Site does not require the creation of any user accounts or the submission of personal
+            information for access to its content. Users may browse the Site without providing any
+            personal data, and we do not store or process any personal data submitted by users.`
+          ]
+        },
+        {
+          title: '4. Data Collection and Privacy',
+          paragraphs: [
+            `While we do not collect any personal data from you directly, we may use third-party
+            analytics tools (such as Google Analytics) to gather non-identifiable data about your visit
+            to the Site. This data may include information such as your IP address, browser type,
+            device, location, and the pages you visit. These analytics are used solely for improving the
+            user experience and understanding site traffic patterns. For more information on how we
+            handle your data, please refer to our Privacy Policy.`
+          ]
+        },
+        {
+          title: '5. Intellectual Property',
+          paragraphs: [
+            `All content, including text, images, videos, logos, and other materials on the Site, is the
+            property of Emmanuel Baptist Church or its content providers and is protected by copyright
+            laws. You may not reproduce, distribute, or modify any content from this Site without prior
+            written consent from us.`
+          ]
+        },
+        {
+          title: '6. Disclaimers',
+          paragraphs: [
+            `The content provided on this Site is for informational purposes only. While we strive to
+            provide accurate and up-to-date information, we make no representations or warranties
+            regarding the accuracy, completeness, or reliability of the content. We are not liable for
+            any errors or omissions in the information provided on the Site.`,
+            `The Site may contain links to third-party websites. We do not control, endorse, or assume
+            responsibility for the content, privacy practices, or policies of these external sites.`
+          ]
+        },
+        {
+          title: '7. Limitation of Liability',
+          paragraphs: [
+            `To the fullest extent permitted by law, Emmanuel Baptist Church shall not be liable for any
+            direct, indirect, incidental, special, or consequential damages arising out of or related to
+            your use of the Site. This includes, but is not limited to, damages for loss of data or
+            profits, or due to any errors or omissions in the content.`
+          ]
+        },
+        {
+          title: '8. Modifications to Terms',
+          paragraphs: [
+            `We reserve the right to modify, update, or change these Terms of Use at any time without
+            prior notice. Any changes will be posted on this page, and your continued use of the Site
+            after such changes constitutes your acceptance of the modified terms.`
+          ]
+        },
+        {
+          title: '9. Governing Law',
+          paragraphs: [
+            `These Terms of Use are governed by the laws of your jurisdiction, and any disputes relating
+            to these terms will be subject to the exclusive jurisdiction of the courts located in your
+            jurisdiction.`
+          ]
+        },
+        {
+          title: '10. Contact Information',
+          paragraphs: [
+            {
+              text:
+                'If you have any questions or concerns about these Terms of Use, please contact us at:',
+              link: { label: 'info@emmanuelbaptistnc.org', href: 'mailto:info@emmanuelbaptistnc.org' }
+            }
+          ]
+        }
+      ]
+    },
 
-			<h3 class="mt-12 mb-6 text-xl font-bold text-center text-neutral-800 md:text-2xl">
-				1. Introduction
-			</h3>
+    privacy: {
+      heading: 'Privacy Policy',
+      sections: [
+        {
+          paragraphs: [
+            `Your privacy is important to us. This website does not collect personal information or
+            require users to create accounts. We gather minimal, anonymized analytics data (compliant
+            with applicable privacy laws) solely to improve the site’s functionality and content.`
+          ]
+        },
+        {
+          paragraphs: [
+            `We do not share, sell, or disclose any visitor data with third parties, except for
+            analytics information collected in aggregate form. By using our website, you agree to
+            this policy.`
+          ]
+        },
+        {
+          paragraphs: [
+            {
+              text: 'If you have any questions or concerns about this policy, contact us at:',
+              link: { label: 'info@emmanuelbaptistnc.org', href: 'mailto:info@emmanuelbaptistnc.org' }
+            }
+          ]
+        }
+      ]
+    }
+  };
 
-			<p class="text-base text-left text-neutral-600">
-				Welcome to the website of Emmanuel Baptist Church ("we", "our", or "us"). By accessing or
-				using this website ("Site"), you agree to comply with and be bound by these Terms of Use. If
-				you do not agree to these terms, please refrain from using the Site.
-			</p>
+  // Utilities
+  const formatDate = (iso?: string) =>
+    iso ? new Date(iso).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+</script>
 
-			<h3 class="my-10 text-xl font-bold text-center text-neutral-800 md:text-2xl">
-				2. Site Usage
-			</h3>
+<!-- PAGE BACKGROUND / DECOR -->
+<div class="relative grow pt-10 sm:pt-12 overflow-x-hidden space-y-8">
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-br from-sky-50 via-sky-50 to-white"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-40">
+    <div class="absolute left-[-10%] top-10 h-48 w-80 blur-[106px] bg-gradient-to-br from-sky-200 to-sky-300"></div>
+    <div class="absolute right-[-6%] top-28 h-36 w-72 blur-[106px] bg-gradient-to-r from-sky-200 to-sky-100"></div>
+  </div>
 
-			<p class="text-base text-left text-neutral-600">
-				You are permitted to use this Site for lawful purposes only. You may browse the content,
-				read articles, watch videos, and engage with any publicly available materials provided.
-				Unauthorized use of any content, including but not limited to copying, distribution, or
-				modification, is strictly prohibited.
-			</p>
+  <!-- Header -->
+  <section id="legal" class="w-full scroll-mt-28 py-8 md:py-12">
+    <div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6">
+      <h1 class="text-center text-4xl font-extrabold text-zinc-900 md:text-5xl">Legal</h1>
+    </div>
+  </section>
 
-			<h3 class="my-10 text-xl font-bold text-center text-neutral-800 md:text-2xl">
-				3. No Account Creation
-			</h3>
+  <!-- Terms of Service -->
+  <section id="terms-of-service" class="w-full scroll-mt-28 py-12 md:py-16">
+    <div class="mx-auto w-full max-w-3xl px-6 text-center">
+      <h2 class="border-b border-zinc-200 pb-6 text-2xl font-extrabold text-zinc-900 md:text-3xl">
+        {legal.terms.heading}
+      </h2>
+      {#if legal.terms.updated}
+        <p class="mt-8 mb-2 text-sm font-medium text-zinc-600">
+          Posted {formatDate(legal.terms.updated)}
+        </p>
+      {/if}
 
-			<p class="text-base text-left text-neutral-600">
-				The Site does not require the creation of any user accounts or the submission of personal
-				information for access to its content. Users may browse the Site without providing any
-				personal data, and we do not store or process any personal data submitted by users.
-			</p>
+      {#each legal.terms.sections as sec}
+        {#if sec.title}
+          <h3 class="mt-10 text-xl font-bold text-zinc-900 md:text-2xl">{sec.title}</h3>
+        {/if}
 
-			<h3 class="my-10 text-xl font-bold text-center text-neutral-800 md:text-2xl">
-				4. Data Collection and Privacy
-			</h3>
+        {#each sec.paragraphs as p}
+          {#if typeof p === 'string'}
+            <p class="mt-3 text-left text-lg leading-7 text-zinc-700">{p}</p>
+          {:else}
+            <p class="mt-3 text-left text-lg leading-7 text-zinc-700">
+              {p.text}
+              {#if p.link}
+                <a class="font-semibold text-zinc-900 underline decoration-sky-300/60 underline-offset-2 hover:decoration-sky-400"
+                  href={p.link.href}>{p.link.label}</a>
+              {/if}
+            </p>
+          {/if}
+        {/each}
+      {/each}
+    </div>
+  </section>
 
-			<p class="text-base text-left text-neutral-600">
-				While we do not collect any personal data from you directly, we may use third-party
-				analytics tools (such as Google Analytics) to gather non-identifiable data about your visit
-				to the Site. This data may include information such as your IP address, browser type,
-				device, location, and the pages you visit. These analytics are used solely for improving the
-				user experience and understanding site traffic patterns. For more information on how we
-				handle your data, please refer to our Privacy Policy.
-			</p>
+  <!-- Privacy Policy -->
+  <section id="privacy-policy" class="w-full scroll-mt-28 pb-16 md:pb-36">
+    <div class="mx-auto w-full max-w-3xl px-6 text-center">
+      <h2 class="border-b border-zinc-200 pb-6 text-2xl font-extrabold text-zinc-900 md:text-3xl">
+        {legal.privacy.heading}
+      </h2>
 
-			<h3 class="my-10 text-xl font-bold text-center text-neutral-800 md:text-2xl">
-				5. Intellectual Property
-			</h3>
+      {#each legal.privacy.sections as sec}
+        {#if sec.title}
+          <h3 class="mt-8 text-xl font-bold text-zinc-900 md:text-2xl">{sec.title}</h3>
+        {/if}
 
-			<p class="text-base text-left text-neutral-600">
-				All content, including text, images, videos, logos, and other materials on the Site, is the
-				property of Emmanuel Baptist Church or its content providers and is protected by copyright
-				laws. You may not reproduce, distribute, or modify any content from this Site without prior
-				written consent from us.
-			</p>
-
-			<h3 class="my-10 text-xl font-bold text-center text-neutral-800 md:text-2xl">
-				6. Disclaimers
-			</h3>
-			<p class="text-base text-left text-neutral-600">
-				The content provided on this Site is for informational purposes only. While we strive to
-				provide accurate and up-to-date information, we make no representations or warranties
-				regarding the accuracy, completeness, or reliability of the content. We are not liable for
-				any errors or omissions in the information provided on the Site.
-			</p>
-
-			<p class="text-base text-left text-neutral-600">
-				The Site may contain links to third-party websites. We do not control, endorse, or assume
-				responsibility for the content, privacy practices, or policies of these external sites.
-			</p>
-
-			<h3 class="my-10 text-xl font-bold text-center text-neutral-800 md:text-2xl">
-				7. Limitation of Liability
-			</h3>
-
-			<p class="text-base text-left text-neutral-600">
-				To the fullest extent permitted by law, Emmanuel Baptist Church shall not be liable for any
-				direct, indirect, incidental, special, or consequential damages arising out of or related to
-				your use of the Site. This includes, but is not limited to, damages for loss of data or
-				profits, or due to any errors or omissions in the content.
-			</p>
-
-			<h3 class="my-10 text-xl font-bold text-center text-neutral-800 md:text-2xl">
-				8. Modifications to Terms
-			</h3>
-			<p class="text-base text-left text-neutral-600">
-				We reserve the right to modify, update, or change these Terms of Use at any time without
-				prior notice. Any changes will be posted on this page, and your continued use of the Site
-				after such changes constitutes your acceptance of the modified terms.
-			</p>
-
-			<h3 class="my-10 text-xl font-bold text-center text-neutral-800 md:text-2xl">
-				9. Governing Law
-			</h3>
-			<p class="text-base text-left text-neutral-600">
-				These Terms of Use are governed by the laws of your jurisdiction, and any disputes relating
-				to these terms will be subject to the exclusive jurisdiction of the courts located in your
-				jurisdiction.
-			</p>
-
-			<h3 class="my-10 text-xl font-bold text-center text-neutral-800 md:text-2xl">
-				10. Contact Information
-			</h3>
-			<p class="text-base text-left text-neutral-600">
-				If you have any questions or concerns about these Terms of Use, please contact us at:
-				<span class="text-base text-left text-neutral-900">info@emmanuelbaptistnc.org</span>
-			</p>
-		</div>
-	</section>
-	<section
-		id="privacy-policy"
-		class="data-[size=md]:scale-[0.8] data-[size=sm]:scale-75 w-screen relative ease-in-out flex transition-all duration-700 will-change-auto items-center flex-col mb-20"
-	>
-		<div
-			class="flex-col items-center p-4 mx-auto mt-16 mb-0 space-y-8 w-full max-w-4xl text-center"
-		>
-			<h2
-				class="p-8 text-2xl font-black text-center text-neutral-800 border-b border-neutral-200 md:text-3xl"
-			>
-				Privacy Policy
-			</h2>
-
-			<p class="mt-12 mb-6 text-base text-left text-neutral-600 dark:text-neutral-300">
-				Your privacy is important to us. This website does not collect personal information or
-				require users to create accounts. We are committed to protecting your privacy and only
-				gather minimal, anonymized data for general site analytics, which complies with GDPR and
-				other relevant privacy laws. This data does not identify individual users and is used solely
-				to improve the functionality and content of the site.
-			</p>
-
-			<p class="text-base text-left text-neutral-600 dark:text-neutral-300">
-				We do not share, sell, or disclose any visitor data with third parties, except for analytics
-				information collected in aggregate form. By using our website, you agree to this policy.
-			</p>
-
-			<p class="text-base text-left text-neutral-600">
-				If you have any questions or concerns about this policy, please contact us at:
-				<span class="text-base text-left text-neutral-900">info@emmanuelbaptistnc.org</span>
-			</p>
-		</div>
-	</section>
+        {#each sec.paragraphs as p}
+          {#if typeof p === 'string'}
+            <p class="mt-4 text-left text-lg leading-7 text-zinc-700">{p}</p>
+          {:else}
+            <p class="mt-4 text-left text-lg leading-7 text-zinc-700">
+              {p.text}
+              {#if p.link}
+                <a class="font-semibold text-zinc-900 underline decoration-sky-300/60 underline-offset-2 hover:decoration-sky-400"
+                  href={p.link.href}>{p.link.label}</a>
+              {/if}
+            </p>
+          {/if}
+        {/each}
+      {/each}
+    </div>
+  </section>
 </div>

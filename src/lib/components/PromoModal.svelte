@@ -25,11 +25,11 @@
 	outsideClose
 	backdrop={true}
 	backdropClass="fixed inset-0 bg-black/60 z-[40]"
-	class="z-[50] flex !items-center !justify-center"
+	class="z-[50] flex !items-center !justify-center backdrop-blur-[4px] rounded-2xl"
 >
-	<h2
+	<!-- <h2
 		slot="header"
-		class="flex items-center justify-center gap-4 text-xl font-bold text-neutral-700 grow-1 pt-2"
+		class="flex items-center justify-center gap-4 text-xl font-bold text-left text-neutral-700 bg-transparent grow-1 pt-2"
 	>
 		<span>
 			{heading}
@@ -43,8 +43,23 @@
 				</time>
 			{/if}
 		</span>
-		<span class="mr-32"></span>
-	</h2>
+	</h2> -->
+	<div slot="header" class="flex items-center justify-center w-[100%]">
+		<h2 id="promo-title" class="text-xl font-bold text-neutral-700 grow-1">
+			{heading}
+			<!-- {#if dateISO}
+				<time datetime={dateISO} class="ml-2 whitespace-nowrap">
+					{new Date(dateISO).toLocaleDateString(undefined, {
+						weekday: 'short',
+						month: 'short',
+						day: 'numeric'
+					})}
+				</time>
+			{/if} -->
+		</h2>
+		<!-- optional custom close; omit entirely if you want no X -->
+		<button aria-label="Close" on:click={() => (open = false)} …>…</button>
+	</div>
 
 	<div class="space-y-4">
 		{#if videoSrc}

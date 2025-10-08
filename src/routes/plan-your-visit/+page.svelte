@@ -67,190 +67,114 @@
 	];
 </script>
 
-<div id="main" class="flex overflow-x-hidden flex-col justify-center mt-0 grow min-h-80">
-	<section
-		class="data-[size=md]:scale-[0.8] data-[size=sm]:scale-75 w-screen relative z-10 ease-in-out flex transition-all duration-700 will-change-auto items-center flex-col"
-	>
-		<div class="relative flex-col items-center mb-20 max-w-8xl" id="home">
-			<!-- GRADIENTS -->
-			<div aria-hidden="true" class="grid absolute inset-0 grid-cols-2 -space-x-52 opacity-40">
-				<div class="blur-[106px] h-56 bg-gradient-to-br from-theme-800 to-purple-400"></div>
-				<div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300"></div>
-			</div>
-			<!-- HERO SECTION -->
-			<div class="flex-col items-center px-6 mx-auto w-full max-w-7xl md:px-12 xl:px-6">
-				<div class="relative flex-col items-center pt-36 ml-auto">
-					<div class="flex-col items-center mx-auto w-full text-center md:w-1/2 lg:w-2/3">
-						<h1 class="text-5xl font-bold text-neutral-900 md:text-6xl xl:text-7xl">
-							<div class="m-auto mt-6 space-y-6 md:w-8/12 lg:w-full">
-								<h1 class="text-4xl font-black md:text-5xl">Plan Your Visit</h1>
-							</div>
-						</h1>
+<div id="main" class="relative grow pt-10 sm:pt-12 overflow-x-hidden">
+  <!-- Page background -->
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-br from-sky-50 via-sky-50 to-white"></div>
+  <!-- soft blobs -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-40">
+    <div class="absolute left-[-10%] top-10 h-48 w-80 blur-[106px] bg-gradient-to-br from-sky-200 to-sky-300"></div>
+    <div class="absolute right-[-6%] top-28 h-36 w-72 blur-[106px] bg-gradient-to-r from-sky-200 to-sky-100"></div>
+  </div>
 
-						<h3 class="mt-8 text-lg text-neutral-700">
-							Welcome! We’re so glad you’re considering visiting our church. Our goal is to make
-							your experience as smooth and spiritually uplifting as possible. To help with that,
-							we’ve gathered answers to some of the most common questions right here. If you don’t
-							find what you're looking for or simply want to connect, please don’t hesitate to reach
-							out through the <a href="/plan-your-visit#form" class="underline">form below</a> — we’d
-							love to hear from you!
-						</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="my-20 text-neutral-600 dark:text-neutral-300 max-w-8xl" id="faqs">
-			<!-- <div class="px-6 mx-auto max-w-7xl md:px-12 xl:px-6">
-				<div class="px-6 mb-20 space-y-4 md:px-0">
-					<h2 class="text-2xl font-bold text-center text-neutral-800 dark:text-white md:text-4xl">
-						Frequently Asked Questions
-					</h2>
-				</div>
-				<div class="gap-8 space-y-8 md:columns-2 lg:columns-3">
-					<div
-						class="p-8 bg-white rounded-3xl border border-neutral-100 shadow-2xl aspect-auto dark:bg-neutral-800 dark:border-neutral-700 shadow-neutral-600/10 dark:shadow-none"
-					>
-						<div class="flex gap-4 items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" class="text-theme-400" width="24" height="24" viewBox="0 0 24 24">
-								<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-									<circle cx="12" cy="12" r="10" />
-									<path d="M12 6v6l4 2" />
-								</g>
-							</svg>
-							<div>
-								<h6 class="text-lg font-medium text-neutral-700 dark:text-white">
-									What time are your services?
-								</h6>
-							</div>
-						</div>
-						<p class="mt-8">
-							We meet on Sunday morning for Bible study groups at 10:00 AM, at 11:00 AM for congrational worship and Bible preaching, and Wednesday evening at 7:00 PM for congrational Bible study and prayer.
-						</p>
-					</div>
-					<div
-						class="p-8 bg-white rounded-3xl border border-neutral-100 shadow-2xl aspect-auto dark:bg-neutral-800 dark:border-neutral-700 shadow-neutral-600/10 dark:shadow-none"
-					>
-						<div class="flex gap-4 items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" class="text-theme-400" width="24" height="24" viewBox="0 0 24 24">
-								<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-									<circle cx="12" cy="12" r="10" />
-									<path d="M12 6v6l4 2" />
-								</g>
-							</svg>
-							<div>
-								<h6 class="text-lg font-medium text-neutral-700 dark:text-white">
-									What's a typical church service like?
-								</h6>
-							</div>
-						</div>
-						<p class="mt-8">
-							Our church services are a little over an hour long and include congregational singing, 
-						</p>
-					</div>
-					<div
-						class="p-8 bg-white rounded-3xl border border-neutral-100 shadow-2xl aspect-auto dark:bg-neutral-800 dark:border-neutral-700 shadow-neutral-600/10 dark:shadow-none"
-					>
-						<div class="flex gap-4 items-center">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-								<path fill="currentColor" d="M13 3C9.23 3 6.19 5.95 6 9.66l-1.92 2.53c-.24.31 0 .81.42.81H6v3c0 1.11.89 2 2 2h1v3h7v-4.69c2.37-1.12 4-3.51 4-6.31c0-3.86-3.12-7-7-7m1 11h-2v-2h2zm1.75-5.19c-.29.4-.66.69-1.11.93c-.25.16-.42.33-.51.52c-.09.18-.13.43-.13.74h-2c0-.5.11-.92.31-1.18c.19-.27.54-.57 1.05-.91c.26-.16.47-.36.61-.59c.16-.23.23-.5.23-.82c0-.3-.08-.56-.26-.75c-.18-.18-.44-.28-.75-.28a1 1 0 0 0-.66.23c-.18.16-.27.39-.28.69h-1.93l-.01-.03c-.01-.79.25-1.36.77-1.77c.54-.39 1.24-.59 2.11-.59c.93 0 1.66.23 2.19.68c.54.45.81 1.06.81 1.82c0 .5-.15.91-.44 1.31" />
-							</svg>
-							<div>
-								<h6 class="text-lg font-medium text-neutral-700 dark:text-white">Are all your services the same?</h6>
-							</div>
-						</div>
-						<p class="mt-8">
-							We meet Sunday mornings at 10:00 AM and 11:00 AM, Sunday evenings at 6:30 PM and Wednesday evenings at 7:00 PM. Throughout the year we have additional services that may occur throught the week.
-						</p>
-					</div>
-				
-				</div>
-			</div> -->
-			<div class="px-6 mx-auto max-w-7xl md:px-12 xl:px-6">
-				<div class="px-6 mb-20 space-y-4 md:px-0">
-					<h2 class="text-2xl font-bold text-center text-neutral-800 dark:text-white md:text-4xl">
-						Frequently Asked Questions
-					</h2>
-				</div>
-				<div class="gap-8 space-y-8 md:columns-2 lg:columns-3">
-					{#each faqs as { question, answer, icon }}
-						<div
-							class="p-8 bg-white rounded-3xl border border-neutral-100 shadow-2xl aspect-auto dark:bg-neutral-800 dark:border-neutral-700 shadow-neutral-600/10 dark:shadow-none"
-						>
-							<div class="flex gap-4 items-center">
-								<span class="p-3 text-white rounded-full bg-theme-600">{@html icon}</span>
+  <!-- HERO -->
+  <section class="w-full pb-20">
+    <div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6">
+      <div class="mx-auto mt-6 text-center">
+        <h1 class="py-8 text-4xl font-extrabold text-zinc-900 md:text-5xl">Plan Your Visit</h1>
 
-								<div>
-									<h6 class="text-lg font-medium text-neutral-700 dark:text-white">{question}</h6>
-								</div>
-							</div>
-							<p class="mt-8">{answer}</p>
-						</div>
-					{/each}
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="form" class="p-4 mx-auto mb-20 max-w-2xl">
-		<div class="flex-col items-center px-6 mx-auto w-full max-w-7xl md:px-12 xl:px-6">
-			<div class="relative flex-col items-center pt-36 ml-auto">
-				<div class="flex-col items-center mx-auto w-full text-center md:w-1/2 lg:w-2/3">
-					<h2 class="text-2xl font-bold text-center text-neutral-800 dark:text-white md:text-4xl">
-						Reach Out Directly
-					</h2>
-					<h3 class="mt-8 mb-20 text-lg text-neutral-700">
-						Visiting a new church can feel intimidating, but we’re here to help you feel at home.
-						Use the form below to ask us anything!
-					</h3>
-				</div>
-			</div>
-		</div>
-		<form class="mx-auto max-w-xl" action="https://api.web3forms.com/submit" method="POST">
-			<input type="hidden" name="subject" value="New Submission from EBC Contact Form" />
-			<input type="hidden" name="access_key" value={ACCESS_KEY} />
-			<div class="mb-5">
-				<Label class="space-y-2">
-					<span class="capitalize">Your Name*</span>
-					<Input type="name" placeholder="First Last" size="lg" required />
-				</Label>
-			</div>
-			<div class="mb-5">
-				<Label class="space-y-2">
-					<span class="capitalize">Your email address*</span>
-					<Input type="email" placeholder="name@provider.com" size="lg" required>
-						<!-- <EnvelopeSolid slot="right" class="w-5 h-5" /> -->
-					</Input>
-				</Label>
-			</div>
-			<div class="mb-5">
-				<Label for="textarea-id" class="mb-2 capitalize">Your question/comment*</Label>
-				<!-- <Textarea id="textarea-id" placeholder="Your message/question" rows="4" name="message" class="p-2" required /> -->
-				<Textarea
-					class="mb-4"
-					id="textarea-id"
-					name="message"
-					rows="4"
-					placeholder="Do you have visitor parking?"
-				>
-					<div slot="footer" class="flex justify-between items-center">
-						<Helper class="text-sm text-neutral-600">
-							We’ll never share your details. Read our <a
-								href="/legal#privacy-policy"
-								class="font-medium text-theme-600 hover:underline dark:text-theme-500"
-							>
-								Privacy Policy
-							</a>
-							.
-						</Helper>
-					</div>
-				</Textarea>
-			</div>
-			<input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
-			<button
-				type="submit"
-				class="text-white rounded-full text-md md:text-lg py-2.5 px-6 text-center me-2 w-[95%] md:max-w-[300px] h-14 bg-theme-900 font-heading-medium focus:outline-none focus:ring-4 focus:ring-blue-300 transform transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tr hover:from-blue-600 hover:to-cyan-500 hover:text-white justify-center"
-			>
-				Send Question/Comment
-			</button>
-		</form>
-	</section>
+        <p class="mx-auto max-w-3xl text-lg leading-7 text-zinc-700">
+          Welcome! We’re so glad you’re considering visiting our church. Our goal is to make your experience
+          as smooth and spiritually uplifting as possible. We’ve gathered answers to common questions below.
+          If you don’t find what you need, <a href="/plan-your-visit#form" class="underline decoration-sky-400 underline-offset-2">reach out with the form</a> — we’d love to hear from you!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQS -->
+  <section id="faqs" class="w-full">
+    <div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6">
+      <div class="mt-16 text-center">
+        <h2 class="text-3xl font-bold text-zinc-900 md:text-4xl pb-12">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-10 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {#each faqs as { question, answer, icon }}
+          <article
+            class="rounded-xl border border-zinc-200 bg-white p-8 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-within:ring-2 focus-within:ring-sky-300"
+          >
+            <div class="flex items-center gap-4">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sky-600 text-white">
+                {@html icon}
+              </span>
+              <h3 class="text-lg font-semibold text-zinc-900">{question}</h3>
+            </div>
+            <p class="mt-6 text-zinc-700">{answer}</p>
+          </article>
+        {/each}
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="form" class="w-full pt-12">
+    <div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6 pb-20">
+      <div class="mt-20 text-center">
+        <h2 class="text-3xl font-bold text-zinc-900 md:text-4xl">Reach Out Directly</h2>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-zinc-700">
+          Visiting a new church can feel intimidating, but we’re here to help you feel at home.
+          Use the form below to ask us anything!
+        </p>
+      </div>
+
+      <div class="mx-auto mt-10 max-w-2xl rounded-xl border border-zinc-200 bg-white p-6 sm:p-8 shadow-sm">
+        <form class="mx-auto max-w-xl" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="subject" value="New Submission from EBC Contact Form" />
+          <input type="hidden" name="access_key" value={ACCESS_KEY} />
+
+          <div class="mb-5">
+            <Label class="space-y-2">
+              <span class="capitalize text-zinc-900">Your Name*</span>
+              <Input type="name" placeholder="First Last" size="lg" required />
+            </Label>
+          </div>
+
+          <div class="mb-5">
+            <Label class="space-y-2">
+              <span class="capitalize text-zinc-900">Your email address*</span>
+              <Input type="email" placeholder="name@provider.com" size="lg" required />
+            </Label>
+          </div>
+
+          <div class="mb-6">
+            <Label for="textarea-id" class="mb-2 capitalize text-zinc-900">Your question/comment*</Label>
+            <Textarea
+              class="mb-3"
+              id="textarea-id"
+              name="message"
+              rows="4"
+              placeholder="Do you have visitor parking?"
+              required
+            >
+              <div slot="footer" class="flex items-center justify-between">
+                <Helper class="text-sm text-zinc-600">
+                  We’ll never share your details. Read our
+                  <a href="/legal#privacy-policy" class="font-medium text-sky-700 hover:underline">Privacy Policy</a>.
+                </Helper>
+              </div>
+            </Textarea>
+          </div>
+
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+          <button
+            type="submit"
+            class="inline-flex h-12 w-11/12 items-center justify-center rounded-full bg-sky-600 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 md:h-14 md:w-auto"
+          >
+            Send Question/Comment
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 </div>
