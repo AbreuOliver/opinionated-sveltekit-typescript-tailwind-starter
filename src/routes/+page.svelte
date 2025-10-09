@@ -25,7 +25,7 @@
 			></div>
 		</div>
 
-		<div id="home" class="mx-auto w-full max-w-7xl px-6 md:px-12 xl:px-6">
+		<div id="home" class="mx-auto w-full max-w-7xl px-6 md:px-12 xl:px-6 scroll-mt-28">
 			<div class="mx-auto max-w-2xl py-20 sm:py-28 text-center">
 				<h1
 					id="home-title"
