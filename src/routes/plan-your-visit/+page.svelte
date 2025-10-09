@@ -58,7 +58,7 @@
 			</svg>`
 		},
 		{
-			question: 'What your worship style?',
+			question: 'What is your worship style?',
 			answer: `Our church sings traditional hymns accompanied by piano and a church choir.`,
 			icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 				<path fill="currentColor" d="M18.5 5A1.5 1.5 0 1 1 17 6.5A1.5 1.5 0 0 1 18.5 5m0 6a1.5 1.5 0 1 1-1.5 1.5a1.5 1.5 0 0 1 1.5-1.5M10 4a5 5 0 0 0-5 5v1a2 2 0 1 0 2.18-2A3 3 0 0 1 10 6a4 4 0 0 1 4 4c0 3.59-2.23 6.19-7 8.2l.76 1.84C13.31 17.72 16 14.43 16 10a6 6 0 0 0-6-6" />
@@ -68,113 +68,148 @@
 </script>
 
 <div id="main" class="relative grow pt-10 sm:pt-12 overflow-x-hidden">
-  <!-- Page background -->
-  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-br from-sky-50 via-sky-50 to-white"></div>
-  <!-- soft blobs -->
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-40">
-    <div class="absolute left-[-10%] top-10 h-48 w-80 blur-[106px] bg-gradient-to-br from-sky-200 to-sky-300"></div>
-    <div class="absolute right-[-6%] top-28 h-36 w-72 blur-[106px] bg-gradient-to-r from-sky-200 to-sky-100"></div>
-  </div>
+	<!-- Page background -->
+	<div
+		aria-hidden="true"
+		class="absolute inset-0 -z-10 bg-gradient-to-br from-sky-50 via-sky-50 to-white"
+	></div>
+	<!-- soft blobs -->
+	<div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 opacity-40">
+		<div
+			class="absolute left-[-10%] top-10 h-48 w-80 blur-[106px] bg-gradient-to-br from-sky-200 to-sky-300"
+		></div>
+		<div
+			class="absolute right-[-6%] top-28 h-36 w-72 blur-[106px] bg-gradient-to-r from-sky-200 to-sky-100"
+		></div>
+	</div>
 
-  <!-- HERO -->
-  <section class="w-full pb-20">
-    <div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6">
-      <div class="mx-auto mt-6 text-center">
-        <h1 class="py-8 text-4xl font-extrabold text-zinc-900 md:text-5xl">Plan Your Visit</h1>
+	<!-- HERO -->
+	<section class="w-full pb-20">
+		<div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6">
+			<div class="mx-auto mt-6 text-center">
+				<h1 class="py-8 text-4xl font-extrabold text-zinc-900 md:text-5xl">Plan Your Visit</h1>
 
-        <p class="mx-auto max-w-3xl text-lg leading-7 text-zinc-700">
-          Welcome! We’re so glad you’re considering visiting our church. Our goal is to make your experience
-          as smooth and spiritually uplifting as possible. We’ve gathered answers to common questions below.
-          If you don’t find what you need, <a href="/plan-your-visit#form" class="underline decoration-sky-400 underline-offset-2">reach out with the form</a> — we’d love to hear from you!
-        </p>
-      </div>
-    </div>
-  </section>
+				<p class="mx-auto max-w-3xl text-lg leading-7 text-zinc-700">
+					Welcome! We’re so glad you’re considering visiting our church. Our goal is to make your
+					experience as smooth and spiritually uplifting as possible. We’ve gathered answers to
+					common questions below. If you don’t find what you need, <a
+						href="/plan-your-visit#form"
+						class="underline decoration-sky-400 underline-offset-2">reach out with the form</a
+					> — we’d love to hear from you!
+				</p>
+			</div>
+		</div>
+	</section>
 
-  <!-- FAQS -->
-  <section id="faqs" class="w-full">
-    <div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6">
-      <div class="mt-16 text-center">
-        <h2 class="text-3xl font-bold text-zinc-900 md:text-4xl pb-12">Frequently Asked Questions</h2>
-      </div>
+	<!-- FAQS -->
+	<section id="faqs" class="w-full">
+		<div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6">
+			<div class="mt-16 text-center">
+				<h2 class="text-3xl font-bold text-zinc-900 md:text-4xl pb-12">
+					Frequently Asked Questions
+				</h2>
+			</div>
 
-      <div class="mt-10 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {#each faqs as { question, answer, icon }}
-          <article
-            class="rounded-xl border border-zinc-200 bg-white p-8 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-within:ring-2 focus-within:ring-sky-300"
-          >
-            <div class="flex items-center gap-4">
-              <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sky-600 text-white">
-                {@html icon}
-              </span>
-              <h3 class="text-lg font-semibold text-zinc-900">{question}</h3>
-            </div>
-            <p class="mt-6 text-zinc-700">{answer}</p>
-          </article>
-        {/each}
-      </div>
-    </div>
-  </section>
+			<div class="mt-10 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
+				{#each faqs as { question, answer, icon }}
+					<article
+						class="rounded-xl border border-zinc-200 bg-white p-8 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-within:ring-2 focus-within:ring-sky-300"
+					>
+						<div class="flex justify-evenly items-center gap-4">
+							<span
+								class="inline-flex p-2 w-12 items-center justify-center rounded-full bg-sky-600 grow-1 text-white"
+							>
+								{@html icon}
+							</span>
+							<h3 class="text-lg font-semibold text-zinc-900 grow">{question}</h3>
+						</div>
+						<p class="mt-6 text-zinc-700">{answer}</p>
+					</article>
+				{/each}
+			</div>
+		</div>
+	</section>
 
-  <!-- CONTACT FORM -->
-  <section id="form" class="w-full pt-12">
-    <div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6 pb-20">
-      <div class="mt-20 text-center">
-        <h2 class="text-3xl font-bold text-zinc-900 md:text-4xl">Reach Out Directly</h2>
-        <p class="mx-auto mt-6 max-w-2xl text-lg text-zinc-700">
-          Visiting a new church can feel intimidating, but we’re here to help you feel at home.
-          Use the form below to ask us anything!
-        </p>
-      </div>
+	<!-- CONTACT FORM -->
+	<section id="form" class="w-full pt-12">
+		<div class="mx-auto max-w-7xl px-6 md:px-12 xl:px-6 pb-20">
+			<div class="mt-20 text-center">
+				<h2 class="text-3xl font-bold text-zinc-900 md:text-4xl">Reach Out Directly</h2>
+				<p class="mx-auto mt-6 max-w-2xl text-lg text-zinc-700">
+					Visiting a new church can feel intimidating, but we’re here to help you feel at home. Use
+					the form below to ask us anything!
+				</p>
+			</div>
 
-      <div class="mx-auto mt-10 max-w-2xl rounded-xl border border-zinc-200 bg-white p-6 sm:p-8 shadow-sm">
-        <form class="mx-auto max-w-xl" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="subject" value="New Submission from EBC Contact Form" />
-          <input type="hidden" name="access_key" value={ACCESS_KEY} />
+			<div
+				class="mx-auto mt-10 max-w-2xl rounded-xl border border-zinc-200 bg-white p-6 sm:p-8 shadow-sm"
+			>
+				<form class="mx-auto max-w-xl" action="https://api.web3forms.com/submit" method="POST">
+					<input type="hidden" name="subject" value="New Submission from EBC Contact Form" />
+					<input type="hidden" name="access_key" value={ACCESS_KEY} />
 
-          <div class="mb-5">
-            <Label class="space-y-2">
-              <span class="capitalize text-zinc-900">Your Name*</span>
-              <Input type="name" placeholder="First Last" size="lg" required />
-            </Label>
-          </div>
+					<!-- Name -->
+					<Label class="space-y-2 pb-4">
+						<span class="capitalize text-zinc-900">Your Name*</span>
+						<Input
+							type="text"
+							placeholder="First Last"
+							required
+							class="appearance-none h-12 md:h-14 w-full rounded-xl border border-zinc-300 px-4
+           text-base leading-6 placeholder:text-zinc-400
+           focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-300"
+						/>
+					</Label>
 
-          <div class="mb-5">
-            <Label class="space-y-2">
-              <span class="capitalize text-zinc-900">Your email address*</span>
-              <Input type="email" placeholder="name@provider.com" size="lg" required />
-            </Label>
-          </div>
+					<!-- Email -->
+					<Label class="space-y-2 pb-4">
+						<span class="capitalize text-zinc-900">Your Email Address*</span>
+						<Input
+							type="email"
+							placeholder="name@provider.com"
+							required
+							class="appearance-none h-12 md:h-14 w-full rounded-xl border border-zinc-300 px-4
+           text-base leading-6 placeholder:text-zinc-400 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-300"
+						/>
+					</Label>
 
-          <div class="mb-6">
-            <Label for="textarea-id" class="mb-2 capitalize text-zinc-900">Your question/comment*</Label>
-            <Textarea
-              class="mb-3"
-              id="textarea-id"
-              name="message"
-              rows="4"
-              placeholder="Do you have visitor parking?"
-              required
-            >
-              <div slot="footer" class="flex items-center justify-between">
-                <Helper class="text-sm text-zinc-600">
-                  We’ll never share your details. Read our
-                  <a href="/legal#privacy-policy" class="font-medium text-sky-700 hover:underline">Privacy Policy</a>.
-                </Helper>
-              </div>
-            </Textarea>
-          </div>
+					<!-- Message -->
+					<Label for="message" class="mb-2 capitalize text-zinc-900">Your Question/Comment*</Label>
 
-          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+					<!-- Wrapper handles border/ring; footer stays attached -->
+					<div
+						class="group overflow-hidden rounded-xl border border-zinc-300
+         focus-within:border-sky-400 focus-within:ring-2 focus-within:ring-sky-300"
+					>
+						<textarea
+							id="message"
+							name="message"
+							required
+							placeholder="Do you have visitor parking?"
+							aria-describedby="message-help"
+							class="block w-full resize-y min-h-[9.5rem] border-0 rounded-none
+           px-4 py-3 text-[16px] leading-6 placeholder:text-zinc-400
+           focus:outline-none focus:ring-0"
+						></textarea>
 
-          <button
-            type="submit"
-            class="inline-flex h-12 w-11/12 items-center justify-center rounded-full bg-sky-600 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 md:h-14 md:w-auto"
-          >
-            Send Question/Comment
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
+						<div id="message-help" class="border-t bg-zinc-50 px-4 py-2 text-sm text-zinc-600">
+							We’ll never share your details. Read our
+							<a href="/legal#privacy-policy" class="font-medium text-sky-700 hover:underline">
+								Privacy Policy
+							</a>.
+						</div>
+					</div>
+
+					<input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+
+					<button
+						type="submit"
+						class="inline-flex h-14 md:w-1/2 items-center justify-center rounded-full bg-sky-600 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-sky-700 w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 md:h-14 mt-6"
+					>
+						Send Question/Comment
+					</button>
+				</form>
+			</div>
+		</div>
+	</section>
 </div>
