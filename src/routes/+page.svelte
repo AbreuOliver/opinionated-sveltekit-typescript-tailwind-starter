@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SmallCalendar from '$lib/components/SmallCalendar.svelte';
+	import calendarEvents from '$lib/data/calendar-events.json';
 	import '../global.css';
 </script>
 
@@ -332,7 +333,7 @@
 
     <!-- Calendar -->
     <div class="mx-auto mt-10 overflow-hidden  bg-transparent ">
-      <SmallCalendar />
+      <SmallCalendar events={calendarEvents} />
     </div>
   </div>
 </section>

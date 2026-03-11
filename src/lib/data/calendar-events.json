@@ -1,0 +1,174 @@
+{
+	"2026-01": [
+		{
+			"date": "01/04/2026",
+			"formattedDate": "Sun, Jan 04",
+			"title": "Vision Sunday",
+			"description": ""
+		},
+		{
+			"date": "01/29/2026 - 01/31/2026",
+			"formattedDate": "Thu, Jan 29 - Sat, Jan 31",
+			"title": "Marriage Retreat",
+			"description": ""
+		}
+	],
+	"2026-02": [
+		{
+			"date": "02/24/2026",
+			"formattedDate": "Tue, Feb 24",
+			"title": "40 Days of Prayer and Fasting",
+			"description": ""
+		}
+	],
+	"2026-03": [
+		{
+			"date": "03/19/2026",
+			"formattedDate": "Thu, Mar 19",
+			"title": "Easter Outreach",
+			"description": ""
+		},
+		{
+			"date": "03/22/2026",
+			"formattedDate": "Sun, Mar 22",
+			"title": "Lord's Supper",
+			"description": ""
+		},
+		{
+			"date": "03/26/2026",
+			"formattedDate": "Thu, Mar 26",
+			"title": "Easter Outreach",
+			"description": ""
+		},
+		{
+			"date": "03/29/2026 - 04/01/2026",
+			"formattedDate": "Sun, Mar 29 - Wed, Apr 01",
+			"title": "Revival w/Jeff Jones",
+			"description": ""
+		}
+	],
+	"2026-04": [
+		{
+			"date": "04/02/2026",
+			"formattedDate": "Thu, Apr 02",
+			"title": "Easter Outreach",
+			"description": ""
+		},
+		{
+			"date": "04/04/2026",
+			"formattedDate": "Sat, Apr 04",
+			"title": "Super Saturday Saturation",
+			"description": ""
+		},
+		{
+			"date": "04/05/2026",
+			"formattedDate": "Sun, Apr 05",
+			"title": "Easter Sunday",
+			"description": ""
+		}
+	],
+	"2026-05": [
+		{
+			"date": "05/10/2026",
+			"formattedDate": "Sun, May 10",
+			"title": "Mother's Day",
+			"description": ""
+		},
+		{
+			"date": "05/17/2026",
+			"formattedDate": "Sun, May 17",
+			"title": "Graduation Celebration",
+			"description": ""
+		}
+	],
+	"2026-06": [
+		{
+			"date": "06/07/2026",
+			"formattedDate": "Sun, Jun 07",
+			"title": "Lord's Supper",
+			"description": ""
+		},
+		{
+			"date": "06/14/2026 - 06/18/2026",
+			"formattedDate": "Sun, Jun 14 - Thu, Jun 18",
+			"title": "VBS",
+			"description": ""
+		},
+		{
+			"date": "06/21/2026",
+			"formattedDate": "Sun, Jun 21",
+			"title": "Father's Day",
+			"description": ""
+		}
+	],
+	"2026-08": [
+		{
+			"date": "08/01/2026",
+			"formattedDate": "Sat, Aug 01",
+			"title": "Teach Appreciation Meal",
+			"description": ""
+		},
+		{
+			"date": "08/02/2026",
+			"formattedDate": "Sun, Aug 02",
+			"title": "Move Up Sunday",
+			"description": ""
+		},
+		{
+			"date": "08/30/2026 - 09/03/2026",
+			"formattedDate": "Sun, Aug 30 - Thu, Sep 03",
+			"title": "Revival w/Roy Velez",
+			"description": ""
+		}
+	],
+	"2026-09": [
+		{
+			"date": "09/06/2026",
+			"formattedDate": "Sun, Sep 06",
+			"title": "Lord's Supper",
+			"description": ""
+		},
+		{
+			"date": "09/13/2026",
+			"formattedDate": "Sun, Sep 13",
+			"title": "Grandparent's Day",
+			"description": ""
+		}
+	],
+	"2026-10": [
+		{
+			"date": "10/17/2026",
+			"formattedDate": "Sat, Oct 17",
+			"title": "Big Bus Day",
+			"description": ""
+		},
+		{
+			"date": "10/18/2026",
+			"formattedDate": "Sun, Oct 18",
+			"title": "Family Day",
+			"description": ""
+		}
+	],
+	"2026-11": [
+		{
+			"date": "11/08/2026",
+			"formattedDate": "Sun, Nov 08",
+			"title": "Fall Festival",
+			"description": ""
+		}
+	],
+	"2026-12": [
+		{
+			"date": "12/13/2026",
+			"formattedDate": "Sun, Dec 13",
+			"title": "Christmas Cantata",
+			"description": ""
+		},
+		{
+			"date": "12/20/2026",
+			"formattedDate": "Sun, Dec 20",
+			"title": "Lord's Supper",
+			"description": ""
+		}
+	]
+}
