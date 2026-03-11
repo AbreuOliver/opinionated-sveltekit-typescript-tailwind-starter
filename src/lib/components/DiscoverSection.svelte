@@ -20,7 +20,7 @@
 					our pastor
 				</a>
 				<img
-					src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/mini-pastor-garner_FiOaKJ7bb.webp?updatedAt=1729398571290"
+					src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/Pastor%202025_YpeYpnI7X.jpg"
 					alt="Our Pastor"
 					class="w-full h-full object-cover rounded-[1.5rem]"
 				/>

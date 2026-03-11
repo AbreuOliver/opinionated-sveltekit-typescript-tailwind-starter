@@ -62,6 +62,7 @@
 		},
 		{
 			title: `Outreach`,
+			image: 'https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/outreach-image_0uCiIQUhS.png',
 			description: [
 				`At Emmanuel Baptist Church, we have a passion to reach our community, our country, and those around the world with the Gospel (Acts 1:8). Locally, we accomplish this through our bus ministry, and church-wide soul winning. Abroad, we accomplish this through our support of many missionaries. Currently, we support works in Moldova, Venezuela, Panama, China, India, Brazil, and a children's home in Brazil. In addition to supporting these works, we also support FBN radio which has a reach spanning the globe.`
 			]
@@ -269,7 +270,7 @@
           <div class="relative mt-10 md:mt-0 md:w-1/2">
             <img
               class="h-full w-full rounded-xl object-cover object-left"
-              src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/image_M8J7Q6rMd.jpg?updatedAt=1730959808912"
+              src="https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/Family%202025_1vHslSx1yp.JPG"
               alt="Garner Family"
               width="1628" height="1233"
             />
@@ -332,4 +333,3 @@
     </div>
   </section>
 </div>
-
