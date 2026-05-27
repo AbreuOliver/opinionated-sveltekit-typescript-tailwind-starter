@@ -292,13 +292,7 @@
 				<div class="relative overflow-hidden rounded-xl ring-1 ring-zinc-200 shadow-sm">
 					<!-- 16:9 wrapper; use aspect-video if your Tailwind config supports it -->
 					<div class="relative w-full pb-[56.25%]">
-						<iframe
-							title="EBC Livestream or Latest Sermon"
-							allow="autoplay; fullscreen; picture-in-picture"
-							class="absolute inset-0 h-full w-full"
-							src="https://control.resi.io/webplayer/video.html?id=ae4b050f-68f2-458f-834e-bd578c9b51d3&startPos=240&debug&autoplay=1"
-							style="border:0"
-						></iframe>
+						<iframe src="https://vimeo.com/event/5951260/embed/interaction" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
 					</div>
 				</div>
 			</div>
