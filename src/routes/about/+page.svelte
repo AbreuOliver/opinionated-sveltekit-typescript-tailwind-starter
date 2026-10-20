@@ -28,7 +28,7 @@
 	const ministryInformation: MinistryInfo[] = [
 		{
 			title: 'Preaching',
-			image: `https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/PREACHER2_Rz0apm1s3.jpg?updatedAt=1733800042663`,
+			image: `https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/image_7DUEwJXdm.jpg`,
 			description: [
 				`"For after that in the wisdom of God the world by wisdom knew not God, it pleased God by the foolishness of preaching to save them that believe." (1 Corinthians 1:21)`,
 				'By this passage, we understand that preaching of the Bible is God’s method of reaching the unsaved. Though this method may stand against the way common wisdom would seek to reach a people group, this is the ordained method of God. Through preaching is God’s Word able to be made clear to the human mind and applied to the human heart.',
@@ -53,7 +53,7 @@
 		},
 		{
 			title: `Music Ministry`,
-			image: `https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/John_8xDVTuwkap.JPG?updatedAt=1733800042636`,
+			image: `https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/DSC04045_7ZvCMVBd4.jpeg`,
 			description: [
 				'A Joyful Noise',
 				`"O sing unto the LORD a new song: sing unto the LORD, all the earth.Sing unto the LORD, bless his name; shew forth his salvation from day to day.Declare his glory among the heathen, his wonders among all people." Psalm 96:1-3`,
