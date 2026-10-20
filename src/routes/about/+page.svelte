@@ -14,6 +14,7 @@
 	interface MinistryInfo {
 		title: string;
 		image?: string;
+		imagePosition?: string;
 		description: string[];
 	}
 
@@ -29,6 +30,7 @@
 		{
 			title: 'Preaching',
 			image: `https://ik.imagekit.io/bip1v395ybp/Emmanuel%20Baptist%20Church/image_7DUEwJXdm.jpg`,
+			imagePosition: 'center 40%',
 			description: [
 				`"For after that in the wisdom of God the world by wisdom knew not God, it pleased God by the foolishness of preaching to save them that believe." (1 Corinthians 1:21)`,
 				'By this passage, we understand that preaching of the Bible is God’s method of reaching the unsaved. Though this method may stand against the way common wisdom would seek to reach a people group, this is the ordained method of God. Through preaching is God’s Word able to be made clear to the human mind and applied to the human heart.',
@@ -294,7 +296,8 @@
               alt=""
               loading="lazy"
               width="1000" height="667"
-              class="h-auto w-full aspect-[16/9] object-cover object-top "
+              class="h-auto w-full aspect-[16/9] object-cover"
+              style:object-position={item.imagePosition ?? 'center top'}
             />
           {/if}
           <div class="p-16">
