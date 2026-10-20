@@ -4,6 +4,22 @@ This repository contains the source code for the official website of Emmanuel Ba
 
 Visit the live site: [https://www.emmanuelbaptistnc.org](https://www.emmanuelbaptistnc.org)
 
+## Development and deployment
+
+Use Node.js 24.x. With nvm installed, run:
+
+```sh
+nvm install
+nvm use
+npm ci
+npm run dev
+```
+
+Run `npm run build` to verify the production build. Vercel selects Node 24.x
+from `engines.node` in `package.json`, and the SvelteKit adapter explicitly uses
+the `nodejs24.x` runtime. Keep the Vercel adapter at version 6.2.0 or newer for
+Node 24 support, and commit `package-lock.json` with dependency changes.
+
 ---
 
 ## What's Inside
@@ -35,4 +51,3 @@ This site is powered by modern tools and frameworks to ensure fast performance, 
 - [Epilogue](https://fonts.google.com/specimen/Epilogue): A modern, clean font for a professional appearance.
 
 ---
-
