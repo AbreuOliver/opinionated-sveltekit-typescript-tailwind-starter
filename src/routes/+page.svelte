@@ -300,7 +300,7 @@
 			<!-- CTA -->
 			<div class="mt-10 flex justify-center">
 				<a
-					href="https://www.youtube.com/@emmanuelbaptistnc85/streams"
+					href="https://www.youtube.com/@emmanuelchurch-n2m/streams"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="inline-flex h-12 items-center justify-center rounded-full border border-zinc-300 bg-white px-6 text-base font-semibold text-zinc-900 transition-colors hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2"
